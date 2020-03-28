@@ -33,7 +33,7 @@ class Layout extends React.Component {
 
   handleToggleMenu() {
     this.setState({
-      isMenuVisible: ! this.state.isMenuVisible,
+      isMenuVisible: !this.state.isMenuVisible,
     })
   }
 
@@ -44,14 +44,13 @@ class Layout extends React.Component {
         className={`body ${this.state.loading} ${
           this.state.isMenuVisible ? 'is-menu-visible' : ''
         }`}>
+
         <div id="wrapper">
           <Header onToggleMenu={this.handleToggleMenu} />
-
           {children}
-
-          <Contact />
           <Footer />
         </div>
+
         <Menu onToggleMenu={this.handleToggleMenu} />
       </div>
     )

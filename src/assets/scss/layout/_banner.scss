@@ -8,19 +8,16 @@
 
 	#banner {
 		@include vendor('align-items', 'center');
-		@include vendor('background-image', 'url("../images/banner.jpg")');
 		@include vendor('display', 'flex');
 		@include padding(4em, 0, (2em, 0, 0, 0));
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-image: url("../images/background.png");
 		border-bottom: 0 !important;
 		cursor: default;
-		height: 60vh;
 		margin-bottom: -3.25em;
-		max-height: 32em;
-		min-height: 22em;
 		position: relative;
 		top: -3.25em;
 
@@ -28,12 +25,18 @@
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
 			@include vendor('pointer-events', 'none');
-			background-color: _palette(bg);
+			background: linear-gradient(
+				to bottom left,
+				rgba(139, 0, 0, 0.8) 0%,
+				#ff9201 80%,
+				rgba(255, 115, 1, 1) 100%
+			);
+			backdrop-filter: multiply(0.8);
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 0.8;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -86,7 +89,7 @@
 				}
 
 				p {
-					font-size: 0.7em;
+					font-size: 1.4rem;
 					font-weight: _font(weight-bold);
 					letter-spacing: _font(letter-spacing-alt);
 					text-transform: uppercase;
@@ -95,10 +98,6 @@
 		}
 
 		&.major {
-			height: 75vh;
-			min-height: 30em;
-			max-height: 50em;
-
 			&.alt {
 				opacity: 0.75;
 			}

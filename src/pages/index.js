@@ -3,13 +3,13 @@ import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
-
-import pic01 from '../assets/images/pic01.jpg'
-import pic02 from '../assets/images/pic02.jpg'
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
-import pic05 from '../assets/images/pic05.jpg'
-import pic06 from '../assets/images/pic06.jpg'
+import Callout from '../components/Callout'
+import pic01 from '../assets/images/29676243823_a82bc1678f_o.jpg'
+import pic02 from '../assets/images/30220593851_55f8bc7af5_o.jpg'
+import pic03 from '../assets/images/30221095941_ecee6778e8_o.jpg'
+import pic04 from '../assets/images/30191159352_1f5bf7cb6d_o.jpg'
+import pic05 from '../assets/images/30271820676_e46b9f31e4_o.jpg'
+import pic06 from '../assets/images/30306790745_3ceb0fee8b_o.jpg'
 
 /**
  * Home Page Component
@@ -19,15 +19,18 @@ class Home extends Component {
     return (
       <Layout>
         <Helmet
-          title="Gatsby Starter - Forty"
+          title="BEYOND RECOVERY"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}></Helmet>
+            { name: 'description', content: 'A people’s plan to ensure a healthy, stable, thriving future for us all.' },
+            { name: 'keywords', content: 'beyond recovery, rent strike' },
+        ]} />
 
         <Banner />
 
-        <div id="main">
+        <div id="main" style={{maxWidth: '100vw'}}>
+          <section style={{maxWidth: '100vw'}}>
+            <Callout />
+          </section>
           <section id="one" className="tiles">
             <article style={{ backgroundImage: `url(${pic01})` }}>
               <header className="major">
@@ -71,29 +74,6 @@ class Home extends Component {
               </header>
               <Link to="/landing" className="link primary"></Link>
             </article>
-          </section>
-          <section id="two">
-            <div className="inner">
-              <header className="major">
-                <h2>Massa libero</h2>
-              </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-                Pellentesque condimentum sem. In efficitur ligula tate urna.
-                Maecenas laoreet massa vel lacinia pellentesque lorem ipsum
-                dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
-                sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
-                amet pharetra et feugiat tempus.
-              </p>
-              <ul className="actions">
-                <li>
-                  <Link to="/landing" className="button next">
-                    Get Started
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </section>
         </div>
       </Layout>

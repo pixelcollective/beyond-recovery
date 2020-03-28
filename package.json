@@ -7,10 +7,17 @@
     "Hunter Chang"
   ],
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion": "^10.0.27",
+    "framer-motion": "^1.10.2",
     "gatsby": "^2.19.5",
+    "gatsby-plugin-emotion": "^4.2.1",
     "gatsby-plugin-manifest": "^2.2.38",
+    "gatsby-plugin-netlify": "^2.2.1",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.1.27",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
@@ -21,15 +28,15 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "prettier": "2.0.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "prettier": "^2.0.2"
   }
 }

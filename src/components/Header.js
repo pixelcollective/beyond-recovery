@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const Header = (props) => (
   <header id="header" className="alt">
     <Link to="/" className="logo">
-      <strong>NYC</strong> <span>mystery site</span>
+      <strong>Beyond Recovery</strong>
     </Link>
 
     <nav>
