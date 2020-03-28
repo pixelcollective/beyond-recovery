@@ -134,6 +134,10 @@ const GuaranteeBg = (props) => (
     />
   </AnimatePresence>
 )
+
+/**
+ * Guarantee: Text contents
+ */
 const GuaranteeText = (props) => (
   <AnimatePresence>
     <motion.text
