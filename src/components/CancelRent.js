@@ -28,6 +28,9 @@ export default ({ width, height }) => (
   </div>
 )
 
+/**
+ * Transition groups
+ */
 const container = (delay) => ({
   hidden: { opacity: 0 },
   show: {
@@ -43,6 +46,9 @@ const container = (delay) => ({
   },
 })
 
+/**
+ * Letter animation states
+ */
 const letter = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },

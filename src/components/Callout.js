@@ -40,12 +40,21 @@ const letter = {
 export default () => (
   <AnimatePresence>
     <motion.section
-      style={{ paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '3rem', paddingTop: '2rem' }}
+      style={{
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
+        paddingBottom: '3rem',
+        paddingTop: '2rem',
+      }}
       initial="hidden"
       pointerEvents="none"
       animate="show"
       variants={container(0.3)}>
-      <div style={{ maxWidth: '70vw', marginLeft: 'auto', marginRight: 'auto' }}>
+      <div style={{
+        maxWidth: '70vw',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      }}>
         <header
           style={{
             maxWidth: '80vw',
