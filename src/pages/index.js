@@ -21,14 +21,18 @@ class Home extends Component {
         <Helmet
           title="BEYOND RECOVERY"
           meta={[
-            { name: 'description', content: 'A people’s plan to ensure a healthy, stable, thriving future for us all.' },
+            {
+              name: 'description',
+              content: 'A people’s plan to ensure a healthy, stable, thriving future for us all.',
+            },
             { name: 'keywords', content: 'beyond recovery, rent strike' },
-        ]} />
+          ]}
+        />
 
         <Banner />
 
-        <div id="main" style={{maxWidth: '100vw'}}>
-          <section style={{maxWidth: '100vw'}}>
+        <div id="main" style={{ maxWidth: '100vw' }}>
+          <section style={{ maxWidth: '100vw' }}>
             <Callout />
           </section>
           <section id="one" className="tiles">

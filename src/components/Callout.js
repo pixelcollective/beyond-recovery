@@ -39,14 +39,27 @@ const letter = {
 
 export default () => (
   <AnimatePresence>
-    <motion.section style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '3rem', paddingTop: '2rem'}} initial="hidden" pointerEvents="none" animate="show" variants={container(0.3)}>
-      <div style={{maxWidth: '70vw', marginLeft: 'auto', marginRight: 'auto'}}>
-        <header style={{maxWidth: '80vw', marginLeft: 'auto', marginRight: 'auto', borderBottom: '1px solid white', marginBottom: '2rem', paddingTop: '2rem'}}>
+    <motion.section
+      style={{ paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '3rem', paddingTop: '2rem' }}
+      initial="hidden"
+      pointerEvents="none"
+      animate="show"
+      variants={container(0.3)}>
+      <div style={{ maxWidth: '70vw', marginLeft: 'auto', marginRight: 'auto' }}>
+        <header
+          style={{
+            maxWidth: '80vw',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            borderBottom: '1px solid white',
+            marginBottom: '2rem',
+            paddingTop: '2rem',
+          }}>
           <Title>Beyond Recovery</Title>
           <Subtitle>A people’s plan to ensure a healthy, stable, thriving future for us all.</Subtitle>
         </header>
 
-        <div style={{maxWidth: '95%'}}>
+        <div style={{ maxWidth: '95%' }}>
           <p>
             Our homes, health, and collective safety and futures are on the line. Millions of us don’t know how we are
             going to pay our rent, mortgage, or utilities on April 1st, yet landlords and banks are expecting payment as
@@ -60,7 +73,9 @@ export default () => (
 
           <ul className="actions" style={{ marginTop: '2rem' }}>
             <li>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform" className="button next">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform"
+                className="button next">
                 Sign the Demands Platform here
               </a>
             </li>

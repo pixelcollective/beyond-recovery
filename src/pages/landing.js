@@ -8,7 +8,7 @@ import pic08 from '../assets/images/pic08.jpg'
 import pic09 from '../assets/images/pic09.jpg'
 import pic10 from '../assets/images/pic10.jpg'
 
-const Landing = props => (
+const Landing = (props) => (
   <Layout>
     <Helmet>
       <title>Beyond Recovery</title>
@@ -24,13 +24,10 @@ const Landing = props => (
             <h2>Sed amet aliquam</h2>
           </header>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-            urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Nullam et orci eu lorem consequat tincidunt vivamus et
-            sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula
-            tate urna.
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In
+            efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu
+            lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus
+            et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
           </p>
         </div>
       </section>
@@ -45,11 +42,9 @@ const Landing = props => (
                 <h3>Orci maecenas</h3>
               </header>
               <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
+                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.
+                In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
+                Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
               </p>
               <ul className="actions">
                 <li>
@@ -71,11 +66,9 @@ const Landing = props => (
                 <h3>Rhoncus magna</h3>
               </header>
               <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
+                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.
+                In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
+                Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
               </p>
               <ul className="actions">
                 <li>
@@ -97,11 +90,9 @@ const Landing = props => (
                 <h3>Sed nunc ligula</h3>
               </header>
               <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
+                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.
+                In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
+                Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
               </p>
               <ul className="actions">
                 <li>

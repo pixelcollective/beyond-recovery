@@ -13,7 +13,6 @@ export default ({ width, height }) => (
       pointerEvents="none"
       height={height || null}
       width={width || null}>
-
       <title>Cancel Rent</title>
       <g>
         <CancelRentBg />
@@ -52,7 +51,7 @@ const letter = {
 /**
  * Cancel Rent
  */
-const CancelRentBg = props => (
+const CancelRentBg = (props) => (
   <AnimatePresence>
     <motion.path
       initial={{ opacity: 0 }}
@@ -63,7 +62,7 @@ const CancelRentBg = props => (
   </AnimatePresence>
 )
 
-const CancelRentText = props => (
+const CancelRentText = (props) => (
   <motion.text
     initial="hidden"
     pointerEvents="none"
@@ -76,17 +75,17 @@ const CancelRentText = props => (
     fontWeight="700"
     letterSpacing="-0.02em">
     {'Cancel Rent'.split('').map((char, id) => (
-        <motion.tspan pointerEvents="none" key={id} variants={letter}>
-          {char}
-        </motion.tspan>
-      ))}
+      <motion.tspan pointerEvents="none" key={id} variants={letter}>
+        {char}
+      </motion.tspan>
+    ))}
   </motion.text>
 )
 
 /**
  * Cancel Mortgages
  */
-const CancelMortgagesBg = props => (
+const CancelMortgagesBg = (props) => (
   <AnimatePresence>
     <motion.path
       role="decorative"
@@ -98,7 +97,7 @@ const CancelMortgagesBg = props => (
   </AnimatePresence>
 )
 
-const CancelMortgagesText = props => (
+const CancelMortgagesText = (props) => (
   <AnimatePresence>
     <motion.text
       initial="hidden"
@@ -124,7 +123,7 @@ const CancelMortgagesText = props => (
 /**
  * Guarantee
  */
-const GuaranteeBg = props => (
+const GuaranteeBg = (props) => (
   <AnimatePresence>
     <motion.path
       role="decorative"
@@ -135,7 +134,7 @@ const GuaranteeBg = props => (
     />
   </AnimatePresence>
 )
-const GuaranteeText = props => (
+const GuaranteeText = (props) => (
   <AnimatePresence>
     <motion.text
       initial="hidden"

@@ -62,6 +62,25 @@ module.exports = {
         // Accepts all options defined by `babel-plugin-emotion` plugin.
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: true,
+        jpegQuality: 50,
+        stripMetadata: true,
+        quality: 60,
+        maxWidth: 1900,
+        maxHeight: 1080,
+      },
+    },
     'gatsby-plugin-offline',
+    'gatsby-transformer-sharp',
   ],
 }
