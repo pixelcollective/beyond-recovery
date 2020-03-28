@@ -2,33 +2,32 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Callout from '../components/Callout'
-import pic11 from '../assets/images/pic11.jpg'
+import pic from '../assets/images/29676270444_5e09913cd5_o.jpg'
 
 const Generic = (props) => (
   <Layout>
     <Helmet>
-      <title>Generic - Forty by HTML5 UP</title>
-      <meta name="description" content="Generic Page" />
+      <title>Page Title</title>
+      <meta name="description" content="Page description." />
     </Helmet>
 
     <div id="main" className="alt">
       <Callout />
-
       <section id="one">
         <div className="inner">
+
           <header className="major">
-            <h1>Generic</h1>
+            <h1>Page title.</h1>
           </header>
+
           <span className="image main">
-            <img src={pic11} alt="" />
+            <img src={pic} alt="" />
           </span>
+
           <p>
-            Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis
-            dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.
-            Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia
-            malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus,
-            commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+            This is the content.
           </p>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti
             sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh
@@ -38,6 +37,7 @@ const Generic = (props) => (
             turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed
             vehicula.
           </p>
+
           <p>
             Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
             mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris,

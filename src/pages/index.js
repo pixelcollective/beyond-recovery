@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Banner from '../components/Banner'
+import Banner from '../components/BannerSoon'
 import Callout from '../components/Callout'
 import pic01 from '../assets/images/29676243823_a82bc1678f_o.jpg'
 import pic02 from '../assets/images/30220593851_55f8bc7af5_o.jpg'
@@ -17,7 +17,7 @@ import pic06 from '../assets/images/30306790745_3ceb0fee8b_o.jpg'
 class Home extends Component {
   render() {
     return (
-      <Layout>
+      <>
         <Helmet
           title="BEYOND RECOVERY"
           meta={[
@@ -28,59 +28,8 @@ class Home extends Component {
             { name: 'keywords', content: 'beyond recovery, rent strike' },
           ]}
         />
-
         <Banner />
-
-        <div id="main" style={{ maxWidth: '100vw' }}>
-          <section style={{ maxWidth: '100vw' }}>
-            <Callout />
-          </section>
-          <section id="one" className="tiles">
-            <article style={{ backgroundImage: `url(${pic01})` }}>
-              <header className="major">
-                <h3>Aliquam</h3>
-                <p>Ipsum dolor sit amet</p>
-              </header>
-              <Link to="/landing" className="link primary"></Link>
-            </article>
-            <article style={{ backgroundImage: `url(${pic02})` }}>
-              <header className="major">
-                <h3>Tempus</h3>
-                <p>feugiat amet tempus</p>
-              </header>
-              <Link to="/landing" className="link primary"></Link>
-            </article>
-            <article style={{ backgroundImage: `url(${pic03})` }}>
-              <header className="major">
-                <h3>Magna</h3>
-                <p>Lorem etiam nullam</p>
-              </header>
-              <Link to="/landing" className="link primary"></Link>
-            </article>
-            <article style={{ backgroundImage: `url(${pic04})` }}>
-              <header className="major">
-                <h3>Ipsum</h3>
-                <p>Nisl sed aliquam</p>
-              </header>
-              <Link to="/landing" className="link primary"></Link>
-            </article>
-            <article style={{ backgroundImage: `url(${pic05})` }}>
-              <header className="major">
-                <h3>Consequat</h3>
-                <p>Ipsum dolor sit amet</p>
-              </header>
-              <Link to="/landing" className="link primary"></Link>
-            </article>
-            <article style={{ backgroundImage: `url(${pic06})` }}>
-              <header className="major">
-                <h3>Etiam</h3>
-                <p>Feugiat amet tempus</p>
-              </header>
-              <Link to="/landing" className="link primary"></Link>
-            </article>
-          </section>
-        </div>
-      </Layout>
+      </>
     )
   }
 }
