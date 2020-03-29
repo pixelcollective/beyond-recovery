@@ -1,10 +1,9 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import CancelRentComponent from './CancelRent'
-import backgroundSrc from '../assets/images/background.png'
-import logoSrc from '../assets/images/logo.png'
 
 const Banner = styled.section`
   max-width: 100vw;
@@ -16,7 +15,7 @@ const Banner = styled.section`
   overflow-y: hidden;
 `
 
-const BackgroundImage = styled.img`
+const BackgroundImage = styled(Img)`
   && {
     position: fixed;
     top: 0;
@@ -69,7 +68,7 @@ const Messaging = () => (
   </div>
 )
 
-const Logo = styled(motion.img)`
+const Logo = styled(Img)`
   position: absolute;
   right: 10vw;
   top: calc(60vh);
@@ -77,14 +76,13 @@ const Logo = styled(motion.img)`
   z-index: 50;
 `
 
-const BannerContainer = () => (
+const BannerContainer = ({ bgFluidSrc, logoFluidSrc }) => (
   <Banner>
-    <BackgroundImage src={backgroundSrc} />
+    <BackgroundImage fluid={bgFluidSrc} alt="Rent strikers fight for an equitable future." />
     <Scrim />
     <Messaging />
     <AnimatePresence>
-      <Logo
-        style={{
+      <motion.div style={{
           opacity: 0,
         }}
         initial={{
@@ -108,9 +106,12 @@ const BannerContainer = () => (
             rotateX: `20deg`,
             duration: 3,
           },
-        }}
-        src={logoSrc}
+        }}>
+      <Logo
+        src={logoFluidSrc}
+        alt="Beyond Recovery logo"
       />
+      </motion.div>
     </AnimatePresence>
   </Banner>
 )

@@ -13,6 +13,7 @@ const Landing = (props) => (
     <Helmet>
       <title>Beyond Recovery</title>
       <meta name="description" content="Landing Page" />
+      <html lang="en" />
     </Helmet>
 
     <BannerLanding />

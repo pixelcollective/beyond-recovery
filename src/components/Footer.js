@@ -74,6 +74,7 @@ export default () => (
         </section>
       </div>
     </section>
+
     <div className="inner">
       <ul className="icons">
         <li>

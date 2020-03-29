@@ -12,6 +12,7 @@ const Elements = (props) => (
     <Helmet>
       <title>Elements - Forty by HTML5 UP</title>
       <meta name="description" content="Elements Page" />
+      <html lang="en" />
     </Helmet>
 
     <div id="main" className="alt">

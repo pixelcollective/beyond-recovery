@@ -57,6 +57,7 @@ const Generic = (props) => (
         name="description"
         content="We demand a coronavirus recovery that leaves us safely housed and free of debt."
       />
+      <html lang="en" />
     </Helmet>
 
     <div id="main" className="alt">

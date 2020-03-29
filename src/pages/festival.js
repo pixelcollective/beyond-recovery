@@ -53,6 +53,7 @@ const Generic = (props) => (
         name="description"
         content="Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s."
       />
+      <html lang="en" />
     </Helmet>
 
     <div id="main" className="alt">

@@ -13,8 +13,8 @@ const Menu = (props) => (
         </li>
 
         <li>
-          <Link onClick={props.onToggleMenu} to="/landing">
-            Landing
+          <Link onClick={props.onToggleMenu} to="/demands">
+            Demands
           </Link>
         </li>
       </ul>

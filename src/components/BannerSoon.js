@@ -1,10 +1,7 @@
 import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-import CancelRentComponent from './CancelRent'
 import backgroundSrc from '../assets/images/background.png'
-import logoSrc from '../assets/images/logo.png'
 
 const Banner = styled.section`
   max-width: 100vw;
@@ -55,21 +52,13 @@ const Scrim = styled.div`
   }
 `
 
-const Logo = styled(motion.img)`
-  position: absolute;
-  right: 10vw;
-  top: calc(60vh);
-  height: 20vh;
-  z-index: 50;
-`
-
 const BannerContainer = () => (
   <Banner>
     <BackgroundImage src={backgroundSrc} />
     <Scrim />
-    <h1 className={css`
-      text-align: center;
-    `}>Coming soon.</h1>
+    <h1 className={css`text-align: center;`}>
+      Coming soon.
+    </h1>
   </Banner>
 )
 

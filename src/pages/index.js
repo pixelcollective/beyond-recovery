@@ -25,9 +25,14 @@ class Home extends Component {
               name: 'description',
               content: 'A people’s plan to ensure a healthy, stable, thriving future for us all.',
             },
-            { name: 'keywords', content: 'beyond recovery, rent strike' },
+            {
+              name: 'keywords',
+              content: 'beyond recovery, rent strike',
+            },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         <Banner />
       </>
     )
