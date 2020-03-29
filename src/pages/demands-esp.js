@@ -63,8 +63,8 @@ const Generic = (props) => (
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>Demands</h1>
-            <h3>A people’s plan to ensure a healthy, stable, thriving future for us all.</h3>
+            <h1>Demandas</h1>
+            <h3>Reclamaciones para asegurar comunidades saludables, estables, prósperas y un futuro para todxs </h3>
             <Grid>
               <Col size="6">
                 <a
