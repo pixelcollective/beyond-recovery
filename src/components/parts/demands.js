@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Image from 'gatsby-image'
 
 const space = 1.5
 const nudge = 2
@@ -73,11 +74,11 @@ const SubDemand = styled.h3`
   font-color: rgba(255, 255, 255, 0.4);
 `
 
-const Image = styled.img`
+const Img = styled(Image)`
   max-width: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: ${(props) => props.round || 0}px;
 `
 
-export { Demand, SubDemand, Grid, Col, Container, Header, PageTitle, Image, PageSubTitle }
+export { Demand, SubDemand, Grid, Col, Container, Header, PageTitle, Img, PageSubTitle }

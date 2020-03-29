@@ -56,7 +56,10 @@ const BannerContainer = () => (
   <Banner>
     <BackgroundImage src={backgroundSrc} />
     <Scrim />
-    <h1 className={css`text-align: center;`}>
+    <h1
+      className={css`
+        text-align: center;
+      `}>
       Coming soon.
     </h1>
   </Banner>

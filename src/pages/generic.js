@@ -16,18 +16,15 @@ const Generic = (props) => (
       <Callout />
       <section id="one">
         <div className="inner">
-
           <header className="major">
-            <h1>Page title.</h1>
+            <h1>Page title</h1>
           </header>
 
           <span className="image main">
             <img src={pic} alt="" />
           </span>
 
-          <p>
-            This is the content.
-          </p>
+          <p>This is the content.</p>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti

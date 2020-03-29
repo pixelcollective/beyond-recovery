@@ -1,119 +1,108 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'gatsby-image'
 import { css } from '@emotion/core'
+import { injectGlobal } from 'emotion'
 import styled from '@emotion/styled'
-import CancelRentComponent from './CancelRent'
+import CancelRent from './CancelRent'
+import { ParallaxBox } from "./parts/parallaxBox";
 
-const Banner = styled.section`
-  max-width: 100vw;
-  width: 100%;
-  height: 80vh;
-  max-width: 100vw;
-  overflow-x: hidden;
-  max-height: 100vh;
-  overflow-y: hidden;
-`
+injectGlobal`
+  #wrapper {
+    padding-top: 0;
+  }
 
-const BackgroundImage = styled(Img)`
-  && {
-    position: fixed;
+  #header.alt {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: -10;
-    height: 100vh;
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    object-position: center center;
+    position: fixed;
   }
+`
+
+const Banner = styled.section`
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  object-fit: cover;
+  object-position: center center;
+`
+
+const BackgroundImage = styled(Image)`
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 400vw;
+  object-fit: cover;
+  object-position: center center;
 `
 
 const Scrim = styled.div`
-  && {
-    position: absolute;
-    background: linear-gradient(to bottom left, rgba(139, 0, 0, 0.8) 0%, #ff9201 80%, rgba(255, 115, 1, 1) 100%);
-    content: '';
-    display: block;
-    min-height: 100%;
-    height: 100vh;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -10;
-    max-width: 100vw;
-  }
+  background: linear-gradient(
+    to bottom left,
+    rgba(139, 0, 0, 0.3) 0%,
+    #ff9201 80%,
+    rgba(255, 115, 1, 0.8) 100%
+  );
+  content: '';
+  display: block;
+  min-height: 70vh;
+  height: 70vh;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 10;
+  position: absolute;
 `
-
-const CancelRent = styled(CancelRentComponent)``
 
 const Messaging = () => (
   <div
     css={css`
+      z-index: 20;
       position: absolute;
-      top: 15vh;
-      z-index: 0;
-      max-width: 80vw;
-
+      top: 120px;
       * {
-        max-width: 90vw;
+        max-width: 70vw;
       }
     `}>
+        <ParallaxBox triggerPoint={300} fadeOut={true} yOffset={0}>
+
     <CancelRent height={'40vh'} />
+    </ParallaxBox>
   </div>
 )
 
-const Logo = styled(Img)`
+const Logo = styled(Image)`
   position: absolute;
   right: 10vw;
-  top: calc(60vh);
+  top: calc(80vh);
   height: 20vh;
-  z-index: 50;
+  z-index: 30;
 `
 
-const BannerContainer = ({ bgFluidSrc, logoFluidSrc }) => (
+const BannerContainer = ({ bgSrc, logoSrc }) => (
+  <>
   <Banner>
-    <BackgroundImage fluid={bgFluidSrc} alt="Rent strikers fight for an equitable future." />
-    <Scrim />
-    <Messaging />
-    <AnimatePresence>
-      <motion.div style={{
-          opacity: 0,
-        }}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-          transition: {
-            delay: 3,
-            duration: 1,
-          },
-        }}
-        whileHover={{
-          scale: 1.3,
-          transition: {
-            type: 'spring',
-            damping: 10,
-            stiffness: 100,
-          },
-          animate: {
-            rotateX: `20deg`,
-            duration: 3,
-          },
-        }}>
-      <Logo
-        src={logoFluidSrc}
-        alt="Beyond Recovery logo"
-      />
-      </motion.div>
-    </AnimatePresence>
+    <ParallaxBox fadeOut={true} triggerPoint={0.5} yOffset={1200}>
+      <BackgroundImage fluid={bgSrc} alt="Rent strikers fight for an equitable future." />
+
+    </ParallaxBox>
+
+    <ParallaxBox fadeOut={true} triggerPoint={0} yOffset={30}>
+      <Scrim />
+    </ParallaxBox>
+
+      <Messaging />
   </Banner>
+  </>
 )
 
 export default BannerContainer
