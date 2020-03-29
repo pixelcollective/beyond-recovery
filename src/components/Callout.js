@@ -12,11 +12,12 @@ const Title = styled.h2`
   margin-bottom: 0;
   text-decoration: none;
   border-bottom: none;
+  line-height: 1.1;
 `
 
 const Subtitle = styled.h3`
   display: inline-block;
-  max-width: 90%;
+  max-width: 100%;
 `
 
 const Logo = styled(Image)`
@@ -64,7 +65,7 @@ export default ({ logoSrc }) => (
             marginLeft: 'auto',
             marginRight: 'auto',
             borderBottom: '1px solid white',
-            marginBottom: '4rem',
+            marginBottom: '3rem',
             paddingTop: '4rem',
           }}>
           <Title>
@@ -76,7 +77,7 @@ export default ({ logoSrc }) => (
         </header>
 
         <Flex flexWrap={'wrap'} mx={-2}>
-          <Box pr={2} py={2} width={1/3}>
+          <Box pr={2} py={2} width={1/3} display={['none', 'inline-block']} fontSize={[1, 3]}>
           <motion.div
                   animate={{
                     scale: 1,
@@ -96,7 +97,7 @@ export default ({ logoSrc }) => (
                     stiffness: 100,
                   }}><Logo fluid={logoSrc} /></motion.div>
           </Box>
-          <Box px={2} py={2} width={2/3}>
+          <Box px={2} py={2} width={[1, 2/3]}>
             <p>
               Our homes, health, and collective safety and futures are on the line. Millions of us don’t know how we are
               going to pay our rent, mortgage, or utilities on April 1st, yet landlords and banks are expecting payment as
@@ -130,13 +131,14 @@ export default ({ logoSrc }) => (
                     stiffness: 100,
                   }}>
                 <Button
+                  role="link"
                   css={css`&:hover {
                     background-color: white;
                     color: #ff6d00;
                     transition: all 0.2s ease-in-out;
                   }`}
+                  onClick={() => window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform')}
                   fontSize={1}
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform"
                   className="button">
                   Sign the Demands Platform
                 </Button>

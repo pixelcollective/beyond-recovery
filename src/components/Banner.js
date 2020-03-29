@@ -4,7 +4,7 @@ import { css } from '@emotion/core'
 import { injectGlobal } from 'emotion'
 import styled from '@emotion/styled'
 import CancelRent from './CancelRent'
-import { ParallaxBox } from "./parts/parallaxBox";
+import { ParallaxBox } from './parts/parallaxBox'
 
 injectGlobal`
   #wrapper {
@@ -23,7 +23,7 @@ const Banner = styled.section`
   position: relative;
   height: 70vh;
   width: 100vw;
-  maxWidth: 100%;
+  maxwidth: 100%;
   z-index: 0;
   padding: 0;
   margin: 0;
@@ -43,12 +43,7 @@ const BackgroundImage = styled(Image)`
 `
 
 const Scrim = styled.div`
-  background: linear-gradient(
-    to bottom left,
-    rgba(139, 0, 0, 0.3) 0%,
-    #ff9201 80%,
-    rgba(255, 115, 1, 0.8) 100%
-  );
+  background: linear-gradient(to bottom left, rgba(139, 0, 0, 0.3) 0%, #ff9201 80%, rgba(255, 115, 1, 0.8) 100%);
   content: '';
   display: block;
   min-height: 70vh;
@@ -74,9 +69,8 @@ const Messaging = () => (
         max-width: 70vw;
       }
     `}>
-        <ParallaxBox triggerPoint={300} fadeOut={true} yOffset={0}>
-
-    <CancelRent height={'40vh'} />
+    <ParallaxBox triggerPoint={300} fadeOut={true} yOffset={0}>
+      <CancelRent height={'40vh'} />
     </ParallaxBox>
   </div>
 )
@@ -93,7 +87,6 @@ const BannerContainer = ({ bgSrc, logoSrc }) => (
   <Banner>
     <ParallaxBox fadeOut={true} triggerPoint={0.5} yOffset={1200}>
       <BackgroundImage fluid={bgSrc} alt="Rent strikers fight for an equitable future." />
-
     </ParallaxBox>
 
     <ParallaxBox fadeOut={true} triggerPoint={0} yOffset={30}>

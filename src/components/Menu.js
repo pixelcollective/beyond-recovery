@@ -12,26 +12,27 @@ const Menu = (props) => (
           </Link>
         </li>
         <li>
-        <Link onClick={props.onToggleMenu} to="/festival">
-            #CancelRent Festival
+          <Link onClick={props.onToggleMenu} to="/demands">
+            Demands
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/demands">
-            Demands
+          <Link onClick={props.onToggleMenu} to="/festival">
+            #CancelRent Festival
           </Link>
         </li>
       </ul>
 
       <ul className="actions vertical">
         <li>
-          <a href="#" className="button special fit">
-            Contact
-          </a>
+          <Link onClick={props.onToggleMenu} to="/about"
+          className="button special fit">
+            About
+          </Link>
         </li>
 
         <li>
-          <a href="#" className="button fit">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform" className="button fit">
             Take Action
           </a>
         </li>
