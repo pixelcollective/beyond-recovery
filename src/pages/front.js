@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 export default () => (
   <Layout>
     <Helmet
-      title="BEYOND RECOVERY"
+      title='Beyond Recovery'
       meta={[
         {
           name: 'description',
