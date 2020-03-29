@@ -1,11 +1,49 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
 import Layout from '../components/layout'
 import Callout from '../components/Callout'
 
-const Generic = (props) => (
+/**
+ * Home Page Component
+ */
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      background: file(relativePath: { eq: "images/background.png" }) {
+        childImageSharp {
+          fluid(cropFocus: ATTENTION, duotone: { highlight: "#ff7301", shadow: "#8b0000" }) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      logo: file(relativePath: { eq: "images/logo.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image05: file(relativePath: { eq: "images/30220593851_55f8bc7af5_o.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image06: file(relativePath: { eq: "images/29676270444_5e09913cd5_o.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
   <Layout>
     <Helmet>
       <title>About</title>
@@ -22,16 +60,10 @@ const Generic = (props) => (
           <header className="major">
             <h1>About</h1>
           </header>
-          <p>
-            The Beyond Recovery campaign is initiated by the Homes For All campaign and the Right To The City Alliance.
-            Homes For All is a grassroots people’s movement fighting to win permanent, dignified and affordable homes
-            for all people.
-          </p>
+          <Callout logoSrc={data.logo.childImageSharp.fluid} />
         </div>
       </section>
-      <Callout />
     </div>
   </Layout>
 )
-
-export default Generic
+  }
