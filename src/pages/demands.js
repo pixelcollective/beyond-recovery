@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
 import Helmet from 'react-helmet'
 import { css } from '@emotion/core'
 import Layout from '../components/layout'

@@ -41,9 +41,9 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
-        <div id="wrapper">
+        <div id="wrapper" style={{overflowX: 'hidden', maxWidth: '100%'}}>
           <Header onToggleMenu={this.handleToggleMenu} />
-          {children}
+            {children}
           <Footer />
         </div>
 

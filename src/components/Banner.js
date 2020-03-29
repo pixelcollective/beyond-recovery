@@ -23,10 +23,11 @@ const Banner = styled.section`
   position: relative;
   height: 70vh;
   width: 100vw;
+  maxWidth: 100%;
   z-index: 0;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: hidden;
   object-fit: cover;
   object-position: center center;
@@ -89,7 +90,6 @@ const Logo = styled(Image)`
 `
 
 const BannerContainer = ({ bgSrc, logoSrc }) => (
-  <>
   <Banner>
     <ParallaxBox fadeOut={true} triggerPoint={0.5} yOffset={1200}>
       <BackgroundImage fluid={bgSrc} alt="Rent strikers fight for an equitable future." />
@@ -100,9 +100,8 @@ const BannerContainer = ({ bgSrc, logoSrc }) => (
       <Scrim />
     </ParallaxBox>
 
-      <Messaging />
+    <Messaging />
   </Banner>
-  </>
 )
 
 export default BannerContainer

@@ -67,9 +67,12 @@ export default ({ logoSrc }) => (
             marginBottom: '4rem',
             paddingTop: '4rem',
           }}>
-          <Title>Beyond Recovery</Title>
-
-          <Subtitle>A people’s plan to ensure a healthy, stable, thriving future for us all.</Subtitle>
+          <Title>
+            Beyond Recovery
+          </Title>
+          <Subtitle>
+            A people’s plan to ensure a healthy, stable, thriving future for us all.
+          </Subtitle>
         </header>
 
         <Flex flexWrap={'wrap'} mx={-2}>
@@ -144,5 +147,6 @@ export default ({ logoSrc }) => (
         </Flex>
       </div>
     </motion.section>
+    <hr style={{color: 'white', height: '1rem', zIndex: 50, position: 'relative', width: '100%', }}/>
   </AnimatePresence>
 )
