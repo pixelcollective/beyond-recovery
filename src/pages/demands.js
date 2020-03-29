@@ -74,12 +74,9 @@ const Generic = (props) => (
                 </a>
               </Col>
               <Col size="6">
-                {' '}
-                <a
-                  className="button"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform">
+                <Link className="button" to="/demands">
                   Leer en español
-                </a>
+                </Link>
               </Col>
             </Grid>
           </header>

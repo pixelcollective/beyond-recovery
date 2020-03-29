@@ -52,10 +52,10 @@ const Col = styled.div`
 const Generic = (props) => (
   <Layout>
     <Helmet>
-      <title>Demands</title>
+      <title>Las Demandas</title>
       <meta
         name="description"
-        content="We demand a coronavirus recovery that leaves us safely housed and free of debt."
+        content="Reclamaciones para asegurar comunidades saludables, estables, prósperas y un futuro para todxs."
       />
     </Helmet>
 
@@ -63,23 +63,20 @@ const Generic = (props) => (
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>Demandas</h1>
+            <h1>Las Demandas</h1>
             <h3>Reclamaciones para asegurar comunidades saludables, estables, prósperas y un futuro para todxs </h3>
             <Grid>
               <Col size="6">
                 <a
                   className="button special"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform">
-                  Sign the platform here
+                  href="https://docs.google.com/document/d/11sj4fTAsi5bnK0lCB2z8sOSodqBOO6OOkTP-41yVMpg/">
+                  Firme las demandas
                 </a>
               </Col>
               <Col size="6">
-                {' '}
-                <a
-                  className="button"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform">
-                  Leer en español
-                </a>
+                <Link className="button" to="/demands">
+                  Read in English
+                </Link>
               </Col>
             </Grid>
           </header>
@@ -91,14 +88,16 @@ const Generic = (props) => (
             </Col>
 
             <Col size="6">
-              <h2>We want a future free from debt.</h2>
-              <h3>Immediately Cancel Rent, Mortgage and Utility Payments, No New Debts. </h3>
+              <h2>
+                Cancelen los pagos de alquiler, hipotecas y servicios públicos inmediatamente. Nada de deudas nuevas.
+              </h2>
             </Col>
 
             <Col size="12">
               <p>
-                Cancel rent &amp; mortgage and utility payments through the duration of the public health and economic
-                crisis for all renters, homeowners and small businesses, and ensure a 3-month recovery period.
+                Cancelen los pagos de alquiler e hipotecas por la duración de la crisis de salud pública y económica
+                para todxs lxs inquilinxs, propietarixs de hogares y pequeños negocios, y aseguren un período de
+                recuperación de 3 meses.
               </p>
             </Col>
           </Grid>
@@ -109,9 +108,10 @@ const Generic = (props) => (
             </Col>
 
             <Col size="6">
-              <h2>We want a future with safe, dignified and cage-free shelter, sanctuary and homes for all.</h2>
+              <h2>¡Garanticen hogares seguros y saludables para todxs ahora! </h2>
               <h3>
-                Turn Vacant Units into Safe Homes and Decrease the Spread of COVID-19 by Releasing People from Cages.
+                Conviertan las unidades desocupadas en hogares seguros y disminuyan la propagación del COVID-19 sacando
+                a la gente de las jaulas.
               </h3>
             </Col>
           </Grid>
@@ -119,38 +119,42 @@ const Generic = (props) => (
           <Grid>
             <Col size="6">
               <p>
-                We must guarantee that every single person has a safe, healthy home during a public health crisis, and
-                beyond. We demand the local, state and federal governments turn all vacant units into safe homes for
-                people experiencing homelessness or needing healthy housing now.
+                Debemos garantizar que cada persona tenga un hogar seguro y saludable. Exigimos que el gobierno local,
+                estatal y federal conviertan todas las unidades vacantes en hogares seguros para las personas que están
+                experimentando el desamparo, sin techo o que necesitan hogares saludables ahora.
               </p>
 
               <p>
-                Further we echo the demands of people experiencing incarceration and detention and call for action to
-                ensure the health and wellbeing of people currently imprisoned and to mitigate the spread of COVID-19.
+                Además, hacemos eco de las reclamaciones de las personas encarceladas y detenidas y hacemos un llamado
+                de acción para asegurar la salud y bienestar de ellxs y para mitigar la propagación del COVID-19.
               </p>
             </Col>
 
             <Col size="6">
               <p>
-                We call for the immediate release of all people who are being held in immigrant and pretrial detention.
-                Increase the use of Elder, Medical, and Early Release. Immediately release all individuals who are 50
-                years old or older, are immunocompromised, and/or have underlying medical conditions that pose increased
-                risk from a COVID-19 infection. Release all individuals who have 90 days or less remaining in their
-                sentence, and accelerate the release of individuals with more than 90 days remaining. Release people
-                without using electronic monitors.
+                Pedimos la libertad inmediata de todas las personas que están detenidas por razones de inmigración y/o
+                con antelación a juicio. Solicitamos un aumento en la libertad temprana y por causa de edad y/o médica.
+                Pongan en libertad inmediatamente a todas las personas de 50 años en adelante y a las que estén
+                inmunocomprometidas y/o tengan condiciones médicas pre-existentes que las pongan en mayor riesgo de una
+                infección COVID-19. Pongan en libertad a todas las personas a quienes les queden 90 días o menos de su
+                sentencia y aceleren poner en libertad más rápidamente a las que les queden más de 90 días por cumplir.
+                Pónganlas en libertad sin grilletes electrónicos.
               </p>
             </Col>
           </Grid>
 
           <Grid>
             <Col size="12">
-              <h3>Permanent Refuge and Moratorium on Evictions, Foreclosures, Raids, Sweeps</h3>
+              <h3>
+                Ordenanzas para refugio permanente (o a largo plazo) y moratorias para los desahucios, desalojos,
+                ejecuciones hipotecarias, redadas, barridas y la prevención del desamparo (quedar sin techo)
+              </h3>
 
               <p>
-                All people must be able to stay in their homes, be provided adequate housing, be allowed to safely
-                shelter-in-place whether they are housed or unhoused, and be able to maintain all of their belongings to
-                ensure personal and public health and safety. Cities must provide comprehensive support to those
-                “sheltering-in-place” outside.
+                Todas las personas deben poder permanecer en sus hogares; ser provistas de hogares adecuados;
+                permitírseles refugiarse en sitio, tengan o no hogar; y mantener todas sus pertenencias para asegurar su
+                salud y seguridad personal y pública. Las ciudades deberán proveerle apoyo completo a aquellos que estén
+                “refugiándose en sitio” afuera.
               </p>
             </Col>
           </Grid>
@@ -161,17 +165,20 @@ const Generic = (props) => (
             </Col>
 
             <Col size="6">
-              <h2>We want a future where utilities vital to our personal and collective health are guaranteed.</h2>
-              <h3>Prohibit Utility Shut Offs, Rate Increases and Restore Service to all Households</h3>
+              <h2>
+                Prohiban los cortes de servicios públicos, los aumentos en las tasas y restauren los servicios a todos
+                los hogares.
+              </h2>
             </Col>
           </Grid>
 
           <Grid>
             <Col size="12">
               <p>
-                Utilities like water, gas, electric, phone and internet are vital to our personal and collective health.
-                They should be provided as a public good, especially during a public health crisis. Any current utility
-                service shut-offs should be suspended indefinitely for all households, regardless of ability to pay.
+                Los servicios públicos como agua, gas, electricidad, teléfono e internet son vitales para nuestra salud
+                personal y colectiva. Deben ser provistos como un bien público, especialmente durante una crisis de
+                salud pública. Cualquier corte a estos servicios debe ser suspendido inmediatamente para todas las
+                viviendas, no importa su capacidad de pago.
               </p>
             </Col>
           </Grid>
@@ -182,20 +189,18 @@ const Generic = (props) => (
             </Col>
 
             <Col size="6">
-              <h2>We want a future where our work is valued and protected.</h2>
-              <h3>
-                Guarantee unemployment, sick-time and paid leave, health care, safety and protections for workers, and a
-                living-wage for all.
-              </h3>
+              <h2>
+                Garanticen desempleo, tiempo por enfermedad, protecciones laborales y un ingreso básico para todxs.
+              </h2>
             </Col>
           </Grid>
 
           <Grid>
             <Col size="12">
               <p>
-                All people, regardless of status, must have access to the resources they need to provide for their
-                needs, safety and health. People doing essential work must be provided with the equipment that is
-                necessary to keep them safe in addition to any necessary child or elder care for their loved ones.
+                Todas las personas, no importa su estatus, deben tener acceso a recursos para suplir sus necesidades,
+                seguridad y salud. Las personas efectuando trabajo esencial deben ser provistas con el equipo necesario
+                para mantenerlas seguras y con acceso a cuidado de sus seres queridos, tanto mayores como niñxs.
               </p>
             </Col>
           </Grid>
