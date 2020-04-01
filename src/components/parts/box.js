@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
 import {
   background,
@@ -13,8 +13,8 @@ import {
   right,
   space,
   top,
-  typography
-} from 'styled-system';
+  typography,
+} from 'styled-system'
 
 export const composedHelpers = compose(
   background,
@@ -28,11 +28,11 @@ export const composedHelpers = compose(
   left,
   right,
   position,
-  boxShadow
-);
+  boxShadow,
+)
 
 export const Box = styled.div`
   ${composedHelpers}
-`;
+`
 
-Box.defaultProps = {};
+Box.defaultProps = {}

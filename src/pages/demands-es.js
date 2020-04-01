@@ -21,27 +21,17 @@ import {
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      image01: file(relativePath: {
-        eq: "images/30221094971_5494396af1_o.jpg",
-      }) {
+      image01: file(relativePath: { eq: "images/30221094971_5494396af1_o.jpg" }) {
         childImageSharp {
-          fluid(
-            cropFocus: ATTENTION,
-            toFormat: WEBP,
-          ) {
+          fluid(cropFocus: ATTENTION, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }
       }
 
-      image02: file(relativePath: {
-        eq: "images/29676278054_4b8b6994ab_o.jpg",
-      }) {
+      image02: file(relativePath: { eq: "images/29676278054_4b8b6994ab_o.jpg" }) {
         childImageSharp {
-          fluid(
-            cropFocus: ATTENTION,
-            toFormat: WEBP,
-          ) {
+          fluid(cropFocus: ATTENTION, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -106,8 +96,8 @@ export default () => {
             </SubDemand>
             <p>
               Cancelen los pagos de alquiler e hipotecas por la duración de la crisis de salud pública y económica para
-              todxs lxs inquilinxs, propietarixs de hogares y pequeños negocios, y aseguren un período de recuperación de
-              3 meses.
+              todxs lxs inquilinxs, propietarixs de hogares y pequeños negocios, y aseguren un período de recuperación
+              de 3 meses.
             </p>
           </Col>
         </Grid>
@@ -116,8 +106,8 @@ export default () => {
           <Col size="12">
             <Demand>Garanticen hogares seguros y saludables para todxs ahora!</Demand>
             <SubDemand>
-              Conviertan las unidades desocupadas en hogares seguros y disminuyan la propagación del COVID-19 sacando a la
-              gente de las jaulas.
+              Conviertan las unidades desocupadas en hogares seguros y disminuyan la propagación del COVID-19 sacando a
+              la gente de las jaulas.
             </SubDemand>
           </Col>
         </Grid>
@@ -140,11 +130,11 @@ export default () => {
             <p>
               Pedimos la libertad inmediata de todas las personas que están detenidas por razones de inmigración y/o con
               antelación a juicio. Solicitamos un aumento en la libertad temprana y por causa de edad y/o médica. Pongan
-              en libertad inmediatamente a todas las personas de 50 años en adelante y a las que estén inmunocomprometidas
-              y/o tengan condiciones médicas pre-existentes que las pongan en mayor riesgo de una infección COVID-19.
-              Pongan en libertad a todas las personas a quienes les queden 90 días o menos de su sentencia y aceleren
-              poner en libertad más rápidamente a las que les queden más de 90 días por cumplir. Pónganlas en libertad sin
-              grilletes electrónicos.
+              en libertad inmediatamente a todas las personas de 50 años en adelante y a las que estén
+              inmunocomprometidas y/o tengan condiciones médicas pre-existentes que las pongan en mayor riesgo de una
+              infección COVID-19. Pongan en libertad a todas las personas a quienes les queden 90 días o menos de su
+              sentencia y aceleren poner en libertad más rápidamente a las que les queden más de 90 días por cumplir.
+              Pónganlas en libertad sin grilletes electrónicos.
             </p>
           </Col>
         </Grid>
@@ -157,10 +147,10 @@ export default () => {
             </SubDemand>
 
             <p>
-              Todas las personas deben poder permanecer en sus hogares; ser provistas de hogares adecuados; permitírseles
-              refugiarse en sitio, tengan o no hogar; y mantener todas sus pertenencias para asegurar su salud y seguridad
-              personal y pública. Las ciudades deberán proveerle apoyo completo a aquellos que estén “refugiándose en
-              sitio” afuera.
+              Todas las personas deben poder permanecer en sus hogares; ser provistas de hogares adecuados;
+              permitírseles refugiarse en sitio, tengan o no hogar; y mantener todas sus pertenencias para asegurar su
+              salud y seguridad personal y pública. Las ciudades deberán proveerle apoyo completo a aquellos que estén
+              “refugiándose en sitio” afuera.
             </p>
           </Col>
         </Grid>
@@ -197,8 +187,9 @@ export default () => {
                 </SubDemand>
                 <p>
                   Todas las personas, no importa su estatus, deben tener acceso a recursos para suplir sus necesidades,
-                  seguridad y salud. Las personas efectuando trabajo esencial deben ser provistas con el equipo necesario
-                  para mantenerlas seguras y con acceso a cuidado de sus seres queridos, tanto mayores como niñxs.
+                  seguridad y salud. Las personas efectuando trabajo esencial deben ser provistas con el equipo
+                  necesario para mantenerlas seguras y con acceso a cuidado de sus seres queridos, tanto mayores como
+                  niñxs.
                 </p>
               </Col>
             </Grid>

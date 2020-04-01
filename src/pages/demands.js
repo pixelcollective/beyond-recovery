@@ -18,30 +18,20 @@ import {
 /**
  * Page: Demands
  */
-export default props => {
+export default (props) => {
   const data = useStaticQuery(graphql`
     query {
-      image01: file(relativePath: {
-        eq: "images/30221094971_5494396af1_o.jpg",
-      }) {
+      image01: file(relativePath: { eq: "images/30221094971_5494396af1_o.jpg" }) {
         childImageSharp {
-          fluid(
-            cropFocus: ATTENTION,
-            toFormat: WEBP,
-          ) {
+          fluid(cropFocus: ATTENTION, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }
       }
 
-      image02: file(relativePath: {
-        eq: "images/29676278054_4b8b6994ab_o.jpg",
-      }) {
+      image02: file(relativePath: { eq: "images/29676278054_4b8b6994ab_o.jpg" }) {
         childImageSharp {
-          fluid(
-            cropFocus: ATTENTION,
-            toFormat: WEBP,
-          ) {
+          fluid(cropFocus: ATTENTION, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -121,24 +111,24 @@ export default props => {
           <Col size={6}>
             <p>
               We must guarantee that every single person has a safe, healthy home during a public health crisis, and
-              beyond. We demand the local, state and federal governments turn all vacant units into safe homes for people
-              experiencing homelessness or needing healthy housing now.
+              beyond. We demand the local, state and federal governments turn all vacant units into safe homes for
+              people experiencing homelessness or needing healthy housing now.
             </p>
 
             <p>
-              Further we echo the demands of people experiencing incarceration and detention and call for action to ensure
-              the health and wellbeing of people currently imprisoned and to mitigate the spread of COVID-19.
+              Further we echo the demands of people experiencing incarceration and detention and call for action to
+              ensure the health and wellbeing of people currently imprisoned and to mitigate the spread of COVID-19.
             </p>
           </Col>
 
           <Col size={6}>
             <p>
               We call for the immediate release of all people who are being held in immigrant and pretrial detention.
-              Increase the use of Elder, Medical, and Early Release. Immediately release all individuals who are 50 years
-              old or older, are immunocompromised, and/or have underlying medical conditions that pose increased risk from
-              a COVID-19 infection. Release all individuals who have 90 days or less remaining in their sentence, and
-              accelerate the release of individuals with more than 90 days remaining. Release people without using
-              electronic monitors.
+              Increase the use of Elder, Medical, and Early Release. Immediately release all individuals who are 50
+              years old or older, are immunocompromised, and/or have underlying medical conditions that pose increased
+              risk from a COVID-19 infection. Release all individuals who have 90 days or less remaining in their
+              sentence, and accelerate the release of individuals with more than 90 days remaining. Release people
+              without using electronic monitors.
             </p>
           </Col>
         </Grid>
@@ -158,7 +148,10 @@ export default props => {
 
         <Grid>
           <Col size="12">
-            <Demand> We want a future where utilities vital to our personal and collective health are guaranteed.</Demand>
+            <Demand>
+              {' '}
+              We want a future where utilities vital to our personal and collective health are guaranteed.
+            </Demand>
             <SubDemand>Prohibit Utility Shut Offs, Rate Increases and Restore Service to all Households</SubDemand>
             <p>
               Utilities like water, gas, electric, phone and internet are vital to our personal and collective health.
@@ -178,8 +171,8 @@ export default props => {
 
               <Col size={6.8}>
                 <SubDemand>
-                  Guarantee unemployment, sick-time and paid leave, health care, safety and protections for workers, and a
-                  living-wage for all.
+                  Guarantee unemployment, sick-time and paid leave, health care, safety and protections for workers, and
+                  a living-wage for all.
                 </SubDemand>
                 <p>
                   All people, regardless of status, must have access to the resources they need to provide for their

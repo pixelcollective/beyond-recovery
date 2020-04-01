@@ -68,62 +68,46 @@ export default ({ logoSrc }) => (
             marginBottom: '3rem',
             paddingTop: '4rem',
           }}>
-          <Title>
-            Beyond Recovery
-          </Title>
-          <Subtitle>
-            A people’s plan to ensure a healthy, stable, thriving future for us all.
-          </Subtitle>
+          <Title>Beyond Recovery</Title>
+          <Subtitle>A people’s plan to ensure a healthy, stable, thriving future for us all.</Subtitle>
         </header>
 
-        <Flex
-          flexWrap={'wrap'}
-          mx={-2}>
-          <Box
-            pr={2}
-            py={2}
-            width={1/3}
-            display={[
-              'none',
-              'inline-block',
-            ]}
-            fontSize={[1, 3]}>
-          <motion.div
-            animate={{
-              scale: 1,
-              x: -20,
-            }}
-            whileHover={{
-              scale: 1.1,
-              duration: 0.25,
-              x: -40,
-              transition: {
+        <Flex flexWrap={'wrap'} mx={-2}>
+          <Box pr={2} py={2} width={1 / 3} display={['none', 'inline-block']} fontSize={[1, 3]}>
+            <motion.div
+              animate={{
+                scale: 1,
+                x: -20,
+              }}
+              whileHover={{
+                scale: 1.1,
+                duration: 0.25,
+                x: -40,
+                transition: {
+                  type: 'spring',
+                  stiffness: 100,
+                },
+              }}
+              transition={{
                 type: 'spring',
                 stiffness: 100,
-              },
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 100,
-            }}>
+              }}>
               <Logo fluid={logoSrc} />
             </motion.div>
           </Box>
-          <Box px={2} py={2} width={[1, 2/3]}>
+          <Box px={2} py={2} width={[1, 2 / 3]}>
             <p>
               Our homes, health, and collective safety and futures are on the line. Millions of us don’t know how we are
-              going to pay our rent, mortgage, or utilities on April 1st, yet landlords and banks are expecting payment as
-              if it’s business as usual. It’s not.
+              going to pay our rent, mortgage, or utilities on April 1st, yet landlords and banks are expecting payment
+              as if it’s business as usual. It’s not.
             </p>
 
             <p>
-              Join millions of us to fight for a future free from debt and to win a national suspension on rent, mortgage
-              and utility payments!
+              Join millions of us to fight for a future free from debt and to win a national suspension on rent,
+              mortgage and utility payments!
             </p>
 
-            <Subtitle>
-            Worried about rent?
-            </Subtitle>
+            <Subtitle>Worried about rent?</Subtitle>
             <ul className="actions">
               <li>
                 <motion.div
@@ -145,20 +129,24 @@ export default ({ logoSrc }) => (
                     type: 'spring',
                     stiffness: 100,
                   }}>
-                <Button
-                  role="link"
-                  css={css`&:hover {
-                    background-color: white;
-                    color: #ff6d00;
-                    transition: all 0.2s ease-in-out;
-                  }`}
-                  onClick={() => {
-                    return window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform')
-                  }}
-                  fontSize={1}
-                  className="button">
-                  Join us here
-                </Button>
+                  <Button
+                    role="link"
+                    css={css`
+                      &:hover {
+                        background-color: white;
+                        color: #ff6d00;
+                        transition: all 0.2s ease-in-out;
+                      }
+                    `}
+                    onClick={() => {
+                      return window.location.replace(
+                        'https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform',
+                      )
+                    }}
+                    fontSize={1}
+                    className="button">
+                    Join us here
+                  </Button>
                 </motion.div>
               </li>
             </ul>

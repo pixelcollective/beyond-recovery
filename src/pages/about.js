@@ -44,26 +44,26 @@ export default () => {
     }
   `)
   return (
-  <Layout>
-    <Helmet>
-      <title>About</title>
-      <meta
-        name="description"
-        content="We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed."
-      />
-      <html lang="en" />
-    </Helmet>
+    <Layout>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name="description"
+          content="We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed."
+        />
+        <html lang="en" />
+      </Helmet>
 
-    <div id="main" className="alt">
-      <section id="one">
-        <div className="inner">
-          <header className="major">
-            <h1>About</h1>
-          </header>
-          <Callout logoSrc={data.logo.childImageSharp.fluid} />
-        </div>
-      </section>
-    </div>
-  </Layout>
-)
-  }
+      <div id="main" className="alt">
+        <section id="one">
+          <div className="inner">
+            <header className="major">
+              <h1>About</h1>
+            </header>
+            <Callout logoSrc={data.logo.childImageSharp.fluid} />
+          </div>
+        </section>
+      </div>
+    </Layout>
+  )
+}

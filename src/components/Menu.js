@@ -25,14 +25,15 @@ const Menu = (props) => (
 
       <ul className="actions vertical">
         <li>
-          <Link onClick={props.onToggleMenu} to="/about"
-          className="button special fit">
+          <Link onClick={props.onToggleMenu} to="/about" className="button special fit">
             About
           </Link>
         </li>
 
         <li>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform" className="button fit">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform"
+            className="button fit">
             Take Action
           </a>
         </li>
