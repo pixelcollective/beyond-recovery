@@ -85,7 +85,7 @@ export default () => {
               <Image
                 fluid={data.image01.childImageSharp.fluid}
                 style={{
-                  border: '1px solid rgba(255, 255, 255, 0.4)',
+                  border: '1px solid rgba(0, 0, 0, 0.4)',
                   minWidth: '100%',
                   width: '64rem',
                   height: '32rem',
@@ -94,7 +94,7 @@ export default () => {
               />
               <div
                 style={{
-                  background: 'rgba(0, 0, 0, 0.4)',
+                  backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4))',
                   width: '100vw',
                   height: '100%',
                   position: 'absolute',
@@ -140,7 +140,8 @@ export default () => {
               />
               <div
                 style={{
-                  background: 'rgba(0, 0, 0, 0.4)',
+                  backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4))',
+                  color: 'rgba(0, 130, 242, 0.4)',
                   width: '100vw',
                   height: '100%',
                   position: 'absolute',
@@ -148,7 +149,7 @@ export default () => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  ['&::hover']: { background: 'rgba(0, 0, 0, 0)' },
+                  '&:hover': { background: 'rgba(0, 0, 0, 0)' },
                 }}></div>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: '2rem' }}>
                 <div className="inner">
@@ -158,7 +159,7 @@ export default () => {
                   <p>A people’s plan to ensure a healthy, stable, thriving future for us all.</p>
                   <ul className="actions">
                     <li>
-                      <Link to="/demands" className="button">
+                      <Link to="/demands" class="button">
                         Learn more
                       </Link>
                     </li>
