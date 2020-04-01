@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import Image from 'gatsby-image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Flex, Box, Button } from 'rebass'
@@ -44,6 +43,7 @@ export default ({ logoSrc }) => (
     <motion.section
       style={{
         position: 'relative',
+        paddingTop: '1.5rem',
         paddingLeft: '1rem',
         paddingRight: '1rem',
         paddingBottom: '3rem',
@@ -76,26 +76,38 @@ export default ({ logoSrc }) => (
           </Subtitle>
         </header>
 
-        <Flex flexWrap={'wrap'} mx={-2}>
-          <Box pr={2} py={2} width={1/3} display={['none', 'inline-block']} fontSize={[1, 3]}>
+        <Flex
+          flexWrap={'wrap'}
+          mx={-2}>
+          <Box
+            pr={2}
+            py={2}
+            width={1/3}
+            display={[
+              'none',
+              'inline-block',
+            ]}
+            fontSize={[1, 3]}>
           <motion.div
-                  animate={{
-                    scale: 1,
-                    x: -20,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                    duration: 0.25,
-                    x: -40,
-                    transition: {
-                      type: 'spring',
-                      stiffness: 100,
-                    },
-                  }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 100,
-                  }}><Logo fluid={logoSrc} /></motion.div>
+            animate={{
+              scale: 1,
+              x: -20,
+            }}
+            whileHover={{
+              scale: 1.1,
+              duration: 0.25,
+              x: -40,
+              transition: {
+                type: 'spring',
+                stiffness: 100,
+              },
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+            }}>
+              <Logo fluid={logoSrc} />
+            </motion.div>
           </Box>
           <Box px={2} py={2} width={[1, 2/3]}>
             <p>
@@ -109,7 +121,10 @@ export default ({ logoSrc }) => (
               and utility payments!
             </p>
 
-            <ul className="actions" style={{ marginTop: '2rem' }}>
+            <Subtitle>
+            Worried about rent?
+            </Subtitle>
+            <ul className="actions">
               <li>
                 <motion.div
                   initial={{
@@ -137,10 +152,12 @@ export default ({ logoSrc }) => (
                     color: #ff6d00;
                     transition: all 0.2s ease-in-out;
                   }`}
-                  onClick={() => window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform')}
+                  onClick={() => {
+                    return window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform')
+                  }}
                   fontSize={1}
                   className="button">
-                  Sign the Demands Platform
+                  Join us here
                 </Button>
                 </motion.div>
               </li>
@@ -149,6 +166,5 @@ export default ({ logoSrc }) => (
         </Flex>
       </div>
     </motion.section>
-    <hr style={{color: 'white', height: '1rem', zIndex: 50, position: 'relative', width: '100%', }}/>
   </AnimatePresence>
 )
