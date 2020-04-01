@@ -159,7 +159,7 @@ export default () => {
                   <p>A people’s plan to ensure a healthy, stable, thriving future for us all.</p>
                   <ul className="actions">
                     <li>
-                      <Link to="/demands" class="button">
+                      <Link to="/demands" className="button">
                         Learn more
                       </Link>
                     </li>
