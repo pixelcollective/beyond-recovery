@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import Layout from '../components/layout'
-import { Flex, Box } from 'rebass'
+import { Heading, Text, Flex, Box } from 'rebass'
 
 const Image = styled.img`
   max-width: 100%;
@@ -72,10 +72,10 @@ export default props => (
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <header className="major">
-            <h1>Holler at your Representative
-            </h1>
-            <h2><em>Support Our #DebtFreeFuture #BeyondRecovery</em></h2>
+          <header>
+            <Heading fontSize={6} style={{marginBottom: 0, fontFamily: 'Kalam'}}>Holler at your Representative
+            </Heading>
+            <h2 style={{lineBreak: 'word'}}>Support Our #DebtFreeFuture #BeyondRecovery</h2>
           </header>
 
           <Flex flexDirection={['column-reverse', 'row']}>
