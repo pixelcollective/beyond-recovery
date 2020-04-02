@@ -56,7 +56,8 @@ export default props => (
     </Helmet>
 
     {(() => {
-        ((n,e,w,m,o,d) => {
+      if (typeof document !== 'undefined') {
+          ((n,e,w,m,o,d) => {
           m = n.createElement(e)
           m.async = 1
           m.src = w;
@@ -67,6 +68,7 @@ export default props => (
           'script',
           '//engage.newmode.net/embed/18244/18289.js'
         )
+      }
     })()}
 
     <div id="main" className="alt">
