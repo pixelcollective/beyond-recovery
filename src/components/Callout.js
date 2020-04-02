@@ -140,7 +140,7 @@ export default ({ logoSrc }) => (
                     `}
                     onClick={() => {
                       return window.location.replace(
-                        'https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform',
+                        'https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform',
                       )
                     }}
                     fontSize={1}

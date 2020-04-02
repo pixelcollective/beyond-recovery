@@ -21,6 +21,11 @@ const Menu = (props) => (
             #CancelRent Festival
           </Link>
         </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/debt-free-future">
+            Debt Free Future
+          </Link>
+        </li>
       </ul>
 
       <ul className="actions vertical">

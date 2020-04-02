@@ -45,31 +45,38 @@ const Col = styled.div`
 `
 
 const Action = ({ id }) => {
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      ;((n, e, w, m, o, d) => {
-        m = n.createElement(e)
-        m.async = 1
-        m.src = w
-        o = n.getElementsByTagName(e)[0]
-        o.parentNode.insertBefore(m, o)
-      })(document, 'script', `//engage.newmode.net/embed/${id[0]}/${id[1]}.js`)
-    }
-  }, [])
+  if (typeof document !== 'undefined') {
+    const query = new URLSearchParams(window.location.search);
+    console.log(query.get('action'), query.get('id'));
 
-  return (
-    <Box
-      fontFamily={'system-ui'}
-      id={`newmode-embed-${id[0]}-${id[1]}`}
-      css={css`
-        *,
-        &:*,
-        & {
-          body, p, li, em, i, h1, b, h2, h3, h4, h5, h6, strong, body.page-nm-letter, div.l-main, div.node--letter--embed, .form-item .item-label label, .form-item-submitted-newspapers-checkboxes, a.nm-branding-link, .webform-component-addressfield .form-item[class*="autocompletion-block"] + div[class*="toogle"] a, .webform-component a
-        }
-      `}
-    />
-  )
+    return (() => {
+      useEffect(() => {
+        ((n, e, w, m, o, d) => {
+            m = n.createElement(e)
+            m.async = 1
+            m.src = w
+            o = n.getElementsByTagName(e)[0]
+            o.parentNode.insertBefore(m, o)
+          })(document, 'script', `//engage.newmode.net/embed/${query.get('act1') || id[0]}/${query.get('act2') || id[1]}.js`)
+        }, [])
+
+        return (
+          <Box
+            fontFamily={'system-ui'}
+            id={`newmode-embed-${query.get('act1') || id[0]}-${query.get('act2') || id[1]}`}
+            css={css`
+              *,
+              &:*,
+              & {
+                body, p, li, em, i, h1, b, h2, h3, h4, h5, h6, strong, body.page-nm-letter, div.l-main, div.node--letter--embed, .form-item .item-label label, .form-item-submitted-newspapers-checkboxes, a.nm-branding-link, .webform-component-addressfield .form-item[class*="autocompletion-block"] + div[class*="toogle"] a, .webform-component a
+              }
+            `}
+          />
+        )
+    })()
+  }
+
+  return null;
 }
 
 export default (props) => {
