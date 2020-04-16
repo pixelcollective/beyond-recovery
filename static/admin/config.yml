@@ -20,7 +20,7 @@ collections:
     fields:
       - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Subheading", name: "subheading", widget: "string" }
-      - { label: "Embed markup (div tag)", name: "embed", widget: "code" }
-      - { label: "Embed scripts (script tag)", name: "scripts", widget: "code" }
+      - { label: "Embed markup (div tag)", name: "embed", widget: "text" }
+      - { label: "Embed scripts (script tag)", name: "scripts", widget: "text" }
       - { label: "Before the jump", name: "before", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
