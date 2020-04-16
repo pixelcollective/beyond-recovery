@@ -12,9 +12,12 @@ const ActionPagePreview = ({ entry, getAsset }) => {
 
   return data
     ? <ActionPage
-        image={getAsset(data.image)}
-        name={data.name}
+        image={data.image}
+        heading={data.heading}
+        subheading={data.subheading}
         embed={data.embed}
+        before={data.before}
+        scripts={data.scripts}
         body={data.body}
       />
     : <div>Loading...</div>

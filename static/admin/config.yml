@@ -18,7 +18,10 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Heading", name: "heading", widget: "string" }
+      - { label: "Subheading", name: "subheading", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Embed", name: "embed", widget: "text" }
+      - { label: "Embed markup (div tag)", name: "embed", widget: "text" }
+      - { label: "Embed scripts (script tag)", name: "scripts", widget: "text" }
+      - { label: "Before the jump", name: "before", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
