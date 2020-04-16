@@ -58,7 +58,7 @@ const Action = ({ scripts, embed }) => {
   return null
 }
 
-export default ({ name, heading, subheading, before, body, image, embed, scripts, ...props }) => {
+export default ({ name, heading, subheading, before, body, embed, scripts, ...props }) => {
   const [readToggle, setReadToggle] = useState(false)
 
   return (
@@ -81,6 +81,7 @@ export default ({ name, heading, subheading, before, body, image, embed, scripts
                   { heading }
                 </Heading>
               )}
+
               {subheading && (
                 <h2 style={{ lineBreak: 'word' }}>{ subheading }</h2>
               )}

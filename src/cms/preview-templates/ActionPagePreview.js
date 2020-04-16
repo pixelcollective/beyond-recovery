@@ -5,14 +5,12 @@ import ActionPage from '../../pages/action'
  * Action Preview
  *
  * @param {object}   entry
- * @param {function} getAsset
  */
-const ActionPagePreview = ({ entry, getAsset }) => {
+const ActionPagePreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
   return data
     ? <ActionPage
-        image={getAsset(data.image)}
         heading={data.heading}
         subheading={data.subheading}
         embed={data.embed}
