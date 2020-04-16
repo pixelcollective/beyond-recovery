@@ -91,8 +91,7 @@ export default ({ name, heading, subheading, before, body, embed, scripts, ...pr
               <Box mr={[0, 4]} width={[1, 1 / 2]}>
                 {! readToggle && before && (
                   <Box>
-                    { before }
-
+                    <Box dangerouslySetInnerHTML={{__html: before }} />
                     <Button fontSize={1} onClick={() => setReadToggle(true)}>
                       Read more
                     </Button>
@@ -100,9 +99,12 @@ export default ({ name, heading, subheading, before, body, embed, scripts, ...pr
                 )}
 
                 {body && (
-                  <Box style={{ opacity: readToggle ? 1 : 0, transition: 'opacity 0.3s ease-in-out' }}>
-                    { body }
-                  </Box>
+                  <Box
+                    dangerouslySetInnerHTML={{__html: body }}
+                    style={{
+                      opacity: readToggle ? 1 : 0,
+                      transition: 'opacity 0.3s ease-in-out',
+                    }} />
                 )}
               </Box>
 
