@@ -4,6 +4,7 @@ module.exports = {
     description: 'Beyond Recovery',
   },
   plugins: [
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
