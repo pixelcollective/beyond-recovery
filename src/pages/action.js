@@ -1,49 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
-import styled from '@emotion/styled'
-import { css } from '@emotion/core'
 import Layout from '../components/layout'
-import { Heading, Text, Flex, Box, Button } from 'rebass'
+import { Heading, Flex, Box, Button } from 'rebass'
 
-const Image = styled.img`
-  max-width: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: ${(props) => props.round || 0}px;
-`
-
-const space = 1.5
-const smallScreen = `980px`
-
-const Grid = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @media screen and (max-width: ${smallScreen}) {
-    flex-direction: column;
-  }
-`
-
-const Col = styled.div`
-  width: ${(props) => (props.size / 12) * 100 - 2}%;
-  display: flex;
-  flex-direction: column;
-  margin: ${space / 2}rem auto ${space / 2}rem auto;
-
-  &::first-of-type,
-  &::last-of-type {
-    width: ${(props) => (props.size / 12) * 100}%;
-  }
-
-  @media screen and (max-width: ${smallScreen}) {
-    flex-direction: column;
-    width: 100%;
-  }
-`
-
+/**
+ * Action
+ */
 const Action = ({ scripts, embed }) => {
   {scripts && (
     <Helmet>
