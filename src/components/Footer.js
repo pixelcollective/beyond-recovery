@@ -19,16 +19,19 @@ export default () => (
             <span className="label">Twitter</span>
           </a>
         </li>
+
         <li>
           <a href="https://www.facebook.com/RTCalliance/" className="icon alt fa-facebook">
             <span className="label">Facebook</span>
           </a>
         </li>
+
         <li>
           <a href="https://www.instagram.com/ourcityrttc/" className="icon alt fa-instagram">
             <span className="label">Instagram</span>
           </a>
         </li>
+
         <li>
           <a href="mailto: info@righttothecity.org" className="icon alt fa-envelope">
             <span className="label">Email</span>
