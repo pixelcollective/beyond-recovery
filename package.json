@@ -23,6 +23,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.1.27",
     "netlify-cms": "^2.10.44",
+    "netlify-cms-media-library-uploadcare": "^0.5.5",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

@@ -4,7 +4,6 @@ module.exports = {
     description: 'Beyond Recovery',
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -54,6 +53,12 @@ module.exports = {
         mergeCachingHeaders: true, // boolean to turn off the default caching headers
         transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     'gatsby-plugin-sass',
