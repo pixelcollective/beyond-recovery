@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import styled from '@emotion/styled'
 import { Flex, Text, Heading, Box, sx } from 'rebass'
 import Layout from '../components/layout'
