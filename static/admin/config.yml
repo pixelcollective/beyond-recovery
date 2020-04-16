@@ -14,9 +14,9 @@ public_folder: /img
 collections:
   - name: "action"
     label: "Action"
+    identifier_field: heading
     folder: "src/pages/action"
     create: true
-    slug: "{{slug}}"
     fields:
       - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Subheading", name: "subheading", widget: "string" }
