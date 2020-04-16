@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import { css } from '@emotion/core'
 import { Box } from 'rebass'
