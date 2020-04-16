@@ -15,6 +15,7 @@ collections:
   - name: "action"
     label: "Action"
     identifier_field: heading
+    slug: "{{slug}}"
     folder: "src/pages/action"
     create: true
     fields:
