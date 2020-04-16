@@ -15,7 +15,7 @@ export default () => (
     <div className="inner">
       <ul className="icons">
         <li>
-          <a href="https://twitter.com/ourcity" className="icon alt fa-twitter">
+          <a href="https://twitter.com/ourcityRTTC" className="icon alt fa-twitter">
             <span className="label">Twitter</span>
           </a>
         </li>
@@ -25,7 +25,7 @@ export default () => (
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/ourcityrtc/" className="icon alt fa-instagram">
+          <a href="https://www.instagram.com/ourcityrttc/" className="icon alt fa-instagram">
             <span className="label">Instagram</span>
           </a>
         </li>
