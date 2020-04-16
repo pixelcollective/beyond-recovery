@@ -64,10 +64,10 @@ export default ({ name, heading, subheading, before, body, embed, scripts, ...pr
   return (
     <Layout>
       <Helmet>
-        <title>Holler at your Representative: Support Our #DebtFreeFuture</title>
+        <title>{heading}</title>
         <meta
           name="description"
-          content="We need #HomesForAll to #FlattenTheCurve. That's why we're putting pressure on our decision-makers at every level to enact our people’s plan to ensure a healthy, stable, thriving future for us all."
+          content={subheading}
         />
         <html lang="en" />
       </Helmet>
