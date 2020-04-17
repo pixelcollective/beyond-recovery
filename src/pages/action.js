@@ -21,8 +21,8 @@ const Action = () => {
         return (
           <>
             <Helmet>
-            <title>{query.get('title')}</title>
-            <meta name="description" content={query.get('description')} />
+            <title>{query.get('title') || 'Take Action with Cancel Rent'}</title>
+            <meta name="description" content={query.get('description') || 'Together, we are building a powerful movement of renters, homeowners and community members across the country to win homes for all.'} />
             <html lang="en" />
           </Helmet>
           <Box
