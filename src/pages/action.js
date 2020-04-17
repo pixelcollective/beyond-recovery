@@ -1,84 +1,57 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
-import { Heading, Flex, Box, Button } from 'rebass'
+import { Box } from 'rebass'
 
-/**
- * Action
- */
-const Action = ({ scripts, embed }) => {
-  {scripts && (
-    <Helmet>
-      {scripts}
-    </Helmet>
-  )}
-
+const Action = () => {
   if (typeof document !== 'undefined') {
-    return embed
+    const query = new URLSearchParams(window.location.search);
+
+    return (() => {
+      useEffect(() => {
+        ((n, e, w, m, o, d) => {
+            m = n.createElement(e)
+            m.async = 1
+            m.src = w
+            o = n.getElementsByTagName(e)[0]
+            o.parentNode.insertBefore(m, o)
+          })(document, 'script', `//engage.newmode.net/embed/${query.get('action')}/${query.get('id')}.js`)
+        }, [])
+
+        return (
+          <>
+            <Helmet>
+            <title>{query.get('title')}</title>
+            <meta name="description" content={query.get('description')} />
+            <html lang="en" />
+          </Helmet>
+          <Box
+            fontFamily={'system-ui'}
+            id={`newmode-embed-${query.get('action')}-${query.get('id')}`}
+          />
+        </>
+      )
+    })()
   }
 
-  return null
+  return null;
 }
 
-export default ({ name, heading, subheading, before, body, embed, scripts, ...props }) => {
-  const [readToggle, setReadToggle] = useState(false)
+const ActionPage = () => (
+  <Layout>
+    <div id="main" className="alt">
+      <section id="one">
+        <div className="inner">
+          <Box
+            width={[1, 4/5]}
+            mx={'auto'}
+            mb={4}>
+            <Action />
+          </Box>
+        </div>
+      </section>
+    </div>
+  </Layout>
+)
 
-  return (
-    <Layout>
-      <Helmet>
-        <title>{heading}</title>
-        <meta
-          name="description"
-          content={subheading}
-        />
-        <html lang="en" />
-      </Helmet>
-
-      <div id="main" className="alt">
-        <section id="one">
-          <div className="inner">
-            <header>
-              {heading && (
-                <Heading fontSize={6} style={{ marginBottom: 0, fontFamily: 'Kalam' }}>
-                  { heading }
-                </Heading>
-              )}
-
-              {subheading && (
-                <h2 style={{ lineBreak: 'word' }}>{ subheading }</h2>
-              )}
-            </header>
-
-            <Flex flexDirection={['column-reverse', 'row']}>
-              <Box mr={[0, 4]} width={[1, 1 / 2]}>
-                {! readToggle && before && (
-                  <Box>
-                    <Box dangerouslySetInnerHTML={{__html: before }} />
-                    <Button fontSize={1} onClick={() => setReadToggle(true)}>
-                      Read more
-                    </Button>
-                  </Box>
-                )}
-
-                {body && (
-                  <Box
-                    dangerouslySetInnerHTML={{__html: body }}
-                    style={{
-                      opacity: readToggle ? 1 : 0,
-                      transition: 'opacity 0.3s ease-in-out',
-                    }} />
-                )}
-              </Box>
-
-              {embed && (
-                <Box width={[1, 1 / 2]} mb={4}>
-                  <Action embed={embed} scripts={scripts || null} />
-                </Box>
-              )}
-            </Flex>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  )
-}
+export default ActionPage

@@ -61,13 +61,6 @@ const Action = ({ id }) => {
     <Box
       fontFamily={'system-ui'}
       id={`newmode-embed-${id[0]}-${id[1]}`}
-      css={css`
-        *,
-        &:*,
-        & {
-          body, p, li, em, i, h1, b, h2, h3, h4, h5, h6, strong, body.page-nm-letter, div.l-main, div.node--letter--embed, .form-item .item-label label, .form-item-submitted-newspapers-checkboxes, a.nm-branding-link, .webform-component-addressfield .form-item[class*="autocompletion-block"] + div[class*="toogle"] a, .webform-component a
-        }
-      `}
     />
   )
 }
