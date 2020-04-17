@@ -107,7 +107,7 @@ export default ({ logoSrc }) => (
               mortgage and utility payments!
             </p>
 
-            <Subtitle>Worried about rent?</Subtitle>
+            <Subtitle>Worried about paying your rent or mortgage?</Subtitle>
             <ul className="actions">
               <li>
                 <motion.div
