@@ -9,13 +9,10 @@ export default (props) => (
     <Helmet
       lang={'en'}
       title={'Donate'}
-      meta={[
-        {property: 'description', content: "We need #HomesForAll to #FlattenTheCurve. That's why we're putting pressure on our decision-makers at every level to enact our people’s plan to ensure a healthy, stable, thriving future for us all."}
-      ]}
-      script={[
-        {type: 'text/javascript', src: 'https://default.salsalabs.org/api/widget/template/80c90367-85b8-4467-8b5d-5025c12aef68/?tId=b4db2b93-9f57-466c-b8a3-b91a9826c065'}
-      ]}
+      meta={[{ property: 'description', content: "We need #HomesForAll to #FlattenTheCurve. That's why we're putting pressure on our decision-makers at every level to enact our people’s plan to ensure a healthy, stable, thriving future for us all." }]}
+      script={[{ type: 'text/javascript', src: 'https://default.salsalabs.org/api/widget/template/80c90367-85b8-4467-8b5d-5025c12aef68/?tId=b4db2b93-9f57-466c-b8a3-b91a9826c065' }]}
     />
+
     <Box css={css`
       html, body, div, span, applet, object, iframe,
       h1, h2, h3, h4, h5, h6, p, blockquote, pre,

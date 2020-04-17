@@ -46,7 +46,7 @@ export default props => (
         <div className="inner">
           <Flex flexDirection={['column-reverse', 'row']}>
             <Box width={[1]} mb={4}>
-              <Action id={['18244', '18286']} />
+              <Action id={['18244', '18756']} />
             </Box>
           </Flex>
         </div>
