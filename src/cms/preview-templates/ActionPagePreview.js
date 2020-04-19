@@ -4,7 +4,7 @@ import ActionPage from '../../pages/action'
 /**
  * Action Preview
  *
- * @param {object}   entry
+ * @param {object} entry
  */
 const ActionPagePreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()

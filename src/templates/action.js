@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import { Heading, Flex, Box, Button } from 'rebass'
 
+/**
+ * Action
+ */
 const Action = ({ scripts, embed }) => {
-  {
-    scripts && <Helmet>{scripts}</Helmet>
-  }
+  scripts && <Helmet>{scripts}</Helmet>
 
   if (typeof document !== 'undefined') {
     return embed
@@ -15,9 +16,10 @@ const Action = ({ scripts, embed }) => {
   return null
 }
 
+/**
+ * ActionPage
+ */
 const ActionPage = ({ title, secondaryTitle, scripts, embed, before, body, ...props }) => {
-  console.log(props)
-
   const [readToggle, setReadToggle] = useState(false)
 
   return (

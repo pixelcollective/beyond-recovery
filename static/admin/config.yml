@@ -16,7 +16,7 @@ collections:
     label: "Action"
     identifier_field: heading
     slug: "{{slug}}"
-    folder: "src/pages/action"
+    folder: "content/actions"
     create: true
     fields:
       - { label: "Heading", name: "heading", widget: "string" }
