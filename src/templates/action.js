@@ -18,7 +18,7 @@ const ActionComponent = ({ script, embed }) => {
  */
 const ActionPageTemplate = ({
   title,
-  secondaryTitle,
+  description,
   script,
   embed,
 }) => {
@@ -26,7 +26,7 @@ const ActionPageTemplate = ({
     <Layout>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content={secondaryTitle} />
+        <meta name="description" content={description || null} />
         <html lang="en" />
       </Helmet>
 
@@ -47,19 +47,5 @@ const ActionPageTemplate = ({
     </Layout>
   )
 }
-
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        secondaryTitle
-        script
-        embed
-      }
-    }
-  }
-`
 
 export default ActionPageTemplate

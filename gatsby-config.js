@@ -44,9 +44,9 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    `gatsby-plugin-emotion`,
+    'gatsby-plugin-emotion',
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: 'gatsby-plugin-sharp',
       options: {
         useMozJpeg: true,
         jpegQuality: 50,
@@ -65,21 +65,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/assets/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `actions`,
+        name: 'actions',
         path: `${__dirname}/content/actions/`,
       },
     },
+    `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-netlify`,
+      resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {},
         allPageHeaders: [],

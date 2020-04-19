@@ -13,7 +13,7 @@ const ActionPagePreview = ({ entry }) => {
     ? <ActionPage
         heading={data.heading}
         subheading={data.subheading}
-        scripts={data.scripts}
+        script={data.script}
         embed={data.embed}
       />
     : <div>Loading...</div>
