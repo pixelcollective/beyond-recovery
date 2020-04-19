@@ -1,25 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
-import { Heading, Flex, Box, Button } from 'rebass'
+import { Box } from 'rebass'
 
-const Action = ({ scripts, embed }) => {
-  {
-    scripts && <Helmet>{scripts}</Helmet>
-  }
-
-  if (typeof document !== 'undefined') {
-    return embed
-  }
-
-  return null
+const ActionComponent = ({ script, embed }) => {
+  script && <Helmet>{script}</Helmet>
+  return typeof document !== 'undefined' ? embed : null
 }
 
-const ActionPage = ({ title, secondaryTitle, scripts, embed, before, body, ...props }) => {
-  console.log(props)
-
-  const [readToggle, setReadToggle] = useState(false)
-
+/**
+ * Action Page Template
+ *
+ * @param {string} title
+ * @param {string} secondaryTitle
+ * @param {string} script
+ * @param {string} embed
+ */
+const ActionPageTemplate = ({
+  title,
+  secondaryTitle,
+  script,
+  embed,
+}) => {
   return (
     <Layout>
       <Helmet>
@@ -31,44 +33,14 @@ const ActionPage = ({ title, secondaryTitle, scripts, embed, before, body, ...pr
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">
-            <header>
-              {title && (
-                <Heading fontSize={6} style={{ marginBottom: 0, fontFamily: 'Kalam' }}>
-                  {title}
-                </Heading>
-              )}
-
-              {secondaryTitle && <h2 style={{ lineBreak: 'word' }}>{secondaryTitle}</h2>}
-            </header>
-
-            <Flex flexDirection={['column-reverse', 'row']}>
-              <Box mr={[0, 4]} width={[1, 1 / 2]}>
-                {!readToggle && before && (
-                  <Box>
-                    <Box dangerouslySetInnerHTML={{ __html: before }} />
-                    <Button fontSize={1} onClick={() => setReadToggle(true)}>
-                      Read more
-                    </Button>
-                  </Box>
-                )}
-
-                {body && (
-                  <Box
-                    dangerouslySetInnerHTML={{ __html: body }}
-                    style={{
-                      opacity: readToggle ? 1 : 0,
-                      transition: 'opacity 0.3s ease-in-out',
-                    }}
-                  />
-                )}
+            {embed && (
+              <Box width={[1]}>
+                <ActionComponent
+                  embed={embed || null}
+                  script={script || null}
+                />
               </Box>
-
-              {embed && (
-                <Box width={[1, 1 / 2]} mb={4}>
-                  <Action embed={embed} scripts={scripts || null} />
-                </Box>
-              )}
-            </Flex>
+            )}
           </div>
         </section>
       </div>
@@ -76,4 +48,18 @@ const ActionPage = ({ title, secondaryTitle, scripts, embed, before, body, ...pr
   )
 }
 
-export default ActionPage
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        secondaryTitle
+        script
+        embed
+      }
+    }
+  }
+`
+
+export default ActionPageTemplate
