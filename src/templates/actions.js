@@ -4,9 +4,15 @@ import styled from '@emotion/styled'
 import { Helmet } from 'react-helmet'
 import { Flex, Box } from 'rebass'
 
+/**
+ * Components
+ */
 import Layout from '../components/layout'
 import { Img } from '../components/parts/demands'
 
+/**
+ * Styled components
+ */
 const Title = styled.h1`
   font-family: 'Kalam Bold', 'Kalam';
   font-size: 4rem;
@@ -15,11 +21,45 @@ const Title = styled.h1`
   padding-bottom: 0;
 `
 
+/**
+ * Constants
+ */
 const DEFAULT_TITLE = 'Blog'
 const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
 /**
+ * Single Action
+ *
+ * @param {string} image
+ * @param {string} title
+ * @param {string} slug
+ * @param {string} description
+ */
+const Action = ({ id, image, title, slug, description }) => (
+  <Flex flexWrap='wrap' mx={-2} key={id}>
+    {image && image.childImageSharp.fluid && (
+      <Box px={2} py={2} width={1/2}>
+        <Link to={`/action/${slug}`}>
+          <Img fluid={image.childImageSharp.fluid} round={5} />
+        </Link>
+      </Box>
+    )}
+
+    <Box px={2} py={2} width={1/2}>
+      <Link to={`/action/${slug}`}>
+        <Title>{title}</Title>
+      </Link>
+      <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
+    </Box>
+  </Flex>
+)
+
+/**
  * Actions Template
+ *
+ * @param {string} title
+ * @param {string} description
+ * @param {object} actions
  */
 const ActionsTemplate = ({ title, description, actions }) => (
   <Layout>
@@ -39,29 +79,26 @@ const ActionsTemplate = ({ title, description, actions }) => (
             <h1>{ title || DEFAULT_TITLE }</h1>
           </header>
 
-          {actions.edges.map(({ node: { frontmatter, fields }}, id) => {
-            const { title, description, image } = frontmatter
-            const { slug } = fields
-
-            return (
-              <Flex flexWrap='wrap' mx={-2}>
-                {image && image.childImageSharp.fluid && (
-                  <Box px={2} py={2} width={1/2}>
-                    <Link to={`/action/${slug}`}>
-                      <Img fluid={image.childImageSharp.fluid} round={5} />
-                    </Link>
-                  </Box>
-                )}
-
-                <Box px={2} py={2} width={1/2}>
-                  <Link to={`/action/${slug}`}>
-                    <Title>{title}</Title>
-                  </Link>
-                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
-                </Box>
-              </Flex>
-            )
-          })}
+          {actions.edges.map(({
+            node: {
+              frontmatter: {
+                title,
+                description,
+                image,
+              },
+              fields: {
+                slug,
+              }
+            },
+          }, id) => (
+            <Action
+              id={id}
+              title={title}
+              description={description}
+              image={image}
+              slug={slug}
+            />
+          ))}
         </div>
       </section>
     </div>

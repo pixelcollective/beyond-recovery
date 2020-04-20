@@ -18,7 +18,7 @@ import {
 /**
  * Page: Demands
  */
-export default (props) => {
+export default () => {
   const data = useStaticQuery(graphql`
     query {
       image01: file(relativePath: { eq: "images/30221094971_5494396af1_o.jpg" }) {

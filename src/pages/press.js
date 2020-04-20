@@ -1,5 +1,12 @@
+/**
+ * Modules
+ */
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+
+/**
+ * Templates
+ */
 import PressTemplate from './../templates/press-hits'
 
 /**

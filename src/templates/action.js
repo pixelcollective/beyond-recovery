@@ -5,6 +5,7 @@ import { Box } from 'rebass'
 
 /**
  * Action Component
+ *
  * @param {string} actionId
  * @param {string} action
  */

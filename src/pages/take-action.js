@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import ActionsTemplate from './../templates/actions'
 
 /**
- * Action Page
+ * Actions Page
  */
-const ActionPage = () => {
+const ActionsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(filter: {
@@ -39,4 +39,4 @@ const ActionPage = () => {
   )
 }
 
-export default ActionPage
+export default ActionsPage

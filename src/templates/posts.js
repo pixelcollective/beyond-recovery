@@ -1,12 +1,21 @@
+/**
+ * Modules
+ */
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { Helmet } from 'react-helmet'
 import { Flex, Box } from 'rebass'
 
+/**
+ * Components
+ */
 import Layout from '../components/layout'
 import { Img } from '../components/parts/demands'
 
+/**
+ * Styled components
+ */
 const Title = styled.h1`
   font-family: 'Kalam Bold', 'Kalam';
   font-size: 4rem;
@@ -15,11 +24,18 @@ const Title = styled.h1`
   padding-bottom: 0;
 `
 
+/**
+ * Constants
+ */
 const DEFAULT_TITLE = 'Blog'
 const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
 /**
- * PostsTemplate
+ * Posts Template
+ *
+ * @prop {string}  title
+ * @prop {string}  description
+ * @prop {objects} posts
  */
 const PostsTemplate = ({ title, description, posts }) => (
   <Layout>

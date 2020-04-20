@@ -2,6 +2,11 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { get, each } = require('lodash')
 
+/**
+ * Application post types
+ */
+const postTypes = ['post', 'action', 'press']
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
@@ -28,7 +33,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  each(['post', 'action', 'press'], async type => {
+  each(postTypes, async type => {
     const result = await graphql(`
       query {
         allMarkdownRemark(filter: {
@@ -45,6 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 content
                 actionId
                 action
+                image
               }
               fields {
                 slug

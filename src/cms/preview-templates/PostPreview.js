@@ -14,6 +14,7 @@ const PostPreview = ({ entry }) => {
       title={data.title}
       description={data.description}
       content={data.content}
+      image={data.image}
     />
   ) : <div>Loading...</div>
 }

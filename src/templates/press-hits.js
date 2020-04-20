@@ -1,12 +1,21 @@
+/**
+ * Modules.
+ */
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { Helmet } from 'react-helmet'
 import { Flex, Box } from 'rebass'
 
+/**
+ * Components.
+ */
 import Layout from '../components/layout'
 import { Img } from '../components/parts/demands'
 
+/**
+ * Styled components.
+ */
 const Title = styled.h1`
   font-family: 'Kalam Bold', 'Kalam';
   font-size: 4rem;
@@ -15,11 +24,44 @@ const Title = styled.h1`
   padding-bottom: 0;
 `
 
+/**
+ * Constants
+ */
 const DEFAULT_TITLE = 'Press'
 const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
+ * Press Hit
+ *
+ * @prop {number} id
+ * @prop {object} image
+ * @prop {string} title
+ * @prop {string} slug
+ * @prop {string} description
+ */
+const PressHit = ({ id = 0, image, title, slug, description }) => (
+  <Flex flexWrap='wrap' mx={-2} key={id}>
+    {image && image.childImageSharp.fluid && (
+      <Box px={2} py={2} width={1/2}>
+        <Link to={`press/${slug}`}><Img fluid={image.childImageSharp.fluid} round={5} /></Link>
+      </Box>
+    )}
+
+    <Box px={2} py={2} width={1/2}>
+      <Link to={`press/${slug}`}>
+        <Title>{title}</Title>
+      </Link>
+      <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
+    </Box>
+  </Flex>
+)
+
+/**
  * Press Template
+ *
+ * @prop {string} title
+ * @prop {string} description
+ * @prop {object} posts
  */
 const PressHitsTemplate = ({ title, description, posts }) => (
   <Layout>
@@ -39,27 +81,26 @@ const PressHitsTemplate = ({ title, description, posts }) => (
             <h1>{title || 'Press'}</h1>
           </header>
 
-          {posts.edges.map(({ node: { frontmatter, fields }}, id) => {
-            const { title, description, image } = frontmatter
-            const { slug } = fields
-
-            return (
-              <Flex flexWrap='wrap' mx={-2}>
-                {image && image.childImageSharp.fluid && (
-                  <Box px={2} py={2} width={1/2}>
-                    <Link to={`press/${slug}`}><Img fluid={image.childImageSharp.fluid} round={5} /></Link>
-                  </Box>
-                )}
-
-                <Box px={2} py={2} width={1/2}>
-                  <Link to={`press/${slug}`}>
-                    <Title>{title}</Title>
-                  </Link>
-                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
-                </Box>
-              </Flex>
-            )
-          })}
+          {posts.edges.map(({
+            node: {
+              frontmatter: {
+                title,
+                description,
+                image,
+              },
+              fields : {
+                slug,
+              }
+            },
+          }, id) => (
+            <PressHit
+              id={id}
+              title={title}
+              description={description}
+              image={image}
+              slug={slug}
+            />
+          ))}
         </div>
       </section>
     </div>

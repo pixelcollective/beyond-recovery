@@ -1,9 +1,18 @@
+/**
+ * Modules
+ */
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Box } from 'rebass'
 
+/**
+ * Application components
+ */
 import Layout from '../components/layout'
 
+/**
+ * Constants
+ */
 const DEFAULT_TITLE = 'Press'
 const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
@@ -43,11 +52,21 @@ const PressTemplate = ({ title, description, content }) => (
  *
  * @param {object} data
  */
-const PressPage = ({ pageContext: { data: { frontmatter }}}) => (
+const PressPage = ({
+  pageContext: {
+    data: {
+      frontmatter: {
+        title,
+        description,
+        content,
+      },
+    },
+  },
+}) => (
   <PressTemplate
-    title={frontmatter.title}
-    description={frontmatter.description}
-    content={frontmatter.content}
+    title={title}
+    description={description}
+    content={content}
   />
 )
 

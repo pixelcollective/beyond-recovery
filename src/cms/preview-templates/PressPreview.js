@@ -7,13 +7,13 @@ import { PostTemplate } from '../../templates/post'
  * @param {object} entry
  */
 const PostPreview = ({ entry }) => {
-  const data = entry.getIn(['data']).toJS()
+  const { title, description, content } = entry.getIn(['data']).toJS()
 
-  return data ? (
+  return (title && description && content) ? (
     <PostTemplate
-      title={data.title}
-      description={data.description}
-      content={data.content}
+      title={title}
+      description={description}
+      content={content}
     />
   ) : <div>Loading...</div>
 }

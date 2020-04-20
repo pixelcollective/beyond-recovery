@@ -29,9 +29,10 @@ collections:
     folder: "content/post"
     create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Content", name: "content", widget: "text" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Content", name: "content", widget: "markdown", required: true }
 
   - name: "press"
     label: "Press"
@@ -41,5 +42,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Content", name: "content", widget: "text" }
-
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Content", name: "content", widget: "markdown" }

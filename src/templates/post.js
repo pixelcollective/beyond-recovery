@@ -1,8 +1,14 @@
+/**
+ * Modules
+ */
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
-import { Box } from 'rebass'
+import { Text } from 'rebass'
 
+/**
+ * Constants
+ */
 const DEFAULT_TITLE = 'Cancel Rent'
 const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
@@ -13,7 +19,7 @@ const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the sp
  * @param {string} description
  * @param {string} content
  */
-const PostTemplate = ({ title, description, content }) => (
+const PostTemplate = ({ title, description, content, image }) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
@@ -30,7 +36,8 @@ const PostTemplate = ({ title, description, content }) => (
           <header className="major">
             <h1>{title}</h1>
           </header>
-          <Box mb={4} dangerouslySetInnerHTML={{ __html: content }} />
+          {image && <img src={image} />}
+          <Text mb={4} dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </section>
     </div>
@@ -46,6 +53,7 @@ const PostPage = ({
       title,
       description,
       content,
+      image,
     },
   },
 }) => (
@@ -53,6 +61,7 @@ const PostPage = ({
     title={title}
     description={description}
     content={content}
+    image={image}
   />
 )
 
