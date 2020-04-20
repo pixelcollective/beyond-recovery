@@ -1,5 +1,5 @@
 import React from 'react'
-import Post from '../../templates/post'
+import { PostTemplate } from '../../templates/post'
 
 /**
  * Post Preview
@@ -10,7 +10,7 @@ const PostPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
   return data ? (
-    <Post
+    <PostTemplate
       title={data.title}
       description={data.description}
       content={data.content}

@@ -1,33 +1,26 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
 import { Helmet } from 'react-helmet'
-import { Flex, Box } from 'rebass'
+import { Box } from 'rebass'
 
 import Layout from '../components/layout'
-import { Img } from '../components/parts/demands'
-
-const Title = styled.h1`
-  font-family: 'Kalam Bold', 'Kalam';
-  font-size: 4rem;
-  letter-spacing: 0.1ch;
-  margin-bottom: 0;
-  padding-bottom: 0;
-`
 
 const DEFAULT_TITLE = 'Press'
 const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
  * Press Template
+ *
+ * @param {string} title
+ * @param {string} description
+ * @param {string} content
  */
-const PressTemplate = ({ pageContext: { data: { frontmatter }}}) => (
+const PressTemplate = ({ title, description, content }) => (
   <Layout>
     <Helmet>
-      <title>{frontmatter.title || DEFAULT_TITLE}</title>
+      <title>{title || DEFAULT_TITLE}</title>
       <meta
         name="description"
-        content={frontmatter.description || DEFAULT_DESCRIPTION}
+        content={description || DEFAULT_DESCRIPTION}
       />
       <html lang="en" />
     </Helmet>
@@ -36,13 +29,27 @@ const PressTemplate = ({ pageContext: { data: { frontmatter }}}) => (
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>{frontmatter.title}</h1>
+            <h1>{title}</h1>
           </header>
-          <Box mb={4} dangerouslySetInnerHTML={{ __html: frontmatter.content }} />
+          <Box mb={4} dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </section>
     </div>
   </Layout>
 )
 
-export default PressTemplate
+/**
+ * Press Page
+ *
+ * @param {object} data
+ */
+const PressPage = ({ pageContext: { data: { frontmatter }}}) => (
+  <PressTemplate
+    title={frontmatter.title}
+    description={frontmatter.description}
+    content={frontmatter.content}
+  />
+)
+
+export { PressTemplate }
+export default PressPage

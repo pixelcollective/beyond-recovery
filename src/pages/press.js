@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import PressTemplate from './../templates/press'
+import PressTemplate from './../templates/press-hits'
 
 /**
  * Press Page
@@ -31,7 +31,7 @@ export default () => {
   `)
 
   return (
-    <PressHitsTemplate
+    <PressTemplate
       title={'Press'}
       description={'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'}
       posts={data.allMarkdownRemark} />

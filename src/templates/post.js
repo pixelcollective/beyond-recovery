@@ -8,16 +8,12 @@ const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the sp
 
 /**
  * Post Template
+ *
+ * @param {string} title
+ * @param {string} description
+ * @param {string} content
  */
-const PostTemplate = ({
-  pageContext: {
-    data: {
-      title,
-      description,
-      content,
-    },
-  },
-}) => (
+const PostTemplate = ({ title, description, content }) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
@@ -41,4 +37,24 @@ const PostTemplate = ({
   </Layout>
 )
 
-export default PostTemplate
+/**
+ * Post Template
+ */
+const PostPage = ({
+  pageContext: {
+    data: {
+      title,
+      description,
+      content,
+    },
+  },
+}) => (
+  <PostTemplate
+    title={title}
+    description={description}
+    content={content}
+  />
+)
+
+export { PostTemplate }
+export default PostPage
