@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import { Box } from 'rebass'
 
-const ActionComponent = ({ script, embed }) => {
-  script && <Helmet>{script}</Helmet>
-  return typeof document !== 'undefined' ? embed : null
+const ActionComponent = ({ actionId, action }) => {
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      ;((n, e, w, m, o, d) => {
+        m = n.createElement(e)
+        m.async = 1
+        m.src = w
+        o = n.getElementsByTagName(e)[0]
+        o.parentNode.insertBefore(m, o)
+      })(document, 'script', `//engage.newmode.net/embed/${action}/${actionId}.js`)
+    }
+  }, [])
+
+  return (
+    <Box
+      fontFamily={'system-ui'}
+      id={`newmode-embed-${action}-${actionId}`}
+    />
+  )
 }
 
 /**
@@ -17,10 +33,14 @@ const ActionComponent = ({ script, embed }) => {
  * @param {string} embed
  */
 const ActionPageTemplate = ({
-  title,
-  description,
-  script,
-  embed,
+  pageContext: {
+    data: {
+      title,
+      description,
+      actionId,
+      action,
+    },
+  },
 }) => {
   return (
     <Layout>
@@ -33,14 +53,12 @@ const ActionPageTemplate = ({
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">
-            {embed && (
-              <Box width={[1]}>
-                <ActionComponent
-                  embed={embed || null}
-                  script={script || null}
-                />
-              </Box>
-            )}
+            <Box width={[1]}>
+              <ActionComponent
+                actionId={actionId || null}
+                action={action || null}
+              />
+            </Box>
           </div>
         </section>
       </div>

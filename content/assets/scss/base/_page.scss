@@ -1,0 +1,30 @@
+/**
+ * Format
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+@include breakpoint(xsmall) {
+  html,
+  body {
+    min-width: 320px;
+  }
+}
+
+body {
+  background: _palette(bg);
+
+  &.is-loading {
+    *,
+    *:before,
+    *:after {
+      @include vendor('animation', 'none !important');
+      @include vendor('transition', 'none !important');
+    }
+  }
+}

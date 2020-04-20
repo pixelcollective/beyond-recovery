@@ -15,10 +15,31 @@ collections:
   - name: "action"
     label: "Action"
     slug: "{{slug}}"
-    folder: "src/pages/action"
+    folder: "content/action"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Embed markup (div tag)", name: "embed", widget: "text" }
-      - { label: "Embed scripts (script tag)", name: "script", widget: "text" }
+      - { label: "Action ID", name: "actionId", widget: "number" }
+      - { label: "Action", name: "action", widget: "number" }
+
+  - name: "post"
+    label: "Post"
+    slug: "{{slug}}"
+    folder: "content/post"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Content", name: "content", widget: "text" }
+
+  - name: "press"
+    label: "Press"
+    slug: "{{slug}}"
+    folder: "content/press"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Content", name: "content", widget: "text" }
+

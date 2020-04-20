@@ -74,8 +74,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'actions',
-        path: `${__dirname}/content/actions/`,
+        name: 'action',
+        path: `${__dirname}/content/action/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'press',
+        path: `${__dirname}/content/press/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'post',
+        path: `${__dirname}/content/post/`,
       },
     },
     `gatsby-transformer-remark`,
