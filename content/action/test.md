@@ -8,8 +8,8 @@ script: |-
   </script>
 title: Test
 description: Description
-actionId: 18289
-action: 18244
+actionId: 18244
+action: 18289
 embed: <div id="embed-test"></div>
 before: test
 ---
