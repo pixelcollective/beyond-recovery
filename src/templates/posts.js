@@ -61,10 +61,10 @@ const PostsTemplate = ({ title, description, posts }) => (
 
             return (
               <Flex flexWrap='wrap' mx={-2}>
-                {image && image.childImageSharp.fluid && (
+                {image && (
                   <Box px={2} py={2} width={1/2}>
                     <Link to={slug}>
-                      <Img fluid={image.childImageSharp.fluid} round={5} />
+                      <Img src={image} round={5} />
                     </Link>
                   </Box>
                 )}

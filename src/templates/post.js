@@ -36,7 +36,7 @@ const PostTemplate = ({ title, description, content, image }) => (
           <header className="major">
             <h1>{title}</h1>
           </header>
-          {image && <img src={image} />}
+          {image && <img maxWidth="100%" src={image} />}
           <Text mb={4} dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </section>
