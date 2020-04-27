@@ -60,7 +60,7 @@ const PostsTemplate = ({ title, description, posts }) => (
             const slug = `/post/${fields.slug}`
 
             return (
-              <Flex flexWrap='wrap' mx={-2}>
+              <Flex key={id} flexWrap='wrap' mx={-2}>
                 {image && (
                   <Box px={2} py={2} width={1/2}>
                     <Link to={slug}>

@@ -23,7 +23,11 @@ const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recover
  * @param {string} description
  * @param {string} content
  */
-const PressTemplate = ({ title, description, content }) => (
+const PressTemplate = ({
+  title,
+  description,
+  posts,
+}) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
@@ -40,7 +44,30 @@ const PressTemplate = ({ title, description, content }) => (
           <header className="major">
             <h1>{title}</h1>
           </header>
-          <Box mb={4} dangerouslySetInnerHTML={{ __html: content }} />
+
+          {posts.edges.map(({ node: {frontmatter, fields}}, id) => {
+            const {title, description, image} = frontmatter
+            const slug = `/post/${fields.slug}`
+
+            return (
+              <Flex key={id} flexWrap='wrap' mx={-2}>
+                {image && (
+                  <Box px={2} py={2} width={1/2}>
+                    <Link to={slug}>
+                      <Img src={image} round={5} />
+                    </Link>
+                  </Box>
+                )}
+
+                <Box px={2} py={2} width={1/2}>
+                  <Link to={slug}>
+                    <Title>{title}</Title>
+                  </Link>
+                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
+                </Box>
+              </Flex>
+            )
+          })}
         </div>
       </section>
     </div>
