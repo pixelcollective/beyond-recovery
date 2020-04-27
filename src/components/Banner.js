@@ -3,6 +3,7 @@ import Image from 'gatsby-image'
 import { css } from '@emotion/core'
 import { injectGlobal } from 'emotion'
 import styled from '@emotion/styled'
+import {Box} from 'rebass'
 import CancelRent from './CancelRent'
 import { ParallaxBox } from './parts/parallaxBox'
 
@@ -21,25 +22,19 @@ injectGlobal`
 
 const Banner = styled.section`
   position: relative;
-  height: 70vh;
+  max-height: 50vh;
   width: 100vw;
-  maxwidth: 100%;
   z-index: 0;
   padding: 0;
   margin: 0;
   overflow-x: hidden !important;
   overflow-y: hidden;
-  object-fit: cover;
-  object-position: center center;
 `
 
 const BackgroundImage = styled(Image)`
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 400vw;
-  object-fit: cover;
-  object-position: center center;
+  bottom: -400px;
+  min-height: 100vh;
+  width: 100vw;
 `
 
 const Scrim = styled.div`
@@ -60,28 +55,28 @@ const Scrim = styled.div`
 `
 
 const Messaging = () => (
-  <div
+  <Box
     css={css`
       z-index: 20;
       position: absolute;
       top: 120px;
+      @media screen and (max-width: 700px) {
+        top: 50px;
+      }
+
       * {
         max-width: 70vw;
+        @media screen and (max-width: 700px) {
+          width: 95vw;
+          max-width: 100vw;
+        }
       }
     `}>
     <ParallaxBox triggerPoint={300} fadeOut={true} yOffset={0}>
       <CancelRent height={'40vh'} />
     </ParallaxBox>
-  </div>
+  </Box>
 )
-
-const Logo = styled(Image)`
-  position: absolute;
-  right: 10vw;
-  top: calc(80vh);
-  height: 20vh;
-  z-index: 30;
-`
 
 const BannerContainer = ({ bgSrc, logoSrc }) => (
   <Banner>

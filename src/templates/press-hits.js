@@ -82,7 +82,7 @@ const PressHitsTemplate = ({title, description, posts}) => (
             <h1>{title || DEFAULT_TITLE}</h1>
           </header>
 
-          {posts.edges.map(({ node: { frontmatter, fields, ...node }}, id) => {
+          {posts.edges.map(({node: {frontmatter, fields}}, id) => {
             const { title, description, image } = frontmatter
             const slug = `/press/${fields.slug}`
 

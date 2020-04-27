@@ -27,10 +27,7 @@ const PressTemplate = ({title, description, content, outlet, outletUrl, image, s
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
-      <meta
-        name="description"
-        content={description || DEFAULT_DESCRIPTION}
-      />
+      <meta name="description" content={description || DEFAULT_DESCRIPTION} />
       <html lang="en" />
     </Helmet>
 
