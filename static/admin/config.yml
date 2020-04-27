@@ -12,6 +12,18 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/about.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Description", name: "description", widget: "string", required: true }
+          - { label: "Content", name: "content", widget: "markdown", required: false }
+          - { label: "Image", name: "image", widget: "image" }
+
   - name: "action"
     label: "Action"
     slug: "{{slug}}"
@@ -42,5 +54,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Content", name: "content", widget: "markdown", required: false }
+      - { label: "Media Outlet", name: 'outlet', widget: 'string', required: false }
+      - { label: "Media Outlet URL", name: 'outlet-url', widget: 'string', required: false }
+

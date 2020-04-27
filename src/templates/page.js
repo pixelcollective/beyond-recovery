@@ -9,17 +9,17 @@ import { Text } from 'rebass'
 /**
  * Constants
  */
-const DEFAULT_TITLE = 'Cancel Rent'
-const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
+const DEFAULT_TITLE = "Cancel Rent"
+const DEFAULT_DESCRIPTION = "Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s."
 
 /**
- * Post Template
+ * Page Template
  *
  * @param {string} title
  * @param {string} description
  * @param {string} content
  */
-const PostTemplate = ({ title, description, content, image }) => (
+const PageTemplate = ({ title, description, content, image }) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
@@ -36,7 +36,6 @@ const PostTemplate = ({ title, description, content, image }) => (
           <header className="major">
             <h1>{title}</h1>
           </header>
-
           {image && <img maxWidth="100%" src={image} />}
           <Text mb={4} dangerouslySetInnerHTML={{ __html: content }} />
         </div>
@@ -46,9 +45,9 @@ const PostTemplate = ({ title, description, content, image }) => (
 )
 
 /**
- * Post Template
+ * Page Template
  */
-const PostPage = ({
+const Page = ({
   pageContext: {
     data: {
       title,
@@ -58,7 +57,7 @@ const PostPage = ({
     },
   },
 }) => (
-  <PostTemplate
+  <PageTemplate
     title={title}
     description={description}
     content={content}
@@ -66,5 +65,5 @@ const PostPage = ({
   />
 )
 
-export { PostTemplate }
-export default PostPage
+export { PageTemplate }
+export default Page
