@@ -22,7 +22,10 @@ injectGlobal`
 
 const Banner = styled.section`
   position: relative;
-  max-height: 50vh;
+  max-height: 70vh;
+  @media screen and (max-width: 700px) {
+    max-height: 50vh;
+  }
   width: 100vw;
   z-index: 0;
   padding: 0;
@@ -41,8 +44,8 @@ const Scrim = styled.div`
   background: linear-gradient(to bottom left, rgba(139, 0, 0, 0.3) 0%, #ff9201 80%, rgba(255, 115, 1, 0.8) 100%);
   content: '';
   display: block;
-  min-height: 70vh;
-  height: 70vh;
+  min-height: 100vh;
+  height: 100vh;
   opacity: 0.1;
   top: 0;
   left: 0;
