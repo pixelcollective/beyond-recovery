@@ -57,5 +57,5 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Content", name: "content", widget: "markdown", required: false }
       - { label: "Media Outlet", name: 'outlet', widget: 'string', required: false }
-      - { label: "Media Outlet URL", name: 'outlet-url', widget: 'string', required: false }
+      - { label: "Media Outlet URL", name: 'outletUrl', widget: 'string', required: false }
 

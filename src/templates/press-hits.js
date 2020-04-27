@@ -18,10 +18,11 @@ import { Img } from '../components/parts/demands'
  */
 const Title = styled.h1`
   font-family: 'Kalam Bold', 'Kalam';
-  font-size: 4rem;
+  font-size: 2rem;
   letter-spacing: 0.1ch;
   margin-bottom: 0;
   padding-bottom: 0;
+  line-height: 3rem;
 `
 
 /**
@@ -39,13 +40,13 @@ const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recover
  * @prop {string} slug
  * @prop {string} description
  */
-const PressHit = ({ id = 0, image, title, slug, description }) => (
-  <Flex flexWrap='wrap' mx={-2} key={id}>
-    {image && image.childImageSharp.fluid && (
+const PressHit = ({image, title, slug, description }) => (
+  <Flex flexWrap='wrap' mx={-2} mb={5}>
       <Box px={2} py={2} width={1/2}>
-        <Link to={`press/${slug}`}><Img fluid={image.childImageSharp.fluid} round={5} /></Link>
+        <Link to={`press/${slug}`}>
+          <img src={image} style={{maxWidth: '100%'}} round={5} />
+        </Link>
       </Box>
-    )}
 
     <Box px={2} py={2} width={1/2}>
       <Link to={`press/${slug}`}>
@@ -63,7 +64,7 @@ const PressHit = ({ id = 0, image, title, slug, description }) => (
  * @prop {string} description
  * @prop {object} posts
  */
-const PressHitsTemplate = ({ title, description, posts }) => (
+const PressHitsTemplate = ({title, description, posts}) => (
   <Layout>
       <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
@@ -78,29 +79,17 @@ const PressHitsTemplate = ({ title, description, posts }) => (
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>{title || 'Press'}</h1>
+            <h1>{title || DEFAULT_TITLE}</h1>
           </header>
 
-          {posts.edges.map(({
-            node: {
-              frontmatter: {
-                title,
-                description,
-                image,
-              },
-              fields : {
-                slug,
-              }
-            },
-          }, id) => (
+          {posts.edges.map(({node: { frontmatter: {title, description, image}, fields: {slug}}}, id) =>
             <PressHit
-              id={id}
               title={title}
               description={description}
               image={image}
               slug={slug}
             />
-          ))}
+          )}
         </div>
       </section>
     </div>

@@ -24,6 +24,7 @@ export default () => {
             frontmatter {
               title
               description
+              image
               content
               embed
               script

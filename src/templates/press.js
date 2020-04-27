@@ -2,9 +2,9 @@
  * Modules
  */
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import { Box } from 'rebass'
-
+import {Helmet} from 'react-helmet'
+import {Box,Text} from 'rebass'
+import {Link} from 'gatsby'
 /**
  * Application components
  */
@@ -23,11 +23,7 @@ const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recover
  * @param {string} description
  * @param {string} content
  */
-const PressTemplate = ({
-  title,
-  description,
-  posts,
-}) => (
+const PressTemplate = ({title, description, content, outlet, outletUrl, image, slug}) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
@@ -41,33 +37,20 @@ const PressTemplate = ({
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <header className="major">
-            <h1>{title}</h1>
+          <header style={{marginTop: '1rem'}}>
+            <h1 style={{lineBreak: 'word'}}>{title}</h1>
+            <h2>via <a href={outletUrl}>{outlet}</a></h2>
           </header>
 
-          {posts.edges.map(({ node: {frontmatter, fields}}, id) => {
-            const {title, description, image} = frontmatter
-            const slug = `/post/${fields.slug}`
+          {image && (
+            <Link to={slug}>
+              <img src={image} style={{width: '100%'}} round={5} />
+            </Link>
+          )}
 
-            return (
-              <Flex key={id} flexWrap='wrap' mx={-2}>
-                {image && (
-                  <Box px={2} py={2} width={1/2}>
-                    <Link to={slug}>
-                      <Img src={image} round={5} />
-                    </Link>
-                  </Box>
-                )}
-
-                <Box px={2} py={2} width={1/2}>
-                  <Link to={slug}>
-                    <Title>{title}</Title>
-                  </Link>
-                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
-                </Box>
-              </Flex>
-            )
-          })}
+          <Box px={2} py={2}>
+            <Text color={'white'} dangerouslySetInnerHTML={{__html: content || description}} />
+          </Box>
         </div>
       </section>
     </div>
@@ -79,23 +62,9 @@ const PressTemplate = ({
  *
  * @param {object} data
  */
-const PressPage = ({
-  pageContext: {
-    data: {
-      frontmatter: {
-        title,
-        description,
-        content,
-      },
-    },
-  },
-}) => (
-  <PressTemplate
-    title={title}
-    description={description}
-    content={content}
-  />
-)
+const PressPage = ({pageContext: {data}}) =>
+  <PressTemplate {...data} slug={`press/${data.slug}`} />
+
 
 export { PressTemplate }
 export default PressPage

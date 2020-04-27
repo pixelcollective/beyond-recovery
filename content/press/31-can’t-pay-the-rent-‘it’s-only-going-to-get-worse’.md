@@ -5,5 +5,5 @@ description: As the economic shutdown pares tenants’ incomes, April payments
   risk.
 image: /img/screen-shot-2020-04-27-at-12.17.00-pm.png
 outlet: The New York Times
-outlet-url: https://www.nytimes.com/2020/04/08/business/economy/coronavirus-rent.html
+outletUrl: https://www.nytimes.com/2020/04/08/business/economy/coronavirus-rent.html
 ---

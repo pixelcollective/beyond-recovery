@@ -6,5 +6,5 @@ description: Oakland City Councilwoman Nikki Fortunato Bas and other Bay Area
   novel coronavirus pandemic.
 image: /img/screen-shot-2020-04-27-at-12.25.45-pm.png
 outlet: SF Gate
-outlet-url: https://www.sfgate.com/news/bayarea/article/Rally-Participants-Call-For-Cancellation-Of-15172457.php
+outletUrl: https://www.sfgate.com/news/bayarea/article/Rally-Participants-Call-For-Cancellation-Of-15172457.php
 ---

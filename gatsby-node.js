@@ -21,12 +21,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }),
     })
 
-    const parent = getNode(get(node, 'parent'));
+    const parent = getNode(get(node, 'parent'))
+
     createNodeField({
       node,
       name: 'collection',
       value: get(parent, 'sourceInstanceName')
-    });
+    })
   }
 }
 
@@ -48,9 +49,11 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 description
                 content
+                image
                 actionId
                 action
-                image
+                outlet
+                outletUrl
               }
               fields {
                 slug

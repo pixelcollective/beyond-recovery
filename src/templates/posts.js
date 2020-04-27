@@ -55,29 +55,34 @@ const PostsTemplate = ({ title, description, posts }) => (
             <h1>{ title || DEFAULT_TITLE }</h1>
           </header>
 
-          {posts.edges.map(({ node: { frontmatter, fields }}, id) => {
-            const { title, description, image } = frontmatter
-            const slug = `/post/${fields.slug}`
+          <Flex flexWrap='wrap' mx={-2}>
+            {posts.edges.map(({ node: { frontmatter, fields, ...node }}, id) => {
+              const { title, description, image } = frontmatter
+              const slug = `/post/${fields.slug}`
 
-            return (
-              <Flex key={id} flexWrap='wrap' mx={-2}>
-                {image && (
+              return [
+                <Box key={id} px={2} py={2}>
+                  {image && (
+                    <Box>
+                      <Link to={slug}>
+                        <img src={image} style={{
+                          minWidth: '100%',
+                          maxWidth: '100%',
+                        }} round={5} />
+                      </Link>
+                    </Box>
+                  )}
+
                   <Box px={2} py={2} width={1/2}>
                     <Link to={slug}>
-                      <Img src={image} round={5} />
+                      <Title>{title}</Title>
                     </Link>
+                    <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
                   </Box>
-                )}
-
-                <Box px={2} py={2} width={1/2}>
-                  <Link to={slug}>
-                    <Title>{title}</Title>
-                  </Link>
-                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
                 </Box>
-              </Flex>
-            )
-          })}
+              ]
+            })}
+          </Flex>
         </div>
       </section>
     </div>

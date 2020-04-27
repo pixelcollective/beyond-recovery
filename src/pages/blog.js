@@ -24,6 +24,7 @@ const PostsPage = () => {
             frontmatter {
               title
               description
+              image
               content
               embed
               script
