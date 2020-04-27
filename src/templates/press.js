@@ -38,17 +38,15 @@ const PressTemplate = ({title, description, content, outlet, outletUrl, image, s
       <section id="one">
         <div className="inner">
           <header style={{marginTop: '1rem'}}>
-            <h1 style={{lineBreak: 'word'}}>{title}</h1>
-            <h2>via <a href={outletUrl}>{outlet}</a></h2>
+            <h1 style={{lineBreak: 'word', marginBottom: '2rem'}}>{title}</h1>
+            {image && (
+              <Link to={slug}>
+                <img src={image} style={{width: '100%'}} round={5} />
+              </Link>
+            )}
+            <h2 style={{marginTop: '2rem'}}>via <a href={outletUrl}>{outlet}</a></h2>
           </header>
-
-          {image && (
-            <Link to={slug}>
-              <img src={image} style={{width: '100%'}} round={5} />
-            </Link>
-          )}
-
-          <Box px={2} py={2}>
+          <Box px={2}>
             <Text color={'white'} dangerouslySetInnerHTML={{__html: content || description}} />
           </Box>
         </div>

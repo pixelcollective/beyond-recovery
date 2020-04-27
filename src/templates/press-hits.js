@@ -78,18 +78,36 @@ const PressHitsTemplate = ({title, description, posts}) => (
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
-          <header className="major">
+          <header className="major" style={{paddingBottom: '2rem'}}>
             <h1>{title || DEFAULT_TITLE}</h1>
           </header>
 
-          {posts.edges.map(({node: { frontmatter: {title, description, image}, fields: {slug}}}, id) =>
-            <PressHit
-              title={title}
-              description={description}
-              image={image}
-              slug={slug}
-            />
-          )}
+          {posts.edges.map(({ node: { frontmatter, fields, ...node }}, id) => {
+            const { title, description, image } = frontmatter
+            const slug = `/press/${fields.slug}`
+
+            return [
+              <Box key={id} px={2} pb={4}>
+                {image && (
+                  <Box>
+                    <Link to={slug}>
+                      <img src={image} style={{
+                        minWidth: '100%',
+                        maxWidth: '100%',
+                      }} round={5} />
+                    </Link>
+                  </Box>
+                )}
+
+                <Box px={2} py={2}>
+                  <Link to={slug}>
+                    <Title>{title}</Title>
+                  </Link>
+                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
+                </Box>
+              </Box>
+            ]
+          })}
         </div>
       </section>
     </div>
