@@ -1,11 +1,13 @@
 {
-  "name": "gatsby-starter-forty-v2",
-  "description": "Gatsby Starter - Forty V2",
+  "name": "cancel-rent",
   "version": "1.0.0",
-  "authors": [
-    "Kelly Mears",
-    "Hunter Chang"
-  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write './package.json' && prettier --write 'src/**/*.js'",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
+  },
   "dependencies": {
     "@devsisters/gatsby-plugin-google-analytics": "^2.0.0",
     "@emotion/core": "^10.0.28",
@@ -35,13 +37,6 @@
     "styled-system": "^5.1.5",
     "use-parallax": "^0.0.6"
   },
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
-  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
@@ -52,6 +47,13 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.4",
-    "prettier": "^2.0.4"
-  }
+    "prettier": "^2.0.4",
+    "prettier-plugin-organize-imports": "^1.0.3",
+    "prettier-plugin-package": "^1.0.0",
+    "typescript": "^3.8.3"
+  },
+  "authors": [
+    "Kelly Mears",
+    "Hunter Chang"
+  ]
 }

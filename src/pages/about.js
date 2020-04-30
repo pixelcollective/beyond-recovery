@@ -5,9 +5,9 @@ import Layout from '../components/layout'
 import Callout from '../components/Callout'
 
 /**
- * Home Page Component
+ * About Page Component
  */
-export default () => {
+const About = () => {
   const data = useStaticQuery(graphql`
     query {
       background: file(relativePath: {eq: "images/background.png"}) {
@@ -43,6 +43,7 @@ export default () => {
       }
     }
   `)
+
   return (
     <Layout>
       <Helmet>
@@ -67,3 +68,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default About
