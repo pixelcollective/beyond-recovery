@@ -11,7 +11,7 @@ content: >-
   Walgreens manager.
 
 
-  One after the other, the tenants called and emailed their landlord, Bruce Brunner, to say they were out of work and the rent was going to be late. A week after the bill was due, some two dozen of Mr. Brunner’s 130 tenants had lost their jobs or had their hours reduced.
+  One after the other, the tenants called and emailed their landlord, Bruce Brunner, to say they were out of work and the rent was going to be late. A week after the bill was due, some two dozen of Mr. Brunner’s 130 tenants had lost their jobs or had their hours reduced...
 outlet: The New York Times
 outletUrl: https://www.nytimes.com/2020/04/08/business/economy/coronavirus-rent.html
 ---
