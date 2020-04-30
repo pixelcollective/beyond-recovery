@@ -32,32 +32,6 @@ const DEFAULT_TITLE = 'Press'
 const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
- * Press Hit
- *
- * @prop {number} id
- * @prop {object} image
- * @prop {string} title
- * @prop {string} slug
- * @prop {string} description
- */
-const PressHit = ({image, title, slug, description }) => (
-  <Flex flexWrap='wrap' mx={-2} mb={5}>
-      <Box px={2} py={2} width={1/2}>
-        <Link to={`press/${slug}`}>
-          <img src={image} style={{maxWidth: '100%'}} round={5} />
-        </Link>
-      </Box>
-
-    <Box px={2} py={2} width={1/2}>
-      <Link to={`press/${slug}`}>
-        <Title>{title}</Title>
-      </Link>
-      <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
-    </Box>
-  </Flex>
-)
-
-/**
  * Press Template
  *
  * @prop {string} title
