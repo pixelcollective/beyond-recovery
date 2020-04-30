@@ -1,5 +1,5 @@
-import React, { useRef, useState, useLayoutEffect } from 'react'
-import { useViewportScroll, useTransform, useSpring, motion } from 'framer-motion'
+import React, {useRef, useState, useLayoutEffect} from 'react'
+import {useViewportScroll, useTransform, useSpring, motion} from 'framer-motion'
 
 const calculateMinHeight = (height, range) => {
   return height + height * range
@@ -9,9 +9,9 @@ const rand = (min = 0, max = 100) => {
   return Math.floor(Math.random() * (+max - +min)) + +min
 }
 
-export default function ParallaxItem({ className, children }) {
+export default function ParallaxItem({className, children}) {
   const range = 0.2
-  const { scrollY } = useViewportScroll()
+  const {scrollY} = useViewportScroll()
   const ref = useRef()
   const [offsetTop, setOffsetTop] = useState(0)
   const [minHeight, setMinHeight] = useState('auto')
@@ -40,8 +40,8 @@ export default function ParallaxItem({ className, children }) {
   )
 
   return (
-    <div style={{ minHeight }} className={className}>
-      <motion.div ref={ref} initial={{ y: 0 }} style={{ y }}>
+    <div style={{minHeight}} className={className}>
+      <motion.div ref={ref} initial={{y: 0}} style={{y}}>
         {children}
       </motion.div>
     </div>

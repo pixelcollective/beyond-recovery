@@ -2,16 +2,16 @@
  * Modules.
  */
 import React from 'react'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 import styled from '@emotion/styled'
-import { Helmet } from 'react-helmet'
-import { Flex, Box } from 'rebass'
+import {Helmet} from 'react-helmet'
+import {Flex, Box} from 'rebass'
 
 /**
  * Components.
  */
 import Layout from '../components/layout'
-import { Img } from '../components/parts/demands'
+import {Img} from '../components/parts/demands'
 
 /**
  * Styled components.
@@ -29,7 +29,8 @@ const Title = styled.h1`
  * Constants
  */
 const DEFAULT_TITLE = 'Press'
-const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
+const DEFAULT_DESCRIPTION =
+  'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
  * Press Template
@@ -40,12 +41,9 @@ const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recover
  */
 const PressHitsTemplate = ({title, description, posts}) => (
   <Layout>
-      <Helmet>
+    <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
-      <meta
-        name="description"
-        content={description || DEFAULT_DESCRIPTION}
-      />
+      <meta name="description" content={description || DEFAULT_DESCRIPTION} />
       <html lang="en" />
     </Helmet>
 
@@ -57,7 +55,7 @@ const PressHitsTemplate = ({title, description, posts}) => (
           </header>
 
           {posts.edges.map(({node: {frontmatter, fields}}, id) => {
-            const { title, description, image } = frontmatter
+            const {title, description, image} = frontmatter
             const slug = `/press/${fields.slug}`
 
             return [
@@ -65,10 +63,14 @@ const PressHitsTemplate = ({title, description, posts}) => (
                 {image && (
                   <Box>
                     <Link to={slug}>
-                      <img src={image} style={{
-                        minWidth: '100%',
-                        maxWidth: '100%',
-                      }} round={5} />
+                      <img
+                        src={image}
+                        style={{
+                          minWidth: '100%',
+                          maxWidth: '100%',
+                        }}
+                        round={5}
+                      />
                     </Link>
                   </Box>
                 )}
@@ -77,9 +79,9 @@ const PressHitsTemplate = ({title, description, posts}) => (
                   <Link to={slug}>
                     <Title>{title}</Title>
                   </Link>
-                  <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
+                  <Box color={'white'} dangerouslySetInnerHTML={{__html: description}} />
                 </Box>
-              </Box>
+              </Box>,
             ]
           })}
         </div>

@@ -1,12 +1,12 @@
 import React from 'react'
-import { PostTemplate } from '../../templates/post'
+import {PostTemplate} from '../../templates/post'
 
 /**
  * Post Preview
  *
  * @param {object} entry
  */
-const PostPreview = ({ entry }) => {
+const PostPreview = ({entry}) => {
   const data = entry.getIn(['data']).toJS()
 
   return data ? (
@@ -16,7 +16,9 @@ const PostPreview = ({ entry }) => {
       content={data.content}
       image={data.image}
     />
-  ) : <div>Loading...</div>
+  ) : (
+    <div>Loading...</div>
+  )
 }
 
 export default PostPreview

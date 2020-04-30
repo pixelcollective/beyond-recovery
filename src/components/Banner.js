@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import { css } from '@emotion/core'
-import { injectGlobal } from 'emotion'
+import {css} from '@emotion/core'
+import {injectGlobal} from 'emotion'
 import styled from '@emotion/styled'
 import {Box} from 'rebass'
 import CancelRent from './CancelRent'
-import { ParallaxBox } from './parts/parallaxBox'
+import {ParallaxBox} from './parts/parallaxBox'
 
 injectGlobal`
   #wrapper {
@@ -41,7 +41,12 @@ const BackgroundImage = styled(Image)`
 `
 
 const Scrim = styled.div`
-  background: linear-gradient(to bottom left, rgba(139, 0, 0, 0.3) 0%, #ff9201 80%, rgba(255, 115, 1, 0.8) 100%);
+  background: linear-gradient(
+    to bottom left,
+    rgba(139, 0, 0, 0.3) 0%,
+    #ff9201 80%,
+    rgba(255, 115, 1, 0.8) 100%
+  );
   content: '';
   display: block;
   min-height: 100vh;
@@ -81,7 +86,7 @@ const Messaging = () => (
   </Box>
 )
 
-const BannerContainer = ({ bgSrc, logoSrc }) => (
+const BannerContainer = ({bgSrc, logoSrc}) => (
   <Banner>
     <ParallaxBox fadeOut={true} triggerPoint={0.5} yOffset={1200}>
       <BackgroundImage fluid={bgSrc} alt="Rent strikers fight for an equitable future." />

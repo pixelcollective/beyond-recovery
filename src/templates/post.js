@@ -2,15 +2,16 @@
  * Modules
  */
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
-import { Text } from 'rebass'
+import {Text} from 'rebass'
 
 /**
  * Constants
  */
 const DEFAULT_TITLE = 'Cancel Rent'
-const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
+const DEFAULT_DESCRIPTION =
+  'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
 /**
  * Post Template
@@ -19,14 +20,11 @@ const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the sp
  * @param {string} description
  * @param {string} content
  */
-const PostTemplate = ({ title, description, content, image }) => (
+const PostTemplate = ({title, description, content, image}) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
-      <meta
-        name="description"
-        content={description || DEFAULT_DESCRIPTION}
-      />
+      <meta name="description" content={description || DEFAULT_DESCRIPTION} />
       <html lang="en" />
     </Helmet>
 
@@ -37,8 +35,8 @@ const PostTemplate = ({ title, description, content, image }) => (
             <h1>{title}</h1>
           </header>
 
-          {image && <img style={{maxWidth: "100%"}} src={image} />}
-          <Text mb={4} dangerouslySetInnerHTML={{ __html: content }} />
+          {image && <img style={{maxWidth: '100%'}} src={image} />}
+          <Text mb={4} dangerouslySetInnerHTML={{__html: content}} />
         </div>
       </section>
     </div>
@@ -50,21 +48,9 @@ const PostTemplate = ({ title, description, content, image }) => (
  */
 const PostPage = ({
   pageContext: {
-    data: {
-      title,
-      description,
-      content,
-      image,
-    },
+    data: {title, description, content, image},
   },
-}) => (
-  <PostTemplate
-    title={title}
-    description={description}
-    content={content}
-    image={image}
-  />
-)
+}) => <PostTemplate title={title} description={description} content={content} image={image} />
 
-export { PostTemplate }
+export {PostTemplate}
 export default PostPage

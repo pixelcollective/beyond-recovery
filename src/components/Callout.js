@@ -1,8 +1,8 @@
 import Image from 'gatsby-image'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Flex, Box, Button } from 'rebass'
+import {motion, AnimatePresence} from 'framer-motion'
+import {Flex, Box, Button} from 'rebass'
 import styled from '@emotion/styled'
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 
 const Title = styled.h2`
   text-transform: uppercase;
@@ -23,8 +23,8 @@ const Logo = styled(Image)`
   z-index: 30;
 `
 
-const container = (delay) => ({
-  hidden: { opacity: 0 },
+const container = delay => ({
+  hidden: {opacity: 0},
   show: {
     opacity: 1,
     transition: {
@@ -38,7 +38,7 @@ const container = (delay) => ({
   },
 })
 
-export default ({ logoSrc }) => (
+export default ({logoSrc}) => (
   <AnimatePresence>
     <motion.section
       style={{
@@ -69,7 +69,9 @@ export default ({ logoSrc }) => (
             paddingTop: '4rem',
           }}>
           <Title>Beyond Recovery</Title>
-          <Subtitle>A people’s plan to ensure a healthy, stable, thriving future for us all.</Subtitle>
+          <Subtitle>
+            A people’s plan to ensure a healthy, stable, thriving future for us all.
+          </Subtitle>
         </header>
 
         <Flex flexWrap={'wrap'} mx={-2}>
@@ -97,14 +99,14 @@ export default ({ logoSrc }) => (
           </Box>
           <Box px={2} py={2} width={[1, 2 / 3]}>
             <p>
-              Our homes, health, and collective safety and futures are on the line. Millions of us don’t know how we are
-              going to pay our rent, mortgage, or utilities on April 1st, yet landlords and banks are expecting payment
-              as if it’s business as usual. It’s not.
+              Our homes, health, and collective safety and futures are on the line. Millions of us
+              don’t know how we are going to pay our rent, mortgage, or utilities on April 1st, yet
+              landlords and banks are expecting payment as if it’s business as usual. It’s not.
             </p>
 
             <p>
-              Join millions of us to fight for a future free from debt and to win a national suspension on rent,
-              mortgage and utility payments!
+              Join millions of us to fight for a future free from debt and to win a national
+              suspension on rent, mortgage and utility payments!
             </p>
 
             <Subtitle>Worried about paying your rent or mortgage?</Subtitle>

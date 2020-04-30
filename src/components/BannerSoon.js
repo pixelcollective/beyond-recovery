@@ -1,5 +1,5 @@
 import React from 'react'
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import styled from '@emotion/styled'
 import backgroundSrc from '../assets/images/background.png'
 
@@ -36,7 +36,12 @@ const BackgroundImage = styled.img`
 const Scrim = styled.div`
   && {
     position: absolute;
-    background: linear-gradient(to bottom left, rgba(139, 0, 0, 0.8) 0%, #ff9201 80%, rgba(255, 115, 1, 1) 100%);
+    background: linear-gradient(
+      to bottom left,
+      rgba(139, 0, 0, 0.8) 0%,
+      #ff9201 80%,
+      rgba(255, 115, 1, 1) 100%
+    );
     content: '';
     display: block;
     min-height: 100%;

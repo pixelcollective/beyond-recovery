@@ -2,15 +2,16 @@
  * Modules
  */
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
-import { Text } from 'rebass'
+import {Text} from 'rebass'
 
 /**
  * Constants
  */
-const DEFAULT_TITLE = "Cancel Rent"
-const DEFAULT_DESCRIPTION = "Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s."
+const DEFAULT_TITLE = 'Cancel Rent'
+const DEFAULT_DESCRIPTION =
+  'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
 /**
  * Page Template
@@ -19,14 +20,11 @@ const DEFAULT_DESCRIPTION = "Party with us at a 9 day virtual festival in the sp
  * @param {string} description
  * @param {string} content
  */
-const PageTemplate = ({ title, description, content, image }) => (
+const PageTemplate = ({title, description, content, image}) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
-      <meta
-        name="description"
-        content={description || DEFAULT_DESCRIPTION}
-      />
+      <meta name="description" content={description || DEFAULT_DESCRIPTION} />
       <html lang="en" />
     </Helmet>
 
@@ -37,7 +35,7 @@ const PageTemplate = ({ title, description, content, image }) => (
             <h1>{title}</h1>
           </header>
           {image && <img maxWidth="100%" src={image} />}
-          <Text mb={4} dangerouslySetInnerHTML={{ __html: content }} />
+          <Text mb={4} dangerouslySetInnerHTML={{__html: content}} />
         </div>
       </section>
     </div>
@@ -49,21 +47,9 @@ const PageTemplate = ({ title, description, content, image }) => (
  */
 const Page = ({
   pageContext: {
-    data: {
-      title,
-      description,
-      content,
-      image,
-    },
+    data: {title, description, content, image},
   },
-}) => (
-  <PageTemplate
-    title={title}
-    description={description}
-    content={content}
-    image={image}
-  />
-)
+}) => <PageTemplate title={title} description={description} content={content} image={image} />
 
-export { PageTemplate }
+export {PageTemplate}
 export default Page

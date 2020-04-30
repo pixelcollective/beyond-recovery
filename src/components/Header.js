@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 
-const Header = (props) => (
+const Header = props => (
   <header id="header" className="alt">
     <Link to="/" className="logo">
       <strong>Beyond Recovery</strong>

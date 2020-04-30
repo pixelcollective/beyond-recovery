@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import {useStaticQuery, graphql} from 'gatsby'
 import PostsTemplate from './../templates/posts'
 
 /**
@@ -8,16 +8,14 @@ import PostsTemplate from './../templates/posts'
 const PostsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "images/logo.png" }) {
+      logo: file(relativePath: {eq: "images/logo.png"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      allMarkdownRemark(filter: {
-        fields: { collection: { eq: "post" } }
-      }) {
+      allMarkdownRemark(filter: {fields: {collection: {eq: "post"}}}) {
         edges {
           node {
             id
@@ -40,10 +38,13 @@ const PostsPage = () => {
 
   return (
     <PostsTemplate
-      title={"Blog"}
-      description={'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'}
+      title={'Blog'}
+      description={
+        'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
+      }
       logo={data.logo}
-      posts={data.allMarkdownRemark} />
+      posts={data.allMarkdownRemark}
+    />
   )
 }
 

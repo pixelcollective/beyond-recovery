@@ -1,6 +1,6 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import {useStaticQuery, graphql} from 'gatsby'
+import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import Callout from '../components/Callout'
 
@@ -10,23 +10,15 @@ import Callout from '../components/Callout'
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      background: file(relativePath: { eq: "images/background.png" }) {
+      background: file(relativePath: {eq: "images/background.png"}) {
         childImageSharp {
-          fluid(cropFocus: ATTENTION, duotone: { highlight: "#ff7301", shadow: "#8b0000" }) {
+          fluid(cropFocus: ATTENTION, duotone: {highlight: "#ff7301", shadow: "#8b0000"}) {
             ...GatsbyImageSharpFluid
           }
         }
       }
 
-      logo: file(relativePath: { eq: "images/logo.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      image05: file(relativePath: { eq: "images/30220593851_55f8bc7af5_o.jpg" }) {
+      logo: file(relativePath: {eq: "images/logo.png"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -34,7 +26,15 @@ export default () => {
         }
       }
 
-      image06: file(relativePath: { eq: "images/29676270444_5e09913cd5_o.jpg" }) {
+      image05: file(relativePath: {eq: "images/30220593851_55f8bc7af5_o.jpg"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      image06: file(relativePath: {eq: "images/29676270444_5e09913cd5_o.jpg"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

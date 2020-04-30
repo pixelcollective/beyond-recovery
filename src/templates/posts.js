@@ -2,16 +2,16 @@
  * Modules
  */
 import React from 'react'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 import styled from '@emotion/styled'
-import { Helmet } from 'react-helmet'
-import { Flex, Box } from 'rebass'
+import {Helmet} from 'react-helmet'
+import {Flex, Box} from 'rebass'
 
 /**
  * Components
  */
 import Layout from '../components/layout'
-import { Img } from '../components/parts/demands'
+import {Img} from '../components/parts/demands'
 
 /**
  * Styled components
@@ -28,7 +28,8 @@ const Title = styled.h1`
  * Constants
  */
 const DEFAULT_TITLE = 'Blog'
-const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
+const DEFAULT_DESCRIPTION =
+  'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
 /**
  * Posts Template
@@ -37,14 +38,11 @@ const DEFAULT_DESCRIPTION = 'Party with us at a 9 day virtual festival in the sp
  * @prop {string}  description
  * @prop {objects} posts
  */
-const PostsTemplate = ({ title, description, posts }) => (
+const PostsTemplate = ({title, description, posts}) => (
   <Layout>
     <Helmet>
       <title>{title || DEFAULT_TITLE}</title>
-      <meta
-        name="description"
-        content={description || DEFAULT_DESCRIPTION}
-      />
+      <meta name="description" content={description || DEFAULT_DESCRIPTION} />
       <html lang="en" />
     </Helmet>
 
@@ -52,12 +50,12 @@ const PostsTemplate = ({ title, description, posts }) => (
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>{ title || DEFAULT_TITLE }</h1>
+            <h1>{title || DEFAULT_TITLE}</h1>
           </header>
 
-          <Flex flexWrap='wrap' mx={-2}>
-            {posts.edges.map(({ node: { frontmatter, fields, ...node }}, id) => {
-              const { title, description, image } = frontmatter
+          <Flex flexWrap="wrap" mx={-2}>
+            {posts.edges.map(({node: {frontmatter, fields, ...node}}, id) => {
+              const {title, description, image} = frontmatter
               const slug = `/post/${fields.slug}`
 
               return [
@@ -65,21 +63,25 @@ const PostsTemplate = ({ title, description, posts }) => (
                   {image && (
                     <Box>
                       <Link to={slug}>
-                        <img src={image} style={{
-                          minWidth: '100%',
-                          maxWidth: '100%',
-                        }} round={5} />
+                        <img
+                          src={image}
+                          style={{
+                            minWidth: '100%',
+                            maxWidth: '100%',
+                          }}
+                          round={5}
+                        />
                       </Link>
                     </Box>
                   )}
 
-                  <Box px={2} py={2} width={1/2}>
+                  <Box px={2} py={2} width={1 / 2}>
                     <Link to={slug}>
                       <Title>{title}</Title>
                     </Link>
-                    <Box color={'white'} dangerouslySetInnerHTML={{ __html: description }} />
+                    <Box color={'white'} dangerouslySetInnerHTML={{__html: description}} />
                   </Box>
-                </Box>
+                </Box>,
               ]
             })}
           </Flex>

@@ -3,7 +3,7 @@
  */
 import React from 'react'
 import {Helmet} from 'react-helmet'
-import {Box,Text} from 'rebass'
+import {Box, Text} from 'rebass'
 import {Link} from 'gatsby'
 /**
  * Application components
@@ -14,7 +14,8 @@ import Layout from '../components/layout'
  * Constants
  */
 const DEFAULT_TITLE = 'Press'
-const DEFAULT_DESCRIPTION = 'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
+const DEFAULT_DESCRIPTION =
+  'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
  * Press Template
@@ -41,7 +42,9 @@ const PressTemplate = ({title, description, content, outlet, outletUrl, image, s
                 <img src={image} style={{width: '100%'}} round={5} />
               </Link>
             )}
-            <h2 style={{marginTop: '2rem'}}>via <a href={outletUrl}>{outlet}</a></h2>
+            <h2 style={{marginTop: '2rem'}}>
+              via <a href={outletUrl}>{outlet}</a>
+            </h2>
           </header>
           <Box px={2}>
             <Text color={'white'} dangerouslySetInnerHTML={{__html: content || description}} />
@@ -57,9 +60,7 @@ const PressTemplate = ({title, description, content, outlet, outletUrl, image, s
  *
  * @param {object} data
  */
-const PressPage = ({pageContext: {data}}) =>
-  <PressTemplate {...data} slug={`press/${data.slug}`} />
+const PressPage = ({pageContext: {data}}) => <PressTemplate {...data} slug={`press/${data.slug}`} />
 
-
-export { PressTemplate }
+export {PressTemplate}
 export default PressPage

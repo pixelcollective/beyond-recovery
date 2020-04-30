@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
+import React, {useEffect} from 'react'
+import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
-import { Box } from 'rebass'
+import {Box} from 'rebass'
 
 /**
  * Action Component
@@ -9,7 +9,7 @@ import { Box } from 'rebass'
  * @param {string} actionId
  * @param {string} action
  */
-const ActionComponent = ({ actionId, action }) => {
+const ActionComponent = ({actionId, action}) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       ;((n, e, w, m, o, d) => {
@@ -22,12 +22,7 @@ const ActionComponent = ({ actionId, action }) => {
     }
   }, [])
 
-  return (
-    <Box
-      fontFamily={'system-ui'}
-      id={`newmode-embed-${action}-${actionId}`}
-    />
-  )
+  return <Box fontFamily={'system-ui'} id={`newmode-embed-${action}-${actionId}`} />
 }
 
 /**
@@ -38,7 +33,7 @@ const ActionComponent = ({ actionId, action }) => {
  * @param {string} actionId
  * @param {string} action
  */
-const ActionTemplate = ({ title, description, actionId, action }) => (
+const ActionTemplate = ({title, description, actionId, action}) => (
   <Layout>
     <Helmet>
       <title>{title}</title>
@@ -50,10 +45,7 @@ const ActionTemplate = ({ title, description, actionId, action }) => (
       <section id="one">
         <div className="inner">
           <Box width={[1]}>
-            <ActionComponent
-              actionId={actionId || null}
-              action={action || null}
-            />
+            <ActionComponent actionId={actionId || null} action={action || null} />
           </Box>
         </div>
       </section>
@@ -71,21 +63,9 @@ const ActionTemplate = ({ title, description, actionId, action }) => (
  */
 const ActionPage = ({
   pageContext: {
-    data: {
-      title,
-      description,
-      actionId,
-      action,
-    },
+    data: {title, description, actionId, action},
   },
-}) => (
-  <ActionTemplate
-    title={title}
-    description={description}
-    actionId={actionId}
-    action={action}
-  />
-)
+}) => <ActionTemplate title={title} description={description} actionId={actionId} action={action} />
 
-export { ActionTemplate }
+export {ActionTemplate}
 export default ActionPage

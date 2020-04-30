@@ -1,12 +1,12 @@
 import React from 'react'
-import { PageTemplate } from '../../templates/page'
+import {PageTemplate} from '../../templates/page'
 
 /**
  * Page Preview
  *
  * @param {object} entry
  */
-const PagePreview = ({ entry }) => {
+const PagePreview = ({entry}) => {
   const data = entry.getIn(['data']).toJS()
 
   return data ? (
@@ -16,7 +16,9 @@ const PagePreview = ({ entry }) => {
       content={data.content}
       image={data.image}
     />
-  ) : <div>Loading...</div>
+  ) : (
+    <div>Loading...</div>
+  )
 }
 
 export default PagePreview

@@ -19,7 +19,7 @@ class Layout extends React.Component {
 
   componentDidMount() {
     this.timeoutId = setTimeout(() => {
-      this.setState({ loading: '' })
+      this.setState({loading: ''})
     }, 100)
   }
 
@@ -36,10 +36,13 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children } = this.props
+    const {children} = this.props
     return (
-      <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
-        <div id="wrapper" style={{ overflowX: 'hidden', maxWidth: '100%' }}>
+      <div
+        className={`body ${this.state.loading} ${
+          this.state.isMenuVisible ? 'is-menu-visible' : ''
+        }`}>
+        <div id="wrapper" style={{overflowX: 'hidden', maxWidth: '100%'}}>
           <Header onToggleMenu={this.handleToggleMenu} />
           {children}
           <Footer />

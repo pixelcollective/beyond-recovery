@@ -26,14 +26,14 @@ const Container = styled(Grid)`
 `
 
 const Col = styled.div`
-  width: ${(props) => (props.size / 12) * 100 - 2}%;
+  width: ${props => (props.size / 12) * 100 - 2}%;
   display: flex;
   flex-direction: column;
   margin: ${space / 2}rem auto ${space / 2}rem auto;
 
   &::first-of-type,
   &::last-of-type {
-    width: ${(props) => (props.size / 12) * 100}%;
+    width: ${props => (props.size / 12) * 100}%;
   }
 
   @media screen and (max-width: ${smallScreen}) {
@@ -78,7 +78,7 @@ const Img = styled(Image)`
   max-width: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: ${(props) => props.round || 0}px;
+  border-radius: ${props => props.round || 0}px;
 `
 
-export { Demand, SubDemand, Grid, Col, Container, Header, PageTitle, Img, PageSubTitle }
+export {Demand, SubDemand, Grid, Col, Container, Header, PageTitle, Img, PageSubTitle}

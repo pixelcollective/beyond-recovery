@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet'
+import React, {useState, useEffect} from 'react'
+import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
-import { Flex, Box } from 'rebass'
+import {Flex, Box} from 'rebass'
 
 /**
  * NewMode embed.
  */
-const Action = ({ id }) => {
+const Action = ({id}) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       ;((n, e, w, m, o, d) => {
@@ -19,12 +19,7 @@ const Action = ({ id }) => {
     }
   }, [])
 
-  return (
-    <Box
-      fontFamily={'system-ui'}
-      id={`newmode-embed-${id[0]}-${id[1]}`}
-    />
-  )
+  return <Box fontFamily={'system-ui'} id={`newmode-embed-${id[0]}-${id[1]}`} />
 }
 
 /**

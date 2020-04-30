@@ -1,7 +1,7 @@
-import React, { useRef, useState, useEffect, useMemo } from 'react'
-import { useViewportScroll, useTransform } from 'framer-motion'
+import React, {useRef, useState, useEffect, useMemo} from 'react'
+import {useViewportScroll, useTransform} from 'framer-motion'
 
-import { MotionBox } from './motionBox'
+import {MotionBox} from './motionBox'
 
 export const ParallaxBox = ({
   children,
@@ -11,7 +11,7 @@ export const ParallaxBox = ({
   fadeOut = false, // true | false fade an element out on end of the animation
   ...rest
 }) => {
-  const { scrollY } = useViewportScroll()
+  const {scrollY} = useViewportScroll()
   const ref = useRef()
   const [elementTop, setElementTop] = useState(0)
   const [elementBottom, setElementBottom] = useState(0)
@@ -53,7 +53,7 @@ export const ParallaxBox = ({
   const opacity = useTransform(scrollY, yOpacityRange, opacityRange, 'anticipate')
 
   return (
-    <MotionBox ref={ref} initial={{ y: 0, scale: 1 }} style={{ y, opacity }} {...rest}>
+    <MotionBox ref={ref} initial={{y: 0, scale: 1}} style={{y, opacity}} {...rest}>
       {children}
     </MotionBox>
   )
