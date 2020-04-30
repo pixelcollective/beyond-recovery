@@ -7,6 +7,9 @@ const { get, each } = require('lodash')
  */
 const postTypes = ['post', 'action', 'press']
 
+/**
+ * Create node hook.
+ */
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
@@ -31,17 +34,25 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+/**
+ * Create pages.
+ */
+exports.createPages = async ({graphql, actions}) => {
   const { createPage } = actions
 
   each(postTypes, async type => {
     const result = await graphql(`
       query {
-        allMarkdownRemark(filter: {
-          fields: {
-            collection: { eq: "${type}" }
+        allMarkdownRemark(
+          filter: {
+            fields: {
+              collection: {eq: "${type}"}
+            }
+          },
+          sort: {
+            fields: frontmatter___date
           }
-        }) {
+        ) {
           edges {
             node {
               id
@@ -49,6 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 description
                 content
+                date
                 image
                 actionId
                 action
@@ -65,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `)
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.forEach(({node}) => {
       const slug = `${type}${node.fields.slug}`
 
       createPage({
