@@ -4,7 +4,7 @@ description: Oakland City Councilwoman Nikki Fortunato Bas and other Bay Area
   speakers joined a national digital rally on Wednesday calling for government
   entities to cancel rent, mortgage and utility payments in response to the
   novel coronavirus pandemic.
-image: /img/screen-shot-2020-04-27-at-12.25.45-pm.png
+image: /img/sf-gate-template.png
 outlet: SF Gate
 outletUrl: https://www.sfgate.com/news/bayarea/article/Rally-Participants-Call-For-Cancellation-Of-15172457.php
 ---
