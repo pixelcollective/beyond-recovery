@@ -41,11 +41,11 @@ const Menu = props => (
         </li>
 
         <li>
-          <Link
-            to="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform"
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform"
             className="button fit">
             Join Us
-          </Link>
+          </a>
         </li>
       </ul>
     </div>
