@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import {css} from '@emotion/core'
@@ -8,7 +8,7 @@ import {Box} from 'rebass'
 /**
  * Donation iframe
  */
-export default () => {
+const Donate = () => {
   injectGlobal`
     footer {
       display: none!important;
@@ -41,3 +41,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Donate

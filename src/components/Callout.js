@@ -104,7 +104,7 @@ const Callout = ({logoSrc}) => (
           <Box px={2} py={2} width={[1, 2 / 3]}>
             <p>
               Our homes, health, and collective safety and futures are on the line. Millions of us
-              don’t know how we are going to pay our rent, mortgage, or utilities on April 1st, yet
+              don’t know how we are going to pay our rent, mortgage, or utilities on May 1st, yet
               landlords and banks are expecting payment as if it’s business as usual. It’s not.
             </p>
 

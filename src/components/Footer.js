@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-const Footer = styled.footer`
+const FooterBox = styled.footer`
   display: block;
   margin-top: 0;
   z-index: 40;
@@ -10,8 +10,11 @@ const Footer = styled.footer`
   padding-top: 0;
 `
 
-export default () => (
-  <Footer>
+/**
+ * Footer
+ */
+const Footer = () => (
+  <FooterBox>
     <div className="inner">
       <ul className="icons">
         <li>
@@ -40,5 +43,7 @@ export default () => (
       </ul>
       <div>&copy; {new Date().getFullYear()} Beyond Recovery</div>
     </div>
-  </Footer>
+  </FooterBox>
 )
+
+export default Footer

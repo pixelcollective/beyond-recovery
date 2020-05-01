@@ -8,7 +8,6 @@ import {Flex, Box} from 'rebass'
  * Components
  */
 import Layout from '../components/layout'
-import {Img} from '../components/parts/demands'
 
 /**
  * Styled components

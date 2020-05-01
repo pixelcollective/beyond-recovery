@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import {Flex, Box} from 'rebass'
@@ -9,7 +9,7 @@ import {Flex, Box} from 'rebass'
 const Action = ({id}) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
-      ;((n, e, w, m, o, d) => {
+      ;((n, e, w, m, o) => {
         m = n.createElement(e)
         m.async = 1
         m.src = w
@@ -25,7 +25,7 @@ const Action = ({id}) => {
 /**
  * Simple embed.
  */
-export default props => (
+const CallYourLegislator = () => (
   <Layout>
     <Helmet>
       <title>Holler at your Representative: Support Our #DebtFreeFuture</title>
@@ -49,3 +49,5 @@ export default props => (
     </div>
   </Layout>
 )
+
+export default CallYourLegislator

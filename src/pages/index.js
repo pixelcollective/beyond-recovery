@@ -181,7 +181,10 @@ const Index = () => {
                   <header className="major">
                     <h3>Press</h3>
                   </header>
-                  <p>Beyond Recovery is making news across the country. Check out just a few of the articles highlighting the stories of people organizing for homes for all.</p>
+                  <p>
+                    Beyond Recovery is making news across the country. Check out just a few of the
+                    articles highlighting the stories of people organizing for homes for all.
+                  </p>
                   <ul className="actions">
                     <li>
                       <Link to="/press" className="button">

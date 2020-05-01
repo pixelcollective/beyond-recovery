@@ -50,29 +50,29 @@ const FestivalPage = () => (
           <p>
             With the coronavirus crisis, many of us are stuck between staying healthy or staying
             housed. With the loss of our incomes, we may not be able to make rent on April 1st or
-            May 1st.  We’re envisioning a future beyond recovery and calling out to our electeds to
-            #CancelRent #CancelMortgages and guarantee #HomesForAll!
+            May 1st. We&apos;re envisioning a future beyond recovery and calling out to our electeds
+            to #CancelRent #CancelMortgages and guarantee #HomesForAll!
           </p>
           <p>
             Rent Parties have deep roots in the Black struggle for freedom, self-determination and
-            mutual aid. We're bringing back this hundred year old tradition to demand a just
+            mutual aid. We&apos;re bringing back this hundred year old tradition to demand a just
             response to coronavirus.
           </p>
           <p>
-            Join us for 10 consecutive days of the{' '}
+            Join us for 10 consecutive days of the
             <a href="https://www.facebook.com/events/1110752565940021/">#CancelRent Festival</a>!
-            Our first performance on Sunday, March 29th kicked off with Grammy-nominated artist{' '}
+            Our first performance on Sunday, March 29th kicked off with Grammy-nominated artist
             <a href="https://www.youtube.com/watch?v=gaKHuBRFt7E&feature=youtu.be">Aloe Blacc!</a>
           </p>
           <p>
             Come back at 9pm ET/6pm PT everyday and tune in early on weekends at 5pm ET/2pm PT for
-            bonus shows, where talented and notable acts will{' '}
+            bonus shows, where talented and notable acts will
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform">
               raise our demands
-            </a>{' '}
+            </a>
             while we dance! For more information on the #CancelRent Festival lineup, to register for
             the writing sessions and community discussions, and to invite your friends, family and
-            community to join us check out the{' '}
+            community to join us check out the
             <a href="https://www.facebook.com/events/1110752565940021/">
               #CancelRent Festival on Facebook
             </a>

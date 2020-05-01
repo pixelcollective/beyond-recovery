@@ -1,15 +1,18 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import {Box} from 'rebass'
 
+/**
+ * Action page
+ */
 const Action = () => {
   if (typeof document !== 'undefined') {
     const query = new URLSearchParams(window.location.search)
 
     return (() => {
       useEffect(() => {
-        ;((n, e, w, m, o, d) => {
+        ;((n, e, w, m, o) => {
           m = n.createElement(e)
           m.async = 1
           m.src = w

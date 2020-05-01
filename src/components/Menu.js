@@ -17,13 +17,18 @@ const Menu = props => (
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/festival">
-            #CancelRent Festival
+          <Link onClick={props.onToggleMenu} to="/press">
+            Press
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/debt-free-future">
-            Debt Free Future
+          <Link onClick={props.onToggleMenu} to="/donate">
+            Donate
+          </Link>
+        </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/take-action">
+            Take Action
           </Link>
         </li>
       </ul>
@@ -36,18 +41,18 @@ const Menu = props => (
         </li>
 
         <li>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdbGN61jHfXPEzE7G5Cw2Jb6a1T1XHFufYTuXniaw5eVos2Nw/viewform"
+          <Link
+            to="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform"
             className="button fit">
-            Take Action
-          </a>
+            Join Us
+          </Link>
         </li>
       </ul>
     </div>
 
-    <a className="close" onClick={props.onToggleMenu} href="javascript:;">
+    <Link className="close" onClick={props.onToggleMenu}>
       Close
-    </a>
+    </Link>
   </nav>
 )
 

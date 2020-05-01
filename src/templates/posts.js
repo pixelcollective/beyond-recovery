@@ -11,7 +11,6 @@ import {Flex, Box} from 'rebass'
  * Components
  */
 import Layout from '../components/layout'
-import {Img} from '../components/parts/demands'
 
 /**
  * Styled components
@@ -54,7 +53,7 @@ const PostsTemplate = ({title, description, posts}) => (
           </header>
 
           <Flex flexWrap="wrap" mx={-2}>
-            {posts.edges.map(({node: {frontmatter, fields, ...node}}, id) => {
+            {posts.edges.map(({node: {frontmatter, fields}}, id) => {
               const {title, description, image} = frontmatter
               const slug = `/post/${fields.slug}`
 

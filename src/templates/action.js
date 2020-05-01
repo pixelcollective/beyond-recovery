@@ -12,7 +12,7 @@ import {Box} from 'rebass'
 const ActionComponent = ({actionId, action}) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
-      ;((n, e, w, m, o, d) => {
+      ;((n, e, w, m, o) => {
         m = n.createElement(e)
         m.async = 1
         m.src = w

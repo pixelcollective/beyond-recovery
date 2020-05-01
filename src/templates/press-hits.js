@@ -5,13 +5,12 @@ import React from 'react'
 import {Link} from 'gatsby'
 import styled from '@emotion/styled'
 import {Helmet} from 'react-helmet'
-import {Flex, Box} from 'rebass'
+import {Box} from 'rebass'
 
 /**
  * Components.
  */
 import Layout from '../components/layout'
-import {Img} from '../components/parts/demands'
 
 /**
  * Styled components.
