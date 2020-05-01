@@ -199,20 +199,32 @@ const Index = () => {
         </Flex>
       </div>
 
-      <div className="alt">
-        <section id="one">
-          <div className="inner">
-            <header className="major">
-              <h1>About</h1>
-            </header>
+      <section>
+        <div className="inner">
+          <header className="major">
+            <h2>Help fund our campaign</h2>
+          </header>
+          <div>
             <p>
-              The Beyond Recovery campaign is initiated by the Homes For All campaign and the Right
-              To The City Alliance. Homes For All is a grassroots people’s movement fighting to win
-              permanent, dignified and affordable homes for all people.
+              <strong>
+                No one should go into debt because they are out of work due to a public health
+                crisis.
+              </strong>
             </p>
+            <p>
+              Join us in fighting for a #DebtFreeFuture. It's time to #CancelRent, #CancelMortgages, and win #HomesForAll during the pandemic and beyond recovery.
+            </p>
+
+            <ul className="actions">
+              <li>
+                <Link to="/donate" className="button">
+                  Donate
+                </Link>
+              </li>
+            </ul>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </Layout>
   )
 }

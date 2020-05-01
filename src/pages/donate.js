@@ -29,11 +29,12 @@ const Donate = () => {
         ]}
       />
 
-      <Box bg={'white'} maxHeight={'100vh'}>
+      <Box maxHeight={'100vh'}>
         <iframe
           css={css`
             width: 100%;
             height: 100vh;
+            padding: 4rem 2rem 2rem 2rem;
           `}
           src="https://righttothecityalliance.salsalabs.org/BeyondRecovery0/index.html"
         />

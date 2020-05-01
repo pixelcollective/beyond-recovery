@@ -57,32 +57,37 @@ const Demands = () => {
         <html lang={'en'} />
       </Helmet>
 
-      <Container>
-        <Header>
-          <Grid>
-            <Col size="12">
-              <PageTitle>Demands</PageTitle>
-              <PageSubTitle>
-                A people’s plan to ensure a healthy, stable, thriving future for us all.
-              </PageSubTitle>
-            </Col>
-          </Grid>
-          <Grid>
-            <Col size={6}>
-              <a
-                className={`button special`}
-                href={`https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform`}>
-                Sign the platform here
-              </a>
-            </Col>
-            <Col size={6}>
-              <Link className={`button`} to={`/demands-es`}>
-                Leer en español
-              </Link>
-            </Col>
-          </Grid>
-        </Header>
+      <section id="banner" className="style2">
+        <div className="inner">
+          <Header>
+            <Grid>
+              <Col size="12">
+                <PageTitle>Demands</PageTitle>
+                <PageSubTitle>
+                  A people’s plan to ensure a healthy, stable, thriving future for us all.
+                </PageSubTitle>
+              </Col>
+            </Grid>
+            <Grid>
+              <Col size={6}>
+                <a
+                  className={`button special`}
+                  href={`https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform`}>
+                  Sign the platform here
+                </a>
+              </Col>
+              <Col size={6}>
+                <Link className={`button`} to={`/demands-es`}>
+                  Leer en español
+                </Link>
+              </Col>
+            </Grid>
+          </Header>
+        </div>
+      </section>
 
+      <Container>
+        <div css={css`margin-top: 2rem;`} />
         <Grid>
           <Col size={6}>
             <Img fluid={data.image01.childImageSharp.fluid} round={5} />
