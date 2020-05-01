@@ -212,7 +212,8 @@ const Index = () => {
               </strong>
             </p>
             <p>
-              Join us in fighting for a #DebtFreeFuture. It's time to #CancelRent, #CancelMortgages, and win #HomesForAll during the pandemic and beyond recovery.
+              Join us in fighting for a #DebtFreeFuture. It&apos;s time to #CancelRent,
+              #CancelMortgages, and win #HomesForAll during the pandemic and beyond recovery.
             </p>
 
             <ul className="actions">

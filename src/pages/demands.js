@@ -87,7 +87,11 @@ const Demands = () => {
       </section>
 
       <Container>
-        <div css={css`margin-top: 2rem;`} />
+        <div
+          css={css`
+            margin-top: 2rem;
+          `}
+        />
         <Grid>
           <Col size={6}>
             <Img fluid={data.image01.childImageSharp.fluid} round={5} />
