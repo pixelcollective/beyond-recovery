@@ -4,7 +4,7 @@ import {motion, AnimatePresence} from 'framer-motion'
 /**
  * Banner
  */
-export default ({width, height}) => (
+const Banner = ({width, height}) => (
   <div>
     <svg
       role="heading"
@@ -27,6 +27,8 @@ export default ({width, height}) => (
     </svg>
   </div>
 )
+
+export default Banner
 
 /**
  * Transition groups
@@ -57,7 +59,7 @@ const letter = {
 /**
  * Cancel Rent
  */
-const CancelRentBg = props => (
+const CancelRentBg = () => (
   <AnimatePresence>
     <motion.path
       initial={{opacity: 0}}
@@ -68,7 +70,7 @@ const CancelRentBg = props => (
   </AnimatePresence>
 )
 
-const CancelRentText = props => (
+const CancelRentText = () => (
   <motion.text
     initial="hidden"
     pointerEvents="none"
@@ -91,7 +93,7 @@ const CancelRentText = props => (
 /**
  * Cancel Mortgages
  */
-const CancelMortgagesBg = props => (
+const CancelMortgagesBg = () => (
   <AnimatePresence>
     <motion.path
       role="decorative"
@@ -103,7 +105,7 @@ const CancelMortgagesBg = props => (
   </AnimatePresence>
 )
 
-const CancelMortgagesText = props => (
+const CancelMortgagesText = () => (
   <AnimatePresence>
     <motion.text
       initial="hidden"
@@ -129,7 +131,7 @@ const CancelMortgagesText = props => (
 /**
  * Guarantee
  */
-const GuaranteeBg = props => (
+const GuaranteeBg = () => (
   <AnimatePresence>
     <motion.path
       role="decorative"
@@ -144,7 +146,7 @@ const GuaranteeBg = props => (
 /**
  * Guarantee: Text contents
  */
-const GuaranteeText = props => (
+const GuaranteeText = () => (
   <AnimatePresence>
     <motion.text
       initial="hidden"

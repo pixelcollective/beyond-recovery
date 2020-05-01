@@ -1,53 +1,13 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
-import {Link} from 'gatsby'
-import styled from '@emotion/styled'
 import Layout from '../components/layout'
-import Callout from '../components/Callout'
-import pic from '../assets/images/30271820676_e46b9f31e4_o.jpg'
 import YouTube from 'react-youtube'
 import {Box} from 'rebass'
 
-const Image = styled.img`
-  max-width: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: ${props => props.round || 0}px;
-`
-
-const space = 1.5
-const smallScreen = `980px`
-
-const Grid = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @media screen and (max-width: ${smallScreen}) {
-    flex-direction: column;
-  }
-`
-
-const Col = styled.div`
-  width: ${props => (props.size / 12) * 100 - 2}%;
-  display: flex;
-  flex-direction: column;
-  margin: ${space / 2}rem auto ${space / 2}rem auto;
-
-  &::first-of-type,
-  &::last-of-type {
-    width: ${props => (props.size / 12) * 100}%;
-  }
-
-  @media screen and (max-width: ${smallScreen}) {
-    flex-direction: column;
-    width: 100%;
-  }
-`
-
-const Generic = props => (
+/**
+ * Generic Page
+ */
+const FestivalPage = () => (
   <Layout>
     <Helmet>
       <title>Cancel Rent Festival</title>
@@ -129,4 +89,4 @@ const Generic = props => (
   </Layout>
 )
 
-export default Generic
+export default FestivalPage

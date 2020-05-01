@@ -24,8 +24,6 @@ const PostsPage = () => {
               description
               image
               content
-              embed
-              script
             }
             fields {
               slug

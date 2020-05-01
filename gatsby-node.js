@@ -1,6 +1,6 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const { get, each } = require('lodash')
+const {createFilePath} = require(`gatsby-source-filesystem`)
+const {get, each} = require('lodash')
 
 /**
  * Application post types
@@ -10,8 +10,8 @@ const postTypes = ['post', 'action', 'press']
 /**
  * Create node hook.
  */
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({node, getNode, actions}) => {
+  const {createNodeField} = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     createNodeField({
@@ -29,7 +29,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'collection',
-      value: get(parent, 'sourceInstanceName')
+      value: get(parent, 'sourceInstanceName'),
     })
   }
 }
@@ -38,7 +38,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
  * Create pages.
  */
 exports.createPages = async ({graphql, actions}) => {
-  const { createPage } = actions
+  const {createPage} = actions
 
   each(postTypes, async type => {
     const result = await graphql(`

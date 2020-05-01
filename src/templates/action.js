@@ -18,11 +18,11 @@ const ActionComponent = ({actionId, action}) => {
         m.src = w
         o = n.getElementsByTagName(e)[0]
         o.parentNode.insertBefore(m, o)
-      })(document, 'script', `//engage.newmode.net/embed/${action}/${actionId}.js`)
+      })(document, 'script', `//engage.newmode.net/embed/${actionId}/${action}.js`)
     }
   }, [])
 
-  return <Box fontFamily={'system-ui'} id={`newmode-embed-${action}-${actionId}`} />
+  return <Box fontFamily={'system-ui'} id={`newmode-embed-${actionId}-${action}`} />
 }
 
 /**

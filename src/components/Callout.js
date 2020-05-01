@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'gatsby-image'
 import {motion, AnimatePresence} from 'framer-motion'
 import {Flex, Box, Button} from 'rebass'
@@ -38,7 +39,10 @@ const container = delay => ({
   },
 })
 
-export default ({logoSrc}) => (
+/**
+ * Callout
+ */
+const Callout = ({logoSrc}) => (
   <AnimatePresence>
     <motion.section
       style={{
@@ -158,3 +162,5 @@ export default ({logoSrc}) => (
     </motion.section>
   </AnimatePresence>
 )
+
+export default Callout

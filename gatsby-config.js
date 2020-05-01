@@ -39,13 +39,12 @@ module.exports = {
           },
         ],
       },
-
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /\.inline\.svg$/
+          include: /\.inline\.svg$/,
         },
       },
     },
@@ -107,9 +106,8 @@ module.exports = {
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
         mergeCachingHeaders: true,
-        transformHeaders: (headers, path) => headers,
         generateMatchPathRewrites: true,
       },
-    }
+    },
   ],
 }

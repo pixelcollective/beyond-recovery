@@ -2,7 +2,7 @@
  * Modules
  */
 import React from 'react'
-import {useStaticQuery, graphql, Link} from 'gatsby'
+import {useStaticQuery, graphql} from 'gatsby'
 
 /**
  * Templates
@@ -12,7 +12,7 @@ import PressTemplate from './../templates/press-hits'
 /**
  * Press Page
  */
-export default () => {
+const Press = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(filter: {fields: {collection: {eq: "press"}}}) {
@@ -24,8 +24,6 @@ export default () => {
               description
               image
               content
-              embed
-              script
             }
             fields {
               slug
@@ -46,3 +44,5 @@ export default () => {
     />
   )
 }
+
+export default Press

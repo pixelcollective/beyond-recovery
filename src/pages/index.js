@@ -10,7 +10,7 @@ import Callout from '../components/Callout'
 /**
  * Home Page Component
  */
-export default () => {
+const Index = () => {
   const data = useStaticQuery(graphql`
     query {
       background: file(relativePath: {eq: "images/background.png"}) {
@@ -120,18 +120,16 @@ export default () => {
                 }}>
                 <div className="inner">
                   <header className="major">
-                    <h3>In the Press</h3>
+                    <h3>Take Action</h3>
                   </header>
                   <p>
-                    The coronavirus crisis has made many of us stuck between staying healthy or
-                    staying housed. With the loss of our incomes, we may not be able to make rent on
-                    April 1st or May 1st. We’re envisioning a future beyond recovery and calling out
-                    to our electeds to cancel rent and mortgages and guarantee homes for all!
+                    Join other renters, homeowners, and small business people in calling out our
+                    electeds to cancel rent and mortgages and guarantee homes for all!
                   </p>
                   <ul className="actions">
                     <li>
-                      <Link to="/festival" className="button">
-                        Check it out
+                      <Link to="/take-action" className="button">
+                        Take action
                       </Link>
                     </li>
                   </ul>
@@ -181,13 +179,13 @@ export default () => {
                 }}>
                 <div className="inner">
                   <header className="major">
-                    <h3>Demands</h3>
+                    <h3>Press</h3>
                   </header>
-                  <p>A people’s plan to ensure a healthy, stable, thriving future for us all.</p>
+                  <p>Beyond Recovery is making news across the country. Check out just a few of the articles highlighting the stories of people organizing for homes for all.</p>
                   <ul className="actions">
                     <li>
-                      <Link to="/demands" className="button">
-                        Learn more
+                      <Link to="/press" className="button">
+                        Read more
                       </Link>
                     </li>
                   </ul>
@@ -215,3 +213,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Index

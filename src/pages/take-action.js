@@ -16,8 +16,8 @@ const ActionsPage = () => {
               title
               description
               content
-              embed
-              script
+              action
+              actionId
             }
             fields {
               slug

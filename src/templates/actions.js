@@ -36,17 +36,9 @@ const DEFAULT_DESCRIPTION =
  * @param {string} slug
  * @param {string} description
  */
-const Action = ({id, image, title, slug, description}) => (
-  <Flex flexWrap="wrap" mx={-2} key={id}>
-    {image && image.childImageSharp.fluid && (
-      <Box px={2} py={2} width={1 / 2}>
-        <Link to={`/action/${slug}`}>
-          <Img fluid={image.childImageSharp.fluid} round={5} />
-        </Link>
-      </Box>
-    )}
-
-    <Box px={2} py={2} width={1 / 2}>
+const Action = ({title, slug, description}) => (
+  <Flex flexWrap="wrap" mx={-2}>
+    <Box px={2} py={2} width={1}>
       <Link to={`/action/${slug}`}>
         <Title>{title}</Title>
       </Link>
@@ -87,7 +79,7 @@ const ActionsTemplate = ({title, description, actions}) => (
               },
               id,
             ) => (
-              <Action id={id} title={title} description={description} image={image} slug={slug} />
+              <Action key={id} title={title} description={description} image={image} slug={slug} />
             ),
           )}
         </div>

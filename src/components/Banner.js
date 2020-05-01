@@ -86,7 +86,7 @@ const Messaging = () => (
   </Box>
 )
 
-const BannerContainer = ({bgSrc, logoSrc}) => (
+const BannerContainer = ({bgSrc}) => (
   <Banner>
     <ParallaxBox fadeOut={true} triggerPoint={0.5} yOffset={1200}>
       <BackgroundImage fluid={bgSrc} alt="Rent strikers fight for an equitable future." />
