@@ -71,9 +71,7 @@ const DemandsEs = () => {
 
           <Grid>
             <Col size="6">
-              <a
-                className="button special"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfYUyCzVw4RQ-HIvY1fhZbsE3u1TXOf2YxRrJxzakNpeAaysA/viewform">
+              <a className="button special" href="https://forms.gle/WQ3x7iuSQCMuuJFFA">
                 Firme las demandas
               </a>
             </Col>
