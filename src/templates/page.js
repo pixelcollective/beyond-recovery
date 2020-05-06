@@ -4,14 +4,14 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
-import {Text} from 'rebass'
+import {Text, Image} from 'rebass'
 
 /**
  * Constants
  */
 const DEFAULT_TITLE = 'Cancel Rent'
 const DEFAULT_DESCRIPTION =
-  'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
+  'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
  * Page Template
@@ -34,7 +34,7 @@ const PageTemplate = ({title, description, content, image}) => (
           <header className="major">
             <h1>{title}</h1>
           </header>
-          {image && <img maxWidth="100%" src={image} />}
+          {image && <Image maxWidth="100%" src={image} />}
           <Text mb={4} dangerouslySetInnerHTML={{__html: content}} />
         </div>
       </section>
@@ -47,9 +47,9 @@ const PageTemplate = ({title, description, content, image}) => (
  */
 const Page = ({
   pageContext: {
-    data: {title, description, content, image},
+    data: {title, description, html, image},
   },
-}) => <PageTemplate title={title} description={description} content={content} image={image} />
+}) => <PageTemplate title={title} description={description} content={html} image={image} />
 
 export {PageTemplate}
 export default Page

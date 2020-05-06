@@ -13,7 +13,7 @@ const PagePreview = ({entry}) => {
     <PageTemplate
       title={data.title}
       description={data.description}
-      content={data.content}
+      content={data.body}
       image={data.image}
     />
   ) : (

@@ -5,7 +5,7 @@ const {get, each} = require('lodash')
 /**
  * Application post types
  */
-const postTypes = ['post', 'action', 'press']
+const postTypes = ['post', 'action', 'press', 'page']
 
 /**
  * Create node hook.
@@ -56,16 +56,17 @@ exports.createPages = async ({graphql, actions}) => {
           edges {
             node {
               id
+              html
               frontmatter {
                 title
                 description
-                content
                 date
                 image
                 actionId
                 action
                 outlet
                 outletUrl
+                content
               }
               fields {
                 slug
@@ -88,6 +89,7 @@ exports.createPages = async ({graphql, actions}) => {
           data: {
             ...node.frontmatter,
             ...node.fields,
+            ...node,
           },
         },
       })

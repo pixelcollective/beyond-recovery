@@ -28,7 +28,7 @@ const Title = styled.h1`
  */
 const DEFAULT_TITLE = 'Blog'
 const DEFAULT_DESCRIPTION =
-  'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
+  'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
 
 /**
  * Posts Template
