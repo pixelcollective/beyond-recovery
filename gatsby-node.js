@@ -40,50 +40,72 @@ exports.onCreateNode = ({node, getNode, actions}) => {
 exports.createPages = async ({graphql, actions}) => {
   const {createPage} = actions
 
-  each(postTypes, async type => {
-    const result = await graphql(`
-      query {
-        allMarkdownRemark(
-          filter: {
-            fields: {
-              collection: {eq: "${type}"}
-            }
-          },
-          sort: {
-            fields: frontmatter___date
+  const query = type => `
+    query {
+      allMarkdownRemark(
+        filter: {
+          fields: {
+            collection: {eq: "${type}"}
           }
-        ) {
-          edges {
-            node {
-              id
-              html
-              frontmatter {
-                title
-                description
-                date
-                image
-                actionId
-                action
-                outlet
-                outletUrl
-                content
-              }
-              fields {
-                slug
-                collection
-              }
+        },
+        sort: {
+          fields: frontmatter___date
+        }
+      ) {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              title
+              description
+              date
+              image
+              actionId
+              action
+              outlet
+              outletUrl
+            }
+            fields {
+              slug
+              collection
             }
           }
         }
       }
-    `)
+    }
+  `
 
-    result.data.allMarkdownRemark.edges.forEach(({node}) => {
-      const slug = `${type}${node.fields.slug}`
+  const postsData = await graphql(query('post'))
+  const pagesData = await graphql(query('page'))
+  const actionsData = await graphql(query('action'))
+  const pressData = await graphql(query('press'))
+
+  Array(
+    {
+      type: 'post',
+      response: postsData,
+    },
+    {
+      type: 'action',
+      response: actionsData,
+    },
+    {
+      type: 'press',
+      response: pressData,
+    },
+    {
+      type: 'page',
+      response: pagesData,
+    },
+  ).forEach(collection => {
+    console.log(collection)
+    collection.response.data.allMarkdownRemark.edges.forEach(({node}) => {
+      const slug = `${collection.type}${node.fields.slug}`
 
       createPage({
         path: slug,
-        component: path.resolve(`./src/templates/${type}.js`),
+        component: path.resolve(`./src/templates/${collection.type}.js`),
         context: {
           slug,
           data: {
