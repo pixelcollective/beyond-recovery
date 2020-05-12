@@ -17,6 +17,6 @@ Millions of us - renters and small businesses, restaurant workers and domestic w
    </head>
    <body><center>
 <body><button class="favorite styled"
-       <button onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeCmfjtaDvPhqjFwqj_H9V37nU15Q9tjdKGeJhNinaquu14Qw/viewform';">Click Here</button>
+       <button onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeCmfjtaDvPhqjFwqj_H9V37nU15Q9tjdKGeJhNinaquu14Qw/viewform';">Join Here</button>
 </body>
 </html>
