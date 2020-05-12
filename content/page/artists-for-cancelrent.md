@@ -9,5 +9,5 @@ Millions of us - renters and small businesses, restaurant workers and domestic w
 
 **Will you join us to #Cancel Rent?**
 
-<body><center><button class="favorite styled"
+<body><input: https://docs.google.com/forms/d/e/1FAIpQLSeCmfjtaDvPhqjFwqj_H9V37nU15Q9tjdKGeJhNinaquu14Qw/viewform><center><button class="favorite styled"
         type="button">    Join Here </button>
