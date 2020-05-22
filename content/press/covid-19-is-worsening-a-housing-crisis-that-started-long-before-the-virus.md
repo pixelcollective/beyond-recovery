@@ -4,7 +4,7 @@ description: Truthout interviews Kamau Walton, National Communications Organizer
   of Right to the City Alliance about Cancel Rent and the Beyond Recovery
   Campaign.
 date: 2020-05-02T18:47:07.538Z
-image: /img/truthout.jpg
+image: /img/truthout-template.jpg
 content: Truthout interviews Kamau Walton, National Communications Organizer of
   Right to the City Alliance about Cancel Rent and the Beyond Recovery Campaign.
 outlet: Truthout
