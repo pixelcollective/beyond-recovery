@@ -1,7 +1,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
-import {Box} from 'rebass'
+import {Box, Text} from 'rebass'
 import YouTube from 'react-youtube'
 
 /**
@@ -53,11 +53,17 @@ const TrainingTemplate = ({title, description, youtubeId}) => (
 
     <div id="main" className="alt">
       <section id="one">
+        <h1 style={{lineBreak: 'word', marginBottom: '2rem'}}>{title}</h1>
+
         <div className="inner">
           <Box width={[1]}>
             <VideoComponent youtubeId={youtubeId || null} />
           </Box>
         </div>
+
+        <Box px={2}>
+          <Text color={'white'} dangerouslySetInnerHTML={{__html: description || description}} />
+        </Box>
       </section>
     </div>
   </Layout>

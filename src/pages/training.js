@@ -24,6 +24,7 @@ const Trainings = () => {
               description
               image
               content
+              youtubeId
             }
             fields {
               slug

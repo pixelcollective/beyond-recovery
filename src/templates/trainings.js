@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 import styled from '@emotion/styled'
 import {Helmet} from 'react-helmet'
-import {Flex, Box} from 'rebass'
+import {Flex, Box, Text} from 'rebass'
 
 /**
  * Components
@@ -43,8 +43,14 @@ const Training = ({title, slug, description, youtubeId}) => (
         <Title>{title}</Title>
       </Link>
 
-      <Box color={'white'} dangerouslySetInnerHTML={{__html: description}}>
-        <VideoComponent youtubeId={youtubeId} />
+      <div className="inner">
+        <Box width={[1]}>
+          <VideoComponent youtubeId={youtubeId || null} />
+        </Box>
+      </div>
+
+      <Box px={2}>
+        <Text color={'white'} dangerouslySetInnerHTML={{__html: description || description}} />
       </Box>
     </Box>
   </Flex>
@@ -76,7 +82,7 @@ const TrainingsTemplate = ({title, description, trainings}) => (
             (
               {
                 node: {
-                  frontmatter: {title, description, image, youtubeId},
+                  frontmatter: {title, description, youtubeId},
                   fields: {slug},
                 },
               },
@@ -86,7 +92,6 @@ const TrainingsTemplate = ({title, description, trainings}) => (
                 key={id}
                 title={title}
                 description={description}
-                image={image}
                 slug={slug}
                 youtubeId={youtubeId}
               />
