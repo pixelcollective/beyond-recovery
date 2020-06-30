@@ -40,8 +40,7 @@ const VideoComponent = ({youtubeId}) => (
  *
  * @param {string} title
  * @param {string} description
- * @param {string} actionId
- * @param {string} action
+ * @param {string} youtubeId
  */
 const TrainingTemplate = ({title, description, youtubeId}) => (
   <Layout>

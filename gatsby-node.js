@@ -76,8 +76,8 @@ exports.createPages = async ({graphql, actions}) => {
   const pagesData = await graphql(query('page'))
   const actionsData = await graphql(query('action'))
   const pressData = await graphql(query('press'))
-  const toolsData = await graphql(query('tools'))
-  const trainingsData = await graphql(query('trainings'))
+  const toolsData = await graphql(query('tool'))
+  const trainingsData = await graphql(query('training'))
 
   Array(
     {
