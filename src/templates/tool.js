@@ -45,7 +45,7 @@ const ToolTemplate = ({title, description, content, organization, url, image, sl
             )}
 
             <h2 style={{marginTop: '2rem'}}>
-              via <a href={url}>{organization}</a>
+              via {organization}
             </h2>
           </header>
           <Box px={2}>
