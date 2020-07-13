@@ -61,6 +61,7 @@ exports.createPages = async ({graphql, actions}) => {
               outlet
               outletUrl
               youtubeId
+              organization
             }
             fields {
               slug

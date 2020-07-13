@@ -3,6 +3,7 @@ import {Link} from 'gatsby'
 import styled from '@emotion/styled'
 import {Helmet} from 'react-helmet'
 import {Flex, Box, Text} from 'rebass'
+import {Grid, Col, PageTitle, PageSubTitle} from '../components/parts/demands'
 
 /**
  * Components
@@ -78,25 +79,34 @@ const TrainingsTemplate = ({title, description, trainings}) => (
             <h1>{title || DEFAULT_TITLE}</h1>
           </header>
 
-          {trainings.edges.map(
-            (
-              {
-                node: {
-                  frontmatter: {title, description, youtubeId},
-                  fields: {slug},
+          <Grid>
+            <Col size="12">
+              <PageSubTitle>Trainings introductory copy.</PageSubTitle>
+            </Col>
+          </Grid>
+
+          <Grid>
+            {trainings.edges.map(
+              (
+                {
+                  node: {
+                    frontmatter: {title, description, youtubeId},
+                    fields: {slug},
+                  },
                 },
-              },
-              id,
-            ) => (
-              <Training
-                key={id}
-                title={title}
-                description={description}
-                slug={slug}
-                youtubeId={youtubeId}
-              />
-            ),
-          )}
+                id,
+              ) => (
+                <Col size={[12, 8, 4]} key={id}>
+                  <Training
+                    title={title}
+                    description={description}
+                    slug={slug}
+                    youtubeId={youtubeId}
+                  />
+                </Col>
+              ),
+            )}
+          </Grid>
         </div>
       </section>
     </div>

@@ -3,6 +3,7 @@ import {Helmet} from 'react-helmet'
 import Layout from '../components/layout'
 import {Box, Text} from 'rebass'
 import YouTube from 'react-youtube'
+import {PageSubTitle} from '../components/parts/demands'
 
 /**
  * Video Component
@@ -52,7 +53,7 @@ const TrainingTemplate = ({title, description, youtubeId}) => (
 
     <div id="main" className="alt">
       <section id="one">
-        <h1 style={{lineBreak: 'word', marginBottom: '2rem'}}>{title}</h1>
+        <PageSubTitle>{title}</PageSubTitle>
 
         <div className="inner">
           <Box width={[1]}>
