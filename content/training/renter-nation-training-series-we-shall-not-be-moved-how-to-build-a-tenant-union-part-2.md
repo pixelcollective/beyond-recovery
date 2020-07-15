@@ -1,7 +1,6 @@
 ---
 title: "Episode 6- We Shall Not Be Moved: How to Build a Tenant Union Part 2"
-description: " We Shall Not Be Moved - How to Build a Tenant Union Part II.
-  Tonight we will be highlighting the existing work of tenant unions and
+description: "This training highlights the existing work of tenant unions and
   organizations that have been working to decomodifty housing and land. This is
   an opportunity to hear from organizers and tenant activists in New Orleans,
   D.C., Boston and Minneapolis, who are making great strides to challenge
