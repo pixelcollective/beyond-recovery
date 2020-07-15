@@ -1,6 +1,5 @@
 ---
-title: "Renter Nation Training Series- We Shall Not Be Moved: How to Build a
-  Tenant Union Part 2"
+title: "Episode 6- We Shall Not Be Moved: How to Build a Tenant Union Part 2"
 description: " We Shall Not Be Moved - How to Build a Tenant Union Part II.
   Tonight we will be highlighting the existing work of tenant unions and
   organizations that have been working to decomodifty housing and land. This is
