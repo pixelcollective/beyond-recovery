@@ -1,6 +1,5 @@
 ---
-title: "Renter Nation Training Series 2020- Episode 1: Power to the People:
-  Organizing 101"
+title: "Renter Nation Training Series- Episode 1: Power to the People: Organizing 101"
 description: "This year's RNTS is working to facilitate the political education
   and organizing skills of people who have been impacted by this moment, to
   deepen our collective capacity to build intersectional, multi-issue movements
