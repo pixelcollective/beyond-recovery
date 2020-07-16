@@ -1,5 +1,5 @@
 ---
-title: "We Shall Not Be Moved: How to Build a Tenant Union Part 2"
+title: "We Shall Not Be Moved: How to Build a Tenant Union (Part 2)"
 episode: 6
 date: 2020-05-02T23:47:07.538Z
 description: "This training highlights the existing work of tenant unions and
