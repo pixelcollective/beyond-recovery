@@ -104,6 +104,20 @@ module.exports = {
         path: `${__dirname}/content/page/`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'tool',
+        path: `${__dirname}/content/tool/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'training',
+        path: `${__dirname}/content/training/`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-netlify',

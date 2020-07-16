@@ -1,11 +1,6 @@
 const path = require(`path`)
 const {createFilePath} = require(`gatsby-source-filesystem`)
-const {get, each} = require('lodash')
-
-/**
- * Application post types
- */
-const postTypes = ['post', 'action', 'press', 'page']
+const {get} = require('lodash')
 
 /**
  * Create node hook.
@@ -25,7 +20,6 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     })
 
     const parent = getNode(get(node, 'parent'))
-
     createNodeField({
       node,
       name: 'collection',
@@ -66,6 +60,9 @@ exports.createPages = async ({graphql, actions}) => {
               action
               outlet
               outletUrl
+              youtubeId
+              organization
+              episode
             }
             fields {
               slug
@@ -81,6 +78,8 @@ exports.createPages = async ({graphql, actions}) => {
   const pagesData = await graphql(query('page'))
   const actionsData = await graphql(query('action'))
   const pressData = await graphql(query('press'))
+  const toolsData = await graphql(query('tool'))
+  const trainingsData = await graphql(query('training'))
 
   Array(
     {
@@ -98,6 +97,14 @@ exports.createPages = async ({graphql, actions}) => {
     {
       type: 'page',
       response: pagesData,
+    },
+    {
+      type: 'tool',
+      response: toolsData,
+    },
+    {
+      type: 'training',
+      response: trainingsData,
     },
   ).forEach(collection => {
     console.log(collection)

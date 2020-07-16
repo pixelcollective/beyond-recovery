@@ -31,6 +31,11 @@ const Menu = props => (
             Take Action
           </Link>
         </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/training">
+            Training
+          </Link>
+        </li>
       </ul>
 
       <ul className="actions vertical">

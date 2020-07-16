@@ -70,3 +70,26 @@ collections:
       - { label: "Media Outlet", name: 'outlet', widget: 'string', required: false }
       - { label: "Media Outlet URL", name: 'outletUrl', widget: 'string', required: false }
 
+  - name: "training"
+    label: "Training"
+    slug: "{{slug}}"
+    folder: "content/training"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Episode", name: "episode", widget: "number" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Youtube ID", name: "youtubeId", widget: "string" }
+
+  - name: "tools"
+    label: "Tools"
+    slug: "{{slug}}"
+    folder: "content/tools"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Content", name: "content", widget: "markdown", required: false }
+      - { label: "Organization", name: 'organization', widget: 'string', required: false }
+
