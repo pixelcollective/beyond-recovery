@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import styled from '@emotion/styled'
 import {Helmet} from 'react-helmet'
 import {Flex, Box, Text} from 'rebass'
-import {Grid, Col, PageTitle, PageSubTitle} from '../components/parts/demands'
+import {Grid, Col, PageSubTitle} from '../components/parts/demands'
 
 /**
  * Components
@@ -25,7 +25,7 @@ const Title = styled.h1`
 /**
  * Constants
  */
-const DEFAULT_TITLE = 'Blog'
+const DEFAULT_TITLE = 'Renter Nation Training Series'
 const DEFAULT_DESCRIPTION =
   'Party with us at a 9 day virtual festival in the spirit of the iconic Rent Parties of the 1920s and 30s.'
 
@@ -37,24 +37,19 @@ const DEFAULT_DESCRIPTION =
  * @param {string} slug
  * @param {string} description
  */
-const Training = ({title, slug, description, youtubeId}) => (
-  <Flex flexWrap="wrap" mx={-2}>
-    <Box px={2} py={2} width={1}>
-      <Link to={`/training/${slug}`}>
-        <Title>{title}</Title>
-      </Link>
+const Training = ({title, slug, description, youtubeId, episode}) => (
+  <Box>
+    <div className="inner">
+      <PageSubTitle>{`Episode #${episode}`}</PageSubTitle>
+      <VideoComponent youtubeId={youtubeId || null} />
+    </div>
 
-      <div className="inner">
-        <Box width={[1]}>
-          <VideoComponent youtubeId={youtubeId || null} />
-        </Box>
-      </div>
+    <Link to={`/training/${slug}`}>
+      <PageSubTitle>{title}</PageSubTitle>
+    </Link>
 
-      <Box px={2}>
-        <Text color={'white'} dangerouslySetInnerHTML={{__html: description || description}} />
-      </Box>
-    </Box>
-  </Flex>
+    <Text color={'white'} dangerouslySetInnerHTML={{__html: description || description}} />
+  </Box>
 )
 
 /**
@@ -76,37 +71,38 @@ const TrainingsTemplate = ({title, description, trainings}) => (
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>{title || DEFAULT_TITLE}</h1>
+            <h1>Renter Nation Training Series</h1>
           </header>
 
-          <Grid>
-            <Col size="12">
-              <PageSubTitle>Trainings introductory copy.</PageSubTitle>
-            </Col>
-          </Grid>
-
-          <Grid>
+          <Box
+            sx={{
+              display: 'grid',
+              gridRow: 'auto',
+              gridGap: 3,
+              gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+              flexDirection: 'row',
+            }}>
             {trainings.edges.map(
               (
                 {
                   node: {
-                    frontmatter: {title, description, youtubeId},
+                    frontmatter: {title, description, youtubeId, episode},
                     fields: {slug},
                   },
                 },
                 id,
               ) => (
-                <Col size={[12, 8, 4]} key={id}>
-                  <Training
-                    title={title}
-                    description={description}
-                    slug={slug}
-                    youtubeId={youtubeId}
-                  />
-                </Col>
+                <Training
+                  key={id}
+                  title={title}
+                  episode={episode}
+                  description={description}
+                  slug={slug}
+                  youtubeId={youtubeId}
+                />
               ),
             )}
-          </Grid>
+          </Box>
         </div>
       </section>
     </div>

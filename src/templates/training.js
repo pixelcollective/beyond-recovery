@@ -18,10 +18,9 @@ const VideoComponent = ({youtubeId}) => (
       className={null}
       containerClassName={''}
       opts={{
-        height: '500',
         width: '100%',
         playerVars: {
-          autoplay: 1,
+          autoplay: 0,
         },
       }}
       onReady={() => null}
@@ -53,17 +52,21 @@ const TrainingTemplate = ({title, description, youtubeId}) => (
 
     <div id="main" className="alt">
       <section id="one">
-        <PageSubTitle>{title}</PageSubTitle>
-
         <div className="inner">
-          <Box width={[1]}>
-            <VideoComponent youtubeId={youtubeId || null} />
+          <header style={{marginTop: '1rem'}}>
+            <PageSubTitle>{title}</PageSubTitle>
+          </header>
+
+          <div className="inner">
+            <Box width={[1]}>
+              <VideoComponent youtubeId={youtubeId || null} />
+            </Box>
+          </div>
+
+          <Box px={2}>
+            <Text color={'white'} dangerouslySetInnerHTML={{__html: description || description}} />
           </Box>
         </div>
-
-        <Box px={2}>
-          <Text color={'white'} dangerouslySetInnerHTML={{__html: description || description}} />
-        </Box>
       </section>
     </div>
   </Layout>
@@ -81,7 +84,13 @@ const TrainingPage = ({
   pageContext: {
     data: {title, description, youtubeId},
   },
-}) => <TrainingTemplate title={title} description={description} youtubeId={youtubeId} />
+}) => (
+  <TrainingTemplate
+    title={title}
+    description={description}
+    youtubeId={youtubeId}
+  />
+)
 
 export {TrainingTemplate, VideoComponent}
 export default TrainingPage

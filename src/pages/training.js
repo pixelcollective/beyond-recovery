@@ -25,6 +25,7 @@ const Trainings = () => {
               image
               content
               youtubeId
+              episode
             }
             fields {
               slug
@@ -37,7 +38,7 @@ const Trainings = () => {
 
   return (
     <TrainingsTemplate
-      title={'Trainings'}
+      title={'Renter Nation Training Series'}
       description={
         'We are fighting for a realistic coronavirus recovery plan that suspends rent and mortgages to keep us safely housed.'
       }
