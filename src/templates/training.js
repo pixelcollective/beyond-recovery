@@ -84,13 +84,7 @@ const TrainingPage = ({
   pageContext: {
     data: {title, description, youtubeId},
   },
-}) => (
-  <TrainingTemplate
-    title={title}
-    description={description}
-    youtubeId={youtubeId}
-  />
-)
+}) => <TrainingTemplate title={title} description={description} youtubeId={youtubeId} />
 
 export {TrainingTemplate, VideoComponent}
 export default TrainingPage

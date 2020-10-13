@@ -73,7 +73,7 @@ collections:
   - name: "training"
     label: "Training"
     slug: "{{slug}}"
-    folder: "content/training"
+    folder: "content/video"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -81,6 +81,49 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", dateFormat: 'MMM Do, YYYY' }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Youtube ID", name: "youtubeId", widget: "string" }
+
+  - name: "press"
+    label: "Press"
+    slug: "{{slug}}"
+    folder: "content/press"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", dateFormat: 'MMM Do, YYYY' }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Content", name: "content", widget: "markdown", required: false }
+      - { label: "Media Outlet", name: 'outlet', widget: 'string', required: false }
+      - { label: "Media Outlet URL", name: 'outletUrl', widget: 'string', required: false }
+
+  - name: "video"
+    label: "Video"
+    slug: "{{slug}}"
+    folder: "content/video"
+    create: true
+    filter: {fields: }
+    fields:
+      - widget: relation
+        name: type
+        label: Type
+        hint: Organize videos based on type
+        collection: type
+        valueField: slug
+        searchFields: ["name"]
+        displayFields: ["name"]
+        required: false
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "URL", name: "videoUrl", widget: "string" }
+
+  - name: "type"
+    label: "type"
+    slug: "{{slug}}"
+    folder: "content/type"
+    create: true
+    fields:
+      - { label: "Name", name: "Name", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
 
   - name: "tools"
     label: "Tools"
@@ -93,4 +136,3 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Content", name: "content", widget: "markdown", required: false }
       - { label: "Organization", name: 'organization', widget: 'string', required: false }
-

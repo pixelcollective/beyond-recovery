@@ -2,7 +2,6 @@
  * Modules
  */
 import React from 'react'
-import {Link} from 'gatsby'
 import {Helmet} from 'react-helmet'
 import {css} from '@emotion/core'
 import Layout from '../components/layout'
